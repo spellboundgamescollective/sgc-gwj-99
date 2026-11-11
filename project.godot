@@ -1,0 +1,56 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="sgc-gwj-99"
+run/main_scene="uid://dovfbqg44r1mq"
+config/features=PackedStringArray("4.7", "Forward Plus")
+config/icon="res://icon.svg"
+
+[clean_copy_examples]
+
+examples_paths=Array[String](["res://addons/maaacks_game_template/examples/"])
+copy_path="res://"
+
+[display]
+
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/maaacks_game_template/plugin.cfg")
+
+[internationalization]
+
+locale/translations=PackedStringArray("res://addons/maaacks_game_template/base/translations/menus_translations.en.translation", "res://addons/maaacks_game_template/base/translations/menus_translations.fr.translation")
+
+[maaacks_game_template]
+
+disable_install_wizard=true
+main_menu_scene_path="res://scenes/menus/main_menu/main_menu.tscn"
+game_scene_path="res://scenes/game/game.tscn"
+ending_scene_path="res://scenes/end_credits/end_credits.tscn"
+copy_path="res://"
+
+[physics]
+
+3d/physics_engine="Jolt Physics"
+
+[plugin_updater]
+
+plugins={
+"res://addons/maaacks_game_template/": "https://github.com/Maaack/Godot-Minimal-Game-Template"
+}
+
+[rendering]
+
+rendering_device/driver.windows="d3d12"
