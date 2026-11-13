@@ -49,7 +49,8 @@ env:
 
 jobs:
   export-web:
-    name: Web Export runs-on: ubuntu-24.04
+    name: Web Export 
+    runs-on: ubuntu-24.04
     container:
       image: barichello/godot-ci:${{ vars.GODOT_VERSION }}
     steps:
