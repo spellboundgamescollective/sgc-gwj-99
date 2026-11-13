@@ -20,6 +20,14 @@ config/icon="res://icon.svg"
 examples_paths=Array[String](["res://addons/maaacks_game_template/examples/"])
 copy_path="res://"
 
+[debug]
+
+gdscript/warnings/untyped_declaration=2
+gdscript/warnings/unsafe_property_access=2
+gdscript/warnings/unsafe_method_access=2
+gdscript/warnings/unsafe_cast=1
+gdscript/warnings/unsafe_call_argument=2
+
 [display]
 
 window/stretch/mode="canvas_items"
@@ -27,7 +35,7 @@ window/stretch/aspect="expand"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/maaacks_game_template/plugin.cfg")
+enabled=PackedStringArray("res://addons/cheatsheet_viewer/plugin.cfg", "res://addons/maaacks_game_template/plugin.cfg")
 
 [internationalization]
 

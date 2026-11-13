@@ -10,7 +10,7 @@ extends "res://addons/maaacks_game_template/base/nodes/menus/options_menu/pagina
 @export var show_input_sensitivity := false
 
 
-func _ready():
+func _ready()->void:
 	var inputs_actions := AppSettings.get_action_names()
 	for iter in range(get_tab_count()):
 		if get("tab_%d/title" % iter) == "Controls":
