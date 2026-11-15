@@ -11,8 +11,6 @@
 			"uuid": "2bfaa1ba-aaa1-43b7-978c-0e59094ac9dd",
 			"title": "Todo",
 			"tasks": [
-				"8f0835ea-fdd2-4cb5-bd0c-e2c0c4f0ce0e",
-				"c1780208-a751-46ba-94ee-6847e72c6fc8",
 				"1c48cdfb-7efa-4ce7-8bef-189fd7db05f7",
 				"7b2c809c-6afc-4616-8fc2-cb33f50e02bd"
 			]
@@ -25,14 +23,16 @@
 		{
 			"uuid": "105b8ca7-8e28-45d9-adfe-bfe9a661426f",
 			"title": "Doing",
-			"tasks": [
-				"0602baf5-15e7-494b-8772-19359d0467e5"
-			]
+			"tasks": []
 		},
 		{
 			"uuid": "2edb8270-7302-47ed-bd42-38dd168e78ef",
 			"title": "Done",
-			"tasks": []
+			"tasks": [
+				"0602baf5-15e7-494b-8772-19359d0467e5",
+				"c1780208-a751-46ba-94ee-6847e72c6fc8",
+				"8f0835ea-fdd2-4cb5-bd0c-e2c0c4f0ce0e"
+			]
 		}
 	],
 	"tasks": [
@@ -67,13 +67,6 @@
 		{
 			"uuid": "7b2c809c-6afc-4616-8fc2-cb33f50e02bd",
 			"title": "Character can power jump",
-			"description": "",
-			"category": "aaf7483a-0f3b-4c03-b0fb-509edd6abd46",
-			"steps": []
-		},
-		{
-			"uuid": "09a1c9ad-9961-446a-8b2b-2cc582d2f193",
-			"title": "",
 			"description": "",
 			"category": "aaf7483a-0f3b-4c03-b0fb-509edd6abd46",
 			"steps": []

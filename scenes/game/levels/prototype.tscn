@@ -10,6 +10,8 @@ size = Vector2(575.25, 104)
 [node name="PlayerCharacter" parent="." unique_id=741950354 instance=ExtResource("1_4r7ra")]
 position = Vector2(439, 669)
 
+[node name="Camera2D" type="Camera2D" parent="PlayerCharacter" unique_id=584982369]
+
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=434957973]
 position = Vector2(312, 819)
 
