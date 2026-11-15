@@ -11,8 +11,8 @@
 			"uuid": "2bfaa1ba-aaa1-43b7-978c-0e59094ac9dd",
 			"title": "Todo",
 			"tasks": [
-				"1c48cdfb-7efa-4ce7-8bef-189fd7db05f7",
-				"7b2c809c-6afc-4616-8fc2-cb33f50e02bd"
+				"7b2c809c-6afc-4616-8fc2-cb33f50e02bd",
+				"c2933e8d-0843-464e-b025-e0dde8700e3a"
 			]
 		},
 		{
@@ -31,7 +31,8 @@
 			"tasks": [
 				"0602baf5-15e7-494b-8772-19359d0467e5",
 				"c1780208-a751-46ba-94ee-6847e72c6fc8",
-				"8f0835ea-fdd2-4cb5-bd0c-e2c0c4f0ce0e"
+				"8f0835ea-fdd2-4cb5-bd0c-e2c0c4f0ce0e",
+				"1c48cdfb-7efa-4ce7-8bef-189fd7db05f7"
 			]
 		}
 	],
@@ -66,7 +67,14 @@
 		},
 		{
 			"uuid": "7b2c809c-6afc-4616-8fc2-cb33f50e02bd",
-			"title": "Character can power jump",
+			"title": "Character can power jump mid air",
+			"description": "",
+			"category": "aaf7483a-0f3b-4c03-b0fb-509edd6abd46",
+			"steps": []
+		},
+		{
+			"uuid": "c2933e8d-0843-464e-b025-e0dde8700e3a",
+			"title": "UI and Canvas Layer in proper location",
 			"description": "",
 			"category": "aaf7483a-0f3b-4c03-b0fb-509edd6abd46",
 			"steps": []

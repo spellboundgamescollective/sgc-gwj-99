@@ -3,7 +3,13 @@
 [ext_resource type="PackedScene" uid="uid://d1xpl3iw6ravd" path="res://scenes/game/player_character.tscn" id="1_4r7ra"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cput5"]
-size = Vector2(575.25, 104)
+size = Vector2(454.70313, 104)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fx5lj"]
+size = Vector2(213.5, 222)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4r7ra"]
+size = Vector2(186, 116)
 
 [node name="Prototype" type="Node2D" unique_id=890863664]
 
@@ -19,7 +25,27 @@ position = Vector2(312, 819)
 shape = SubResource("RectangleShape2D_cput5")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=156240854]
-position = Vector2(1230, 807)
+position = Vector2(1114, 816)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=2098225747]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D2" unique_id=2098225747]
 shape = SubResource("RectangleShape2D_cput5")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="." unique_id=213865977]
+position = Vector2(1491, 611)
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D3" unique_id=1892961318]
+shape = SubResource("RectangleShape2D_fx5lj")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="." unique_id=1435653988]
+position = Vector2(1491, 611)
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D4" unique_id=846301209]
+position = Vector2(337, -46)
+shape = SubResource("RectangleShape2D_4r7ra")
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="." unique_id=1815469361]
+position = Vector2(1491, 611)
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D5" unique_id=880520586]
+position = Vector2(608, -46)
+shape = SubResource("RectangleShape2D_4r7ra")
