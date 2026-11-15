@@ -8,7 +8,7 @@ func _set_input_device() -> void:
 	AudioServer.input_device = _get_setting(default_value)
 
 func _add_microphone_audio_stream() -> void:
-	var instance := AudioStreamPlayer.new()
+	var instance:AudioStreamPlayer = AudioStreamPlayer.new()
 	instance.stream = AudioStreamMicrophone.new()
 	instance.autoplay = true
 	add_child.call_deferred(instance)

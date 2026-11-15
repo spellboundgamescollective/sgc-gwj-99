@@ -6,16 +6,14 @@ extends PopupWindowPanel
 ## Will use ProjectSettings paths if left empty.
 @export_file("*.tscn") var main_menu_scene_path : String
 
-@onready var restart_confirmation = %RestartConfirmation
-@onready var main_menu_confirmation = %MainMenuConfirmation
-@onready var exit_confirmation = %ExitConfirmation
-@onready var options_button = %OptionsButton
-@onready var main_menu_button = %MainMenuButton
-@onready var exit_button = %ExitButton
-## If Maaack's Scene Loader is installed, then it will be used to change scenes.
-@onready var scene_loader_node = get_tree().root.get_node_or_null(^"SceneLoader")
+@onready var restart_confirmation:ConfirmationPopupWindowPanel = %RestartConfirmation
+@onready var main_menu_confirmation:ConfirmationPopupWindowPanel = %MainMenuConfirmation
+@onready var exit_confirmation:ConfirmationPopupWindowPanel = %ExitConfirmation
+@onready var options_button:Button = %OptionsButton
+@onready var main_menu_button:Button = %MainMenuButton
+@onready var exit_button:Button = %ExitButton
 
-var open_window : Node
+var open_window : Node = Node.new()
 var restarting : bool = false
 
 func get_main_menu_scene_path() -> String:
@@ -31,10 +29,7 @@ func close_window() -> void:
 
 func _load_scene(scene_path: String) -> void:
 	_scene_tree.paused = false
-	if scene_loader_node:
-		scene_loader_node.load_scene(scene_path)
-	else:
-		get_tree().change_scene_to_file(scene_path)
+	get_tree().change_scene_to_file(scene_path)
 
 func _show_window(window : Control) -> void:
 	window.show()
@@ -93,8 +88,8 @@ func _on_restart_confirmation_closed() -> void:
 		await draw
 		get_tree().reload_current_scene()
 
-func _on_main_menu_confirmation_confirmed():
+func _on_main_menu_confirmation_confirmed() -> void:
 	_load_scene(get_main_menu_scene_path())
 
-func _on_exit_confirmation_confirmed():
+func _on_exit_confirmation_confirmed() -> void:
 	get_tree().quit()
