@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="sgc-gwj-99"
-run/main_scene="uid://dovfbqg44r1mq"
+run/main_scene="res://scenes/opening/opening.tscn"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -38,6 +38,10 @@ window/stretch/aspect="expand"
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/cheatsheet_viewer/plugin.cfg", "res://addons/maaacks_game_template/plugin.cfg")
+
+[gui]
+
+theme/custom="res://resources/themes/lab.tres"
 
 [internationalization]
 
