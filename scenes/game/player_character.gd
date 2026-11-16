@@ -2,13 +2,22 @@ extends CharacterBody2D
 
 
 const SPEED:float = 300.0
+<<<<<<< HEAD
 var jump_velocity:float = 100.0
 
+=======
+const TERMINAL_VELOCITY:float = 1000
+var jump_velocity:float = 0.0
+var center_coord:float = 960
+>>>>>>> 52b8a95a5c8a4289a427305f538ee54dfaf349c5
 # -45, -40
 
+
 func _physics_process(delta: float) -> void:
-	var tween:Tween = create_tween()
-	print(str(jump_velocity))
+
+	var distance_from_center_scale:float =  abs(position.x/center_coord)
+	#print("Scale: " + str(distance_from_center_scale) + " | Position: " + str(position))
+	#print(str(jump_velocity))
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
@@ -16,7 +25,7 @@ func _physics_process(delta: float) -> void:
 		if Input.is_action_pressed("up"):
 			jump_velocity = clampi(jump_velocity - 20.0, -800, 0)
 			#tween.tween_property($ChargeMeter, "position", Vector2(-48.0, -40), 0.67)
-			
+	
 		# Handle jump.
 		if Input.is_action_just_released("up"):
 			velocity.y = jump_velocity 

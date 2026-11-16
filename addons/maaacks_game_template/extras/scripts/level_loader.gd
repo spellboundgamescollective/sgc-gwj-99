@@ -39,7 +39,7 @@ func load_level(level_path : String):
 		scene_loader_node.load_scene(level_path, true)
 		if level_loading_screen:
 			level_loading_screen.reset()
-		level_load_started.emit()
+		level_load_started.emit() 
 		await scene_loader_node.scene_loaded
 		is_loading = false
 		current_level = _attach_level(scene_loader_node.get_resource())
