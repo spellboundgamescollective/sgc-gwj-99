@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c6osn0uy2bx00"]
 
 [ext_resource type="PackedScene" uid="uid://d1xpl3iw6ravd" path="res://scenes/game/player_character.tscn" id="1_4r7ra"]
+[ext_resource type="Script" uid="uid://m5t6diobvkcp" path="res://scenes/game/levels/prototype.gd" id="1_qmhya"]
 [ext_resource type="Texture2D" uid="uid://cc8bvh7m177nq" path="res://icon.svg" id="2_xxrlb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cput5"]
@@ -13,6 +14,7 @@ size = Vector2(213.5, 222)
 size = Vector2(186, 116)
 
 [node name="Prototype" type="Node2D" unique_id=890863664]
+script = ExtResource("1_qmhya")
 
 [node name="PlayerCharacter" parent="." unique_id=741950354 instance=ExtResource("1_4r7ra")]
 position = Vector2(439, 669)

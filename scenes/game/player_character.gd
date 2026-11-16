@@ -2,19 +2,20 @@ extends CharacterBody2D
 
 
 const SPEED:float = 300.0
+const TERMINAL_VELOCITY:float = 1000
 var jump_velocity:float = 0.0
 var center_coord:float = 960
 # -45, -40
 
+
 func _physics_process(delta: float) -> void:
 
 	var distance_from_center_scale:float =  abs(position.x/center_coord)
-	print("Scale: " + str(distance_from_center_scale) + " | Position: " + str(position))
+	#print("Scale: " + str(distance_from_center_scale) + " | Position: " + str(position))
 	#print(str(jump_velocity))
 	# Add the gravity.
 	if not is_on_floor():
-		velocity += get_gravity() * delta * distance_from_center_scale
-		print(get_gravity())
+		velocity += get_gravity() * delta
 	if is_on_floor():
 		if Input.is_action_pressed("up"):
 			jump_velocity = clampi(jump_velocity - 20.0, -800, 0)
