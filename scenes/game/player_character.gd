@@ -2,14 +2,9 @@ extends CharacterBody2D
 
 
 const SPEED:float = 300.0
-<<<<<<< HEAD
-var jump_velocity:float = 100.0
-
-=======
 const TERMINAL_VELOCITY:float = 1000
 var jump_velocity:float = 0.0
 var center_coord:float = 960
->>>>>>> 52b8a95a5c8a4289a427305f538ee54dfaf349c5
 # -45, -40
 
 

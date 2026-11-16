@@ -26,7 +26,7 @@ level_container = NodePath("../LevelContainer")
 [node name="LevelManager" type="Node" parent="." unique_id=1350972375 node_paths=PackedStringArray("level_loader", "scene_lister")]
 script = ExtResource("4_kp23o")
 level_loader = NodePath("../LevelLoader")
-starting_level_path = "uid://c6osn0uy2bx00"
+starting_level_path = "uid://de11q3hfxk8yg"
 scene_lister = NodePath("SceneLister")
 game_won_scene = ExtResource("5_5jirj")
 level_lost_scene = ExtResource("6_vaxfo")

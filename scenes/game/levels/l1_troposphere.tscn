@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://de11q3hfxk8yg"]
+
+[ext_resource type="PackedScene" uid="uid://d1xpl3iw6ravd" path="res://scenes/game/player_character.tscn" id="1_vbfw5"]
+[ext_resource type="Texture2D" uid="uid://cc8bvh7m177nq" path="res://icon.svg" id="2_2edtx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2k8v3"]
+size = Vector2(3840, 32)
+
+[node name="L1Troposphere" type="Node2D" unique_id=1175749904]
+
+[node name="PlayerCharacter" parent="." unique_id=741950354 instance=ExtResource("1_vbfw5")]
+
+[node name="Camera2D" type="Camera2D" parent="PlayerCharacter" unique_id=92290470]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1905265522]
+position = Vector2(0, 150)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1631655126]
+shape = SubResource("RectangleShape2D_2k8v3")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=938866326]
+position = Vector2(0, 367.25)
+scale = Vector2(30, 5.997)
+texture = ExtResource("2_2edtx")
+
+[node name="Parallax2D" type="Parallax2D" parent="." unique_id=1364700572]
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=130053957]
+position = Vector2(-450, -235)
+gizmo_extents = 50.0
