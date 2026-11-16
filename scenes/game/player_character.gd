@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 
 const SPEED:float = 300.0
-var jump_velocity:float = 0.0
+var jump_velocity:float = 100.0
 
 # -45, -40
 
