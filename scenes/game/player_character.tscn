@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://d1xpl3iw6ravd"]
 
 [ext_resource type="Script" uid="uid://c6ob6umtrpvhp" path="res://scenes/game/player_character.gd" id="1_hlpqy"]
-[ext_resource type="Texture2D" uid="uid://cc8bvh7m177nq" path="res://icon.svg" id="1_vlqbi"]
+[ext_resource type="Texture2D" uid="uid://dl8vnmf22fatx" path="res://assets/pc_front.png" id="2_fx5lj"]
 [ext_resource type="Texture2D" uid="uid://cesclh03a47hb" path="res://assets/progress_bar.png" id="3_fx5lj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hlpqy"]
@@ -14,17 +14,20 @@ script = ExtResource("1_hlpqy")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=714041502]
 scale = Vector2(0.4, 0.4)
-texture = ExtResource("1_vlqbi")
+texture = ExtResource("2_fx5lj")
+offset = Vector2(15, -425)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=303067640]
 shape = SubResource("RectangleShape2D_hlpqy")
 
 [node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1058740542]
+visible = false
 position = Vector2(1.5000002, -40.5)
 scale = Vector2(100, 10)
 texture = SubResource("CanvasTexture_cput5")
 
 [node name="ChargeMeter" type="Sprite2D" parent="." unique_id=720476323]
+visible = false
 position = Vector2(47.999992, -40)
 scale = Vector2(0.4375, 0.11328127)
 texture = ExtResource("3_fx5lj")

@@ -13,6 +13,7 @@ size = Vector2(128, 128)
 [node name="L1Troposphere" type="Node2D" unique_id=1175749904]
 
 [node name="PlayerCharacter" parent="." unique_id=741950354 instance=ExtResource("1_vbfw5")]
+position = Vector2(1, 92)
 
 [node name="Camera2D" type="Camera2D" parent="PlayerCharacter" unique_id=92290470]
 
@@ -28,19 +29,147 @@ scale = Vector2(30, 5.997)
 texture = ExtResource("2_2edtx")
 
 [node name="Parallax2D" type="Parallax2D" parent="." unique_id=1364700572]
+scroll_offset = Vector2(157, 100)
 
 [node name="Marker2D" type="Marker2D" parent="." unique_id=130053957]
 position = Vector2(2073, -712)
 gizmo_extents = 50.0
 
 [node name="Platform" parent="." unique_id=1838500979 instance=ExtResource("3_8dldi")]
-position = Vector2(422.99997, -82)
+position = Vector2(-140, -50.999992)
 rotation = -0.13962634
-scale = Vector2(4, 1)
+scale = Vector2(4, 0.5)
+collision_shape = SubResource("RectangleShape2D_aagra")
+
+[node name="Platform4" parent="." unique_id=1698068557 instance=ExtResource("3_8dldi")]
+position = Vector2(-576.00006, 84)
+scale = Vector2(0.8, 0.8)
+collision_shape = SubResource("RectangleShape2D_aagra")
+
+[node name="Platform8" parent="." unique_id=232287267 instance=ExtResource("3_8dldi")]
+position = Vector2(1124.9999, -688.99994)
+scale = Vector2(0.8, 0.8)
+collision_shape = SubResource("RectangleShape2D_aagra")
+
+[node name="Platform11" parent="." unique_id=1825443263 instance=ExtResource("3_8dldi")]
+position = Vector2(-332.99976, -987)
+scale = Vector2(0.8, 0.8)
+collision_shape = SubResource("RectangleShape2D_aagra")
+
+[node name="Platform24" parent="." unique_id=1185576154 instance=ExtResource("3_8dldi")]
+position = Vector2(-816, -2040.9999)
+scale = Vector2(0.8, 0.8)
+collision_shape = SubResource("RectangleShape2D_aagra")
+
+[node name="Platform12" parent="." unique_id=1050410016 instance=ExtResource("3_8dldi")]
+position = Vector2(-663, -935)
+scale = Vector2(0.8, 0.8)
+collision_shape = SubResource("RectangleShape2D_aagra")
+
+[node name="Platform17" parent="." unique_id=1214790700 instance=ExtResource("3_8dldi")]
+position = Vector2(-856, -1072)
+scale = Vector2(0.8, 0.8)
+collision_shape = SubResource("RectangleShape2D_aagra")
+
+[node name="Platform18" parent="." unique_id=1198463597 instance=ExtResource("3_8dldi")]
+position = Vector2(-655, -1205)
+scale = Vector2(0.8, 0.8)
+collision_shape = SubResource("RectangleShape2D_aagra")
+
+[node name="Platform25" parent="." unique_id=1249848439 instance=ExtResource("3_8dldi")]
+position = Vector2(-514, -2165)
+scale = Vector2(0.8, 0.8)
+collision_shape = SubResource("RectangleShape2D_aagra")
+
+[node name="Platform26" parent="." unique_id=730717149 instance=ExtResource("3_8dldi")]
+position = Vector2(-149.00003, -2193)
+scale = Vector2(0.8, 0.8)
+collision_shape = SubResource("RectangleShape2D_aagra")
+
+[node name="Platform5" parent="." unique_id=944650767 instance=ExtResource("3_8dldi")]
+position = Vector2(-320, -586)
+scale = Vector2(2, 0.5)
+collision_shape = SubResource("RectangleShape2D_aagra")
+
+[node name="Platform14" parent="." unique_id=1996768358 instance=ExtResource("3_8dldi")]
+position = Vector2(248, -1364)
+scale = Vector2(2, 0.5)
+collision_shape = SubResource("RectangleShape2D_aagra")
+
+[node name="Platform15" parent="." unique_id=1447255413 instance=ExtResource("3_8dldi")]
+position = Vector2(434, -1520)
+scale = Vector2(2, 0.5)
+collision_shape = SubResource("RectangleShape2D_aagra")
+
+[node name="Platform22" parent="." unique_id=43745931 instance=ExtResource("3_8dldi")]
+position = Vector2(1671, -1369)
+scale = Vector2(2, 0.5)
+collision_shape = SubResource("RectangleShape2D_aagra")
+
+[node name="Platform16" parent="." unique_id=1143905877 instance=ExtResource("3_8dldi")]
+position = Vector2(222, -1683)
+scale = Vector2(2, 0.5)
+collision_shape = SubResource("RectangleShape2D_aagra")
+
+[node name="Platform20" parent="." unique_id=780373760 instance=ExtResource("3_8dldi")]
+position = Vector2(8, -1816)
+scale = Vector2(2, 0.5)
+collision_shape = SubResource("RectangleShape2D_aagra")
+
+[node name="Platform23" parent="." unique_id=1210829552 instance=ExtResource("3_8dldi")]
+position = Vector2(-539, -1983)
+scale = Vector2(2, 0.5)
+collision_shape = SubResource("RectangleShape2D_aagra")
+
+[node name="Platform9" parent="." unique_id=1802603922 instance=ExtResource("3_8dldi")]
+position = Vector2(1386, -834)
+scale = Vector2(2, 0.5)
+collision_shape = SubResource("RectangleShape2D_aagra")
+
+[node name="Platform6" parent="." unique_id=1747932666 instance=ExtResource("3_8dldi")]
+position = Vector2(501.00003, -616)
+rotation = -0.10995574
+scale = Vector2(6, 0.5)
 collision_shape = SubResource("RectangleShape2D_aagra")
 
 [node name="Platform2" parent="." unique_id=924611099 instance=ExtResource("3_8dldi")]
 position = Vector2(-285, -267)
 rotation = 0.28797933
 scale = Vector2(3, 1)
+collision_shape = SubResource("RectangleShape2D_aagra")
+
+[node name="Platform21" parent="." unique_id=421369890 instance=ExtResource("3_8dldi")]
+position = Vector2(-275.00006, -1737.9999)
+rotation = -1.4695672
+scale = Vector2(3, 1)
+collision_shape = SubResource("RectangleShape2D_aagra")
+
+[node name="Platform10" parent="." unique_id=352516189 instance=ExtResource("3_8dldi")]
+position = Vector2(944, -1008.99994)
+rotation = 0.28797933
+scale = Vector2(3, 0.5)
+collision_shape = SubResource("RectangleShape2D_aagra")
+
+[node name="Platform3" parent="." unique_id=1469332170 instance=ExtResource("3_8dldi")]
+position = Vector2(-944, -453)
+rotation = 0.06806784
+scale = Vector2(4, 0.5)
+collision_shape = SubResource("RectangleShape2D_aagra")
+
+[node name="Platform13" parent="." unique_id=762737842 instance=ExtResource("3_8dldi")]
+position = Vector2(-269.00003, -1306.0001)
+rotation = -0.15184365
+scale = Vector2(4, 0.5)
+collision_shape = SubResource("RectangleShape2D_aagra")
+
+[node name="Platform7" parent="." unique_id=1451590166 instance=ExtResource("3_8dldi")]
+position = Vector2(122, -943.00006)
+rotation = 0.06806784
+scale = Vector2(4, 0.5)
+collision_shape = SubResource("RectangleShape2D_aagra")
+
+[node name="Platform19" parent="." unique_id=1799016686 instance=ExtResource("3_8dldi")]
+position = Vector2(1097.0001, -1326)
+rotation = 0.06806784
+scale = Vector2(4, 0.5)
 collision_shape = SubResource("RectangleShape2D_aagra")

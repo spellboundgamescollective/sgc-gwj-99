@@ -5,7 +5,7 @@ const SPEED:float = 600.0
 const TERMINAL_VELOCITY:float = 1000
 var charge_jump_velocity:float = 0.0
 var jump_velocity:float = 1000
-var center_coord:float = 1 
+var center_coord:float = 1.0 
 var jump_counter:int = 0
 
 @export var gravity_toggle:bool = true
@@ -51,9 +51,6 @@ func _physics_process(delta: float) -> void:
 		velocity.y = -jump_velocity
 	if not is_on_floor():
 			velocity += 3 * get_gravity() * delta * gravity_scale
-
-		
-			
 			
 	var charge_label:Label = get_node("CanvasLayer/ChargeLabel")
 	charge_label.text = "Charged velocity is " + str(-charge_jump_velocity)
@@ -70,7 +67,6 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
-
 
 func _on_reduced_grav_hit_box_body_entered(body: Node2D) -> void:
 	gravity_scale = 0.3
