@@ -4,18 +4,18 @@ extends CharacterBody2D
 const SPEED:float = 300.0
 const TERMINAL_VELOCITY:float = 1000
 var jump_velocity:float = 0.0
-var center_coord:float = 960
+var center_coord:float = 1 
 @export var physics_toggle:bool = true
 
 
 func _physics_process(delta: float) -> void:
 	if physics_toggle == true:
-		var distance_from_center_scale:float =  abs(position.x/center_coord)
+		var distance_from_center_scale:float =  clampf(1-abs(1/global_position.x), 0.01, 1.0)
 		#print("Scale: " + str(distance_from_center_scale) + " | Position: " + str(position))
 		#print(str(jump_velocity))
 		# Add the gravity.
 		if not is_on_floor():
-			velocity += get_gravity() * delta * distance_from_center_scale
+			velocity += 3 * get_gravity() * delta * distance_from_center_scale
 		if is_on_floor():
 			if Input.is_action_pressed("up"):
 				jump_velocity = clampi(jump_velocity - 20.0, -800, 0)
@@ -30,7 +30,8 @@ func _physics_process(delta: float) -> void:
 
 		$CanvasLayer/VelocityLabel.text = "Velocity is " + str(velocity)
 		$CanvasLayer/GravityLabel.text = "Gravity is " + str(get_gravity()*distance_from_center_scale)
-	
+		$CanvasLayer/PositionLabel.text = "Position is " + str(global_position)
+		print(distance_from_center_scale)
 		# Get the input direction and handle the movement/deceleration.
 		# As good practice, you should replace UI actions with custom gameplay actions.
 		var direction:float = Input.get_axis("left", "right")

@@ -13,7 +13,7 @@ func _process(delta: float) -> void:
 
 func _on_beam_hit_box_body_entered(body: Node2D) -> void:
 	$BeamHitBox/CollisionShape2D.debug_color = Color("eb405567")
-
+	await get_tree().create_timer(1.0).timeout
 
 func _on_beam_hit_box_body_exited(body: Node2D) -> void:
 	$BeamHitBox/CollisionShape2D.debug_color = Color("0099b36b")

@@ -39,6 +39,13 @@ offset_bottom = 374.0
 text = "Charged velocity is: "
 metadata/_edit_use_anchors_ = true
 
+[node name="PositionLabel" type="Label" parent="CanvasLayer" unique_id=848165183]
+offset_left = 186.0
+offset_top = 384.0
+offset_right = 266.0
+offset_bottom = 413.0
+text = "Position is"
+
 [node name="VelocityLabel" type="Label" parent="CanvasLayer" unique_id=694859175]
 offset_left = 188.0
 offset_top = 351.0
@@ -47,6 +54,8 @@ offset_bottom = 380.0
 text = "Velocity is:"
 
 [node name="GravityLabel" type="Label" parent="CanvasLayer" unique_id=598911968]
-offset_right = 40.0
-offset_bottom = 29.0
+offset_left = 189.0
+offset_top = 424.0
+offset_right = 266.0
+offset_bottom = 453.0
 text = "Gravity is "
