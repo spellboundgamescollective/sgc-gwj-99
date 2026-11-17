@@ -12,7 +12,7 @@ size = Vector2(128, 128)
 size = Vector2(150, 21600)
 
 [sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_cput5"]
-points = PackedVector2Array(-1920, -64, -75, -21660, 75, -21660, 1920, -64)
+points = PackedVector2Array(-1090, -67, -75, -21660, 75, -21660, 1138, -68)
 
 [node name="Node2D" type="Node2D" unique_id=1990738926]
 script = ExtResource("1_nfoyq")
@@ -38,10 +38,12 @@ position = Vector2(0, -10860)
 shape = SubResource("RectangleShape2D_cput5")
 debug_color = Color(0, 0.6, 0.7019608, 0.41960785)
 
-[node name="Area2D" type="Area2D" parent="." unique_id=797746892]
+[node name="ReducedGravHitBox" type="Area2D" parent="." unique_id=797746892]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1348919686]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ReducedGravHitBox" unique_id=1348919686]
 shape = SubResource("ConvexPolygonShape2D_cput5")
 
 [connection signal="body_entered" from="BeamHitBox" to="." method="_on_beam_hit_box_body_entered"]
 [connection signal="body_exited" from="BeamHitBox" to="." method="_on_beam_hit_box_body_exited"]
+[connection signal="body_entered" from="ReducedGravHitBox" to="PlayerCharacter" method="_on_reduced_grav_hit_box_body_entered"]
+[connection signal="body_exited" from="ReducedGravHitBox" to="PlayerCharacter" method="_on_reduced_grav_hit_box_body_exited"]
