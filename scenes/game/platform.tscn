@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://c583nwmheikpt"]
+
+[ext_resource type="Script" uid="uid://eg1q3vjn80qn" path="res://scenes/game/platform.gd" id="1_mi635"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2k8v3"]
+size = Vector2(128, 128)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_aagra"]
+size = Vector2(128, 128)
+
+[node name="Platform" type="StaticBody2D" unique_id=1838500979]
+script = ExtResource("1_mi635")
+texture_path = "uid://cc8bvh7m177nq"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1615584619]
+shape = SubResource("RectangleShape2D_2k8v3")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=298546633]
+texture = SubResource("PlaceholderTexture2D_aagra")
