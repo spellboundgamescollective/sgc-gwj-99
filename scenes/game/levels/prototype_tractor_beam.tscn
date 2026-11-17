@@ -1,14 +1,41 @@
 [gd_scene format=3 uid="uid://cetg37vknp77g"]
 
+[ext_resource type="Script" uid="uid://cbcfopdbt84f4" path="res://scenes/game/levels/prototype_tractor_beam.gd" id="1_nfoyq"]
 [ext_resource type="PackedScene" uid="uid://d1xpl3iw6ravd" path="res://scenes/game/player_character.tscn" id="1_sgb3x"]
 [ext_resource type="Texture2D" uid="uid://cc8bvh7m177nq" path="res://icon.svg" id="2_dv7pl"]
+[ext_resource type="PackedScene" uid="uid://c583nwmheikpt" path="res://scenes/game/platform.tscn" id="3_wsnaj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wep1q"]
+size = Vector2(128, 128)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cput5"]
+size = Vector2(436, 933)
 
 [node name="Node2D" type="Node2D" unique_id=1990738926]
 position = Vector2(994, 618)
+script = ExtResource("1_nfoyq")
 
 [node name="PlayerCharacter" parent="." unique_id=741950354 instance=ExtResource("1_sgb3x")]
+position = Vector2(0, 275)
+
+[node name="Camera2D" type="Camera2D" parent="PlayerCharacter" unique_id=1615054976]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=965567575]
 position = Vector2(777, -2003.7501)
 scale = Vector2(1, 38.097656)
 texture = ExtResource("2_dv7pl")
+
+[node name="Platform" parent="." unique_id=1838500979 instance=ExtResource("3_wsnaj")]
+position = Vector2(-33, 381)
+scale = Vector2(15, 1)
+collision_shape = SubResource("RectangleShape2D_wep1q")
+
+[node name="BeamHitBox" type="Area2D" parent="." unique_id=347699639]
+position = Vector2(0, -150)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BeamHitBox" unique_id=1096023253]
+shape = SubResource("RectangleShape2D_cput5")
+debug_color = Color(0, 0.6, 0.7019608, 0.41960785)
+
+[connection signal="body_entered" from="BeamHitBox" to="." method="_on_beam_hit_box_body_entered"]
+[connection signal="body_exited" from="BeamHitBox" to="." method="_on_beam_hit_box_body_exited"]

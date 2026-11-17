@@ -30,12 +30,23 @@ scale = Vector2(0.4375, 0.11328127)
 texture = ExtResource("3_fx5lj")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=843805598]
-visible = false
 
-[node name="Label" type="Label" parent="CanvasLayer" unique_id=887867500]
+[node name="ChargeLabel" type="Label" parent="CanvasLayer" unique_id=887867500]
 offset_left = 187.0
 offset_top = 313.0
 offset_right = 486.0
 offset_bottom = 374.0
 text = "Charged velocity is: "
 metadata/_edit_use_anchors_ = true
+
+[node name="VelocityLabel" type="Label" parent="CanvasLayer" unique_id=694859175]
+offset_left = 188.0
+offset_top = 351.0
+offset_right = 270.0
+offset_bottom = 380.0
+text = "Velocity is:"
+
+[node name="GravityLabel" type="Label" parent="CanvasLayer" unique_id=598911968]
+offset_right = 40.0
+offset_bottom = 29.0
+text = "Gravity is "
