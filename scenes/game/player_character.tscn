@@ -1,7 +1,19 @@
 [gd_scene format=3 uid="uid://d1xpl3iw6ravd"]
 
 [ext_resource type="Script" uid="uid://c6ob6umtrpvhp" path="res://scenes/game/player_character.gd" id="1_hlpqy"]
-[ext_resource type="Texture2D" uid="uid://dl8vnmf22fatx" path="res://assets/pc_front.png" id="2_fx5lj"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cput5"]
+animations = [{
+"frames": [],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": 1,
+"name": &"walk",
+"speed": 12.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hlpqy"]
 size = Vector2(192, 192)
@@ -9,9 +21,12 @@ size = Vector2(192, 192)
 [node name="PlayerCharacter" type="CharacterBody2D" unique_id=741950354]
 script = ExtResource("1_hlpqy")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=714041502]
+[node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=741967185]
 position = Vector2(33, -391)
-texture = ExtResource("2_fx5lj")
+sprite_frames = SubResource("SpriteFrames_cput5")
+animation = &"walk"
+frame_progress = 0.605108
+offset = Vector2(0, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=303067640]
 shape = SubResource("RectangleShape2D_hlpqy")

@@ -1,0 +1,185 @@
+{
+	"textures": [
+		{
+			"image": "walk.png",
+			"size": {
+				"w": 328,
+				"h": 2036
+			},
+			"sprites": [
+				{
+					"filename": "walk_1.png",
+					"region": {
+						"x": 1,
+						"y": 1233,
+						"w": 323,
+						"h": 199
+					},
+					"margin": {
+						"x": 24,
+						"y": 100,
+						"w": 589,
+						"h": 231
+					}
+				},
+				{
+					"filename": "walk_2.png",
+					"region": {
+						"x": 1,
+						"y": 1835,
+						"w": 323,
+						"h": 197
+					},
+					"margin": {
+						"x": 72,
+						"y": 99,
+						"w": 589,
+						"h": 233
+					}
+				},
+				{
+					"filename": "walk_3.png",
+					"region": {
+						"x": 1,
+						"y": 1635,
+						"w": 323,
+						"h": 198
+					},
+					"margin": {
+						"x": 107,
+						"y": 98,
+						"w": 589,
+						"h": 232
+					}
+				},
+				{
+					"filename": "walk_4.png",
+					"region": {
+						"x": 1,
+						"y": 829,
+						"w": 323,
+						"h": 200
+					},
+					"margin": {
+						"x": 138,
+						"y": 104,
+						"w": 589,
+						"h": 230
+					}
+				},
+				{
+					"filename": "walk_5.png",
+					"region": {
+						"x": 1,
+						"y": 1434,
+						"w": 323,
+						"h": 199
+					},
+					"margin": {
+						"x": 167,
+						"y": 101,
+						"w": 589,
+						"h": 231
+					}
+				},
+				{
+					"filename": "walk_6.png",
+					"region": {
+						"x": 1,
+						"y": 1,
+						"w": 323,
+						"h": 207
+					},
+					"margin": {
+						"x": 197,
+						"y": 98,
+						"w": 589,
+						"h": 223
+					}
+				},
+				{
+					"filename": "walk_7.png",
+					"region": {
+						"x": 1,
+						"y": 210,
+						"w": 323,
+						"h": 205
+					},
+					"margin": {
+						"x": 230,
+						"y": 103,
+						"w": 589,
+						"h": 225
+					}
+				},
+				{
+					"filename": "walk_8.png",
+					"region": {
+						"x": 1,
+						"y": 417,
+						"w": 323,
+						"h": 204
+					},
+					"margin": {
+						"x": 254,
+						"y": 102,
+						"w": 589,
+						"h": 226
+					}
+				},
+				{
+					"filename": "walk_9.png",
+					"region": {
+						"x": 1,
+						"y": 623,
+						"w": 323,
+						"h": 204
+					},
+					"margin": {
+						"x": 282,
+						"y": 100,
+						"w": 589,
+						"h": 226
+					}
+				},
+				{
+					"filename": "walk_10.png",
+					"region": {
+						"x": 1,
+						"y": 1031,
+						"w": 323,
+						"h": 200
+					},
+					"margin": {
+						"x": 298,
+						"y": 106,
+						"w": 589,
+						"h": 230
+					}
+				}
+			]
+		}
+	],
+	"animations": [
+		{
+			"name": "walk",
+			"frames": [
+				"walk_1.png",
+				"walk_2.png",
+				"walk_3.png",
+				"walk_4.png",
+				"walk_5.png",
+				"walk_6.png",
+				"walk_7.png",
+				"walk_8.png",
+				"walk_9.png",
+				"walk_10.png"
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "1.1",
+		"smartupdate": "$TexturePacker:SmartUpdate:e6a2d59bebe7ccd547758941fa6b0988:b4749decd1f640d29887323cacca4709:d846c16b70d89a37b97f4d023803ee42$"
+	}
+}
