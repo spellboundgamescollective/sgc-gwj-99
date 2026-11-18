@@ -4,7 +4,7 @@ extends CharacterBody2D
 const SPEED:float = 600.0
 const TERMINAL_VELOCITY:float = 1000
 var charge_jump_velocity:float = 0.0
-var jump_velocity:float = 1000
+var jump_velocity:float = 1200
 var center_coord:float = 1.0 
 var jump_counter:int = 0
 
