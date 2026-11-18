@@ -4,9 +4,6 @@
 [ext_resource type="Texture2D" uid="uid://cc8bvh7m177nq" path="res://icon.svg" id="2_2edtx"]
 [ext_resource type="PackedScene" uid="uid://c583nwmheikpt" path="res://scenes/game/platform.tscn" id="3_8dldi"]
 
-[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_8dldi"]
-points = PackedVector2Array(-41.233334, -61.364014, -2.4333334, -21661.496, 2.3333335, -21661.83, 39.666668, -60.697014)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2k8v3"]
 size = Vector2(3840, 32)
 
@@ -16,12 +13,9 @@ size = Vector2(128, 128)
 [node name="L1Troposphere" type="Node2D" unique_id=1175749904]
 
 [node name="ReducedGravHitBox" type="Area2D" parent="." unique_id=1576108458]
-position = Vector2(0, 384)
-scale = Vector2(30, 5.997)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ReducedGravHitBox" unique_id=1185103901]
-position = Vector2(-0.16666667, 3.501751)
-shape = SubResource("ConvexPolygonShape2D_8dldi")
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ReducedGravHitBox" unique_id=574935003]
+polygon = PackedVector2Array(-960, 0, 960, 0, 0, -64800)
 
 [node name="PlayerCharacter" parent="." unique_id=741950354 instance=ExtResource("1_vbfw5")]
 position = Vector2(480, -96)
