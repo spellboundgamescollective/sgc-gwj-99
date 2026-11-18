@@ -3,8 +3,8 @@
 [ext_resource type="Script" uid="uid://c6ob6umtrpvhp" path="res://scenes/game/player_character.gd" id="1_hlpqy"]
 [ext_resource type="Texture2D" uid="uid://dl8vnmf22fatx" path="res://assets/pc_front.png" id="2_fx5lj"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_hlpqy"]
-size = Vector2(192, 192)
+[sub_resource type="CircleShape2D" id="CircleShape2D_hlpqy"]
+radius = 96.0
 
 [node name="PlayerCharacter" type="CharacterBody2D" unique_id=741950354]
 script = ExtResource("1_hlpqy")
@@ -14,7 +14,7 @@ position = Vector2(33, -391)
 texture = ExtResource("2_fx5lj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=303067640]
-shape = SubResource("RectangleShape2D_hlpqy")
+shape = SubResource("CircleShape2D_hlpqy")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=843805598]
 
