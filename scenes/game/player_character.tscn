@@ -17,33 +17,32 @@ texture = ExtResource("2_fx5lj")
 shape = SubResource("RectangleShape2D_hlpqy")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=843805598]
-visible = false
 
 [node name="ChargeLabel" type="Label" parent="CanvasLayer" unique_id=887867500]
-offset_left = -297.0
-offset_top = -249.0
-offset_right = 2.0
-offset_bottom = -188.0
+offset_left = 129.0
+offset_top = 313.0
+offset_right = 428.0
+offset_bottom = 374.0
 text = "Charged velocity is: "
 metadata/_edit_use_anchors_ = true
 
 [node name="PositionLabel" type="Label" parent="CanvasLayer" unique_id=848165183]
-offset_left = -378.0
-offset_top = -101.0
-offset_right = -298.0
-offset_bottom = -72.0
+offset_left = 139.0
+offset_top = 74.0
+offset_right = 219.0
+offset_bottom = 103.0
 text = "Position is"
 
 [node name="VelocityLabel" type="Label" parent="CanvasLayer" unique_id=694859175]
-offset_left = 166.0
-offset_top = -235.0
-offset_right = 248.0
-offset_bottom = -206.0
+offset_left = 137.0
+offset_top = 123.0
+offset_right = 219.0
+offset_bottom = 152.0
 text = "Velocity is:"
 
 [node name="GravityLabel" type="Label" parent="CanvasLayer" unique_id=598911968]
-offset_left = 241.0
-offset_top = -113.0
-offset_right = 318.0
-offset_bottom = -84.0
+offset_left = 138.0
+offset_top = 170.0
+offset_right = 215.0
+offset_bottom = 199.0
 text = "Gravity is "

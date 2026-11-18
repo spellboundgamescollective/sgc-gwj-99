@@ -54,7 +54,7 @@ func _physics_process(delta: float) -> void:
 			
 	var charge_label:Label = get_node("CanvasLayer/ChargeLabel")
 	charge_label.text = "Charged velocity is " + str(-charge_jump_velocity)
-
+	$CanvasLayer/ChargeLabel.text = "Charged velocity is " + str(-charge_jump_velocity)
 	$CanvasLayer/VelocityLabel.text = "Velocity is " + str(velocity)
 	$CanvasLayer/GravityLabel.text = "Gravity is " + str(get_gravity()*gravity_scale)
 	$CanvasLayer/PositionLabel.text = "Position is " + str(global_position)
