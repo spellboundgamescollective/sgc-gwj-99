@@ -10,7 +10,6 @@ const jump_velocity:float = 1200
 var center_coord:float = 1.0
 var rapture_flag:bool = false
 var lowgrav_flag:bool = false
-var monitoring:bool = true
 @export var gravity_toggle:bool = true
 @export var gravity_scale:float = 1.0
 
@@ -42,13 +41,15 @@ func _physics_process(delta: float) -> void:
 	$CanvasLayer/LowGravLabel.text = "Low-Grav: " + str(rapture_flag)
 
 ## Entering and exiting rapture beam flags.
-func _on_rapture_beam_area_entered(area: Area2D) -> void:
+func _on_rapture_beam_body_entered(body: Node2D) -> void:
 	rapture_flag = true
-func _on_rapture_beam_area_exited(area: Area2D) -> void:
+
+func _on_rapture_beam_body_exited(body: Node2D) -> void:
 	rapture_flag = false
 
 ## Entering and exiting low gravity beam flags.
-func _on_low_gravity_area_entered(area: Area2D) -> void:
+func _on_low_gravity_body_entered(body: Node2D) -> void:
 	lowgrav_flag = true
-func _on_low_gravity_area_exited(area: Area2D) -> void:
+
+func _on_low_gravity_body_exited(body: Node2D) -> void:
 	lowgrav_flag = false

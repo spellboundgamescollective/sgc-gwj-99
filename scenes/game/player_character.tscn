@@ -151,9 +151,7 @@ script = ExtResource("1_hlpqy")
 
 [node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=741967185]
 sprite_frames = SubResource("SpriteFrames_cput5")
-animation = &"sit"
-frame = 4
-frame_progress = 1.0
+frame_progress = 0.98352474
 offset = Vector2(0, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=303067640]
