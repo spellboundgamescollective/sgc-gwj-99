@@ -50,6 +50,9 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("up") and is_on_floor():
 		velocity.y = -jump_velocity
 	if not is_on_floor():
+		if(gravity_scale == 0):
+			velocity.y = -200
+		else:
 			velocity += 3 * get_gravity() * delta * gravity_scale
 			
 	var charge_label:Label = get_node("CanvasLayer/ChargeLabel")
@@ -74,3 +77,11 @@ func _on_reduced_grav_hit_box_body_entered(body: Node2D) -> void:
 
 func _on_reduced_grav_hit_box_body_exited(body: Node2D) -> void:
 	gravity_scale = 1.0
+
+
+func _on_beam_hit_box_body_entered(body: Node2D) -> void:
+	gravity_scale = 0 
+
+
+func _on_beam_hit_box_body_exited(body: Node2D) -> void:
+	gravity_scale = 0.8
