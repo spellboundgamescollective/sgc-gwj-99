@@ -1,0 +1,236 @@
+[gd_scene format=3 uid="uid://cv3x2c83s1cgv"]
+
+[ext_resource type="PackedScene" uid="uid://d1xpl3iw6ravd" path="res://scenes/game/player_character.tscn" id="1_4qf3n"]
+[ext_resource type="PackedScene" uid="uid://c583nwmheikpt" path="res://scenes/game/platform.tscn" id="2_npmk5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2rcey"]
+size = Vector2(128, 43840)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r0gow"]
+size = Vector2(128, 128)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_npmk5"]
+size = Vector2(128, 128)
+
+[node name="escape_a51" type="Node2D" unique_id=431927543]
+
+[node name="PlayerCharacter" parent="." unique_id=741950354 instance=ExtResource("1_4qf3n")]
+position = Vector2(-1312, -128)
+
+[node name="Camera2D" type="Camera2D" parent="PlayerCharacter" unique_id=1072366351]
+limit_left = -1920
+limit_right = 1920
+limit_bottom = 1920
+limit_smoothed = true
+position_smoothing_enabled = true
+position_smoothing_speed = 50.0
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+
+[node name="Tractor Beam" type="Node2D" parent="." unique_id=993555344]
+
+[node name="Rapture Beam" type="Area2D" parent="Tractor Beam" unique_id=1469728893]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tractor Beam/Rapture Beam" unique_id=783760309]
+position = Vector2(0, -21280)
+shape = SubResource("RectangleShape2D_2rcey")
+debug_color = Color(0, 0.6, 0.7019608, 0.41960785)
+
+[node name="Low Gravity" type="Area2D" parent="Tractor Beam" unique_id=625029070]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Tractor Beam/Low Gravity" unique_id=1876070226]
+polygon = PackedVector2Array(-960, 0, 960, 0, 0, -64800)
+
+[node name="World Border" type="StaticBody2D" parent="." unique_id=1861014912]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="World Border" unique_id=650088987]
+polygon = PackedVector2Array(-1920, 1920, 1920, 1920, 1920, -43200, 2048, -43200, 2048, 2048, -2048, 2048, -2048, -43200, -1920, -43200)
+
+[node name="Platforms" type="StaticBody2D" parent="." unique_id=1177342571]
+
+[node name="Crates" type="Node2D" parent="Platforms" unique_id=2035894894]
+
+[node name="Crate" parent="Platforms/Crates" unique_id=1838500979 instance=ExtResource("2_npmk5")]
+position = Vector2(-1728, 1856)
+collision_shape = SubResource("RectangleShape2D_r0gow")
+
+[node name="Crate3" parent="Platforms/Crates" unique_id=1708167464 instance=ExtResource("2_npmk5")]
+position = Vector2(-1856, 1728)
+collision_shape = SubResource("RectangleShape2D_r0gow")
+
+[node name="Crate4" parent="Platforms/Crates" unique_id=2144384790 instance=ExtResource("2_npmk5")]
+position = Vector2(-960, 1856)
+collision_shape = SubResource("RectangleShape2D_r0gow")
+
+[node name="Crate5" parent="Platforms/Crates" unique_id=230479318 instance=ExtResource("2_npmk5")]
+position = Vector2(-960, 1728)
+collision_shape = SubResource("RectangleShape2D_r0gow")
+
+[node name="Crate6" parent="Platforms/Crates" unique_id=1027827842 instance=ExtResource("2_npmk5")]
+position = Vector2(-512, 1728)
+collision_shape = SubResource("RectangleShape2D_r0gow")
+
+[node name="Crate7" parent="Platforms/Crates" unique_id=1826946282 instance=ExtResource("2_npmk5")]
+position = Vector2(-512, 1856)
+collision_shape = SubResource("RectangleShape2D_r0gow")
+
+[node name="Crate8" parent="Platforms/Crates" unique_id=1511833299 instance=ExtResource("2_npmk5")]
+position = Vector2(-512, 1600)
+collision_shape = SubResource("RectangleShape2D_r0gow")
+
+[node name="Crate19" parent="Platforms/Crates" unique_id=694279948 instance=ExtResource("2_npmk5")]
+position = Vector2(-960, 1280)
+collision_shape = SubResource("RectangleShape2D_r0gow")
+
+[node name="Crate37" parent="Platforms/Crates" unique_id=1833043392 instance=ExtResource("2_npmk5")]
+position = Vector2(-1088, 1280)
+collision_shape = SubResource("RectangleShape2D_r0gow")
+
+[node name="Crate38" parent="Platforms/Crates" unique_id=367274458 instance=ExtResource("2_npmk5")]
+position = Vector2(-1472, 1024)
+collision_shape = SubResource("RectangleShape2D_r0gow")
+
+[node name="Crate39" parent="Platforms/Crates" unique_id=1748612710 instance=ExtResource("2_npmk5")]
+position = Vector2(-1600, 1024)
+collision_shape = SubResource("RectangleShape2D_r0gow")
+
+[node name="Crate40" parent="Platforms/Crates" unique_id=1293303950 instance=ExtResource("2_npmk5")]
+position = Vector2(-960, 768)
+collision_shape = SubResource("RectangleShape2D_r0gow")
+
+[node name="Crate42" parent="Platforms/Crates" unique_id=1770935660 instance=ExtResource("2_npmk5")]
+position = Vector2(-448, 704)
+collision_shape = SubResource("RectangleShape2D_r0gow")
+
+[node name="Crate41" parent="Platforms/Crates" unique_id=594246899 instance=ExtResource("2_npmk5")]
+position = Vector2(-1088, 768)
+collision_shape = SubResource("RectangleShape2D_r0gow")
+
+[node name="Crate9" parent="Platforms/Crates" unique_id=1169197492 instance=ExtResource("2_npmk5")]
+position = Vector2(1856, 1856)
+collision_shape = SubResource("RectangleShape2D_r0gow")
+
+[node name="Crate10" parent="Platforms/Crates" unique_id=2116675746 instance=ExtResource("2_npmk5")]
+position = Vector2(1856, 1728)
+collision_shape = SubResource("RectangleShape2D_r0gow")
+
+[node name="Crate11" parent="Platforms/Crates" unique_id=491945560 instance=ExtResource("2_npmk5")]
+position = Vector2(1856, 1600)
+collision_shape = SubResource("RectangleShape2D_r0gow")
+
+[node name="Crate12" parent="Platforms/Crates" unique_id=2127002754 instance=ExtResource("2_npmk5")]
+position = Vector2(1728, 1600)
+collision_shape = SubResource("RectangleShape2D_r0gow")
+
+[node name="Crate13" parent="Platforms/Crates" unique_id=1251056262 instance=ExtResource("2_npmk5")]
+position = Vector2(1728, 1728)
+collision_shape = SubResource("RectangleShape2D_r0gow")
+
+[node name="Crate14" parent="Platforms/Crates" unique_id=1272178643 instance=ExtResource("2_npmk5")]
+position = Vector2(1728, 1856)
+collision_shape = SubResource("RectangleShape2D_r0gow")
+
+[node name="Crate15" parent="Platforms/Crates" unique_id=930058164 instance=ExtResource("2_npmk5")]
+position = Vector2(1600, 1856)
+collision_shape = SubResource("RectangleShape2D_r0gow")
+
+[node name="Crate16" parent="Platforms/Crates" unique_id=1237696846 instance=ExtResource("2_npmk5")]
+position = Vector2(1600, 1728)
+collision_shape = SubResource("RectangleShape2D_r0gow")
+
+[node name="Crate17" parent="Platforms/Crates" unique_id=1694046142 instance=ExtResource("2_npmk5")]
+position = Vector2(1600, 1600)
+collision_shape = SubResource("RectangleShape2D_r0gow")
+
+[node name="Crate20" parent="Platforms/Crates" unique_id=2069056690 instance=ExtResource("2_npmk5")]
+position = Vector2(1856, 1472)
+collision_shape = SubResource("RectangleShape2D_r0gow")
+
+[node name="Crate21" parent="Platforms/Crates" unique_id=1873816530 instance=ExtResource("2_npmk5")]
+position = Vector2(1856, 1344)
+collision_shape = SubResource("RectangleShape2D_r0gow")
+
+[node name="Crate22" parent="Platforms/Crates" unique_id=391167918 instance=ExtResource("2_npmk5")]
+position = Vector2(1728, 1344)
+collision_shape = SubResource("RectangleShape2D_r0gow")
+
+[node name="Crate24" parent="Platforms/Crates" unique_id=1587100663 instance=ExtResource("2_npmk5")]
+position = Vector2(1280, 1088)
+collision_shape = SubResource("RectangleShape2D_r0gow")
+
+[node name="Crate25" parent="Platforms/Crates" unique_id=494234226 instance=ExtResource("2_npmk5")]
+position = Vector2(1152, 1088)
+collision_shape = SubResource("RectangleShape2D_r0gow")
+
+[node name="Crate26" parent="Platforms/Crates" unique_id=1245960659 instance=ExtResource("2_npmk5")]
+position = Vector2(1024, 1088)
+collision_shape = SubResource("RectangleShape2D_r0gow")
+
+[node name="Crate28" parent="Platforms/Crates" unique_id=445818848 instance=ExtResource("2_npmk5")]
+position = Vector2(128, 704)
+collision_shape = SubResource("RectangleShape2D_r0gow")
+
+[node name="Crate29" parent="Platforms/Crates" unique_id=1638279830 instance=ExtResource("2_npmk5")]
+position = Vector2(0, 704)
+collision_shape = SubResource("RectangleShape2D_r0gow")
+
+[node name="Crate30" parent="Platforms/Crates" unique_id=517296104 instance=ExtResource("2_npmk5")]
+position = Vector2(-128, 704)
+collision_shape = SubResource("RectangleShape2D_r0gow")
+
+[node name="Crate31" parent="Platforms/Crates" unique_id=1334254591 instance=ExtResource("2_npmk5")]
+position = Vector2(576, 1216)
+collision_shape = SubResource("RectangleShape2D_r0gow")
+
+[node name="Crate32" parent="Platforms/Crates" unique_id=958027961 instance=ExtResource("2_npmk5")]
+position = Vector2(448, 1216)
+collision_shape = SubResource("RectangleShape2D_r0gow")
+
+[node name="Crate33" parent="Platforms/Crates" unique_id=417759743 instance=ExtResource("2_npmk5")]
+position = Vector2(320, 1216)
+collision_shape = SubResource("RectangleShape2D_r0gow")
+
+[node name="Crate34" parent="Platforms/Crates" unique_id=710647300 instance=ExtResource("2_npmk5")]
+position = Vector2(-128, 1216)
+collision_shape = SubResource("RectangleShape2D_r0gow")
+
+[node name="Crate35" parent="Platforms/Crates" unique_id=2139587037 instance=ExtResource("2_npmk5")]
+position = Vector2(-256, 1216)
+collision_shape = SubResource("RectangleShape2D_r0gow")
+
+[node name="Crate36" parent="Platforms/Crates" unique_id=1639095097 instance=ExtResource("2_npmk5")]
+position = Vector2(-384, 1216)
+collision_shape = SubResource("RectangleShape2D_r0gow")
+
+[node name="Crate23" parent="Platforms/Crates" unique_id=1569890964 instance=ExtResource("2_npmk5")]
+position = Vector2(1728, 1472)
+collision_shape = SubResource("RectangleShape2D_r0gow")
+
+[node name="Crate18" parent="Platforms/Crates" unique_id=2047971116 instance=ExtResource("2_npmk5")]
+position = Vector2(1152, 1856)
+collision_shape = SubResource("RectangleShape2D_r0gow")
+
+[node name="Crate27" parent="Platforms/Crates" unique_id=1282232309 instance=ExtResource("2_npmk5")]
+position = Vector2(1024, 1856)
+collision_shape = SubResource("RectangleShape2D_r0gow")
+
+[node name="Crate2" parent="Platforms/Crates" unique_id=641843697 instance=ExtResource("2_npmk5")]
+position = Vector2(-1856, 1856)
+collision_shape = SubResource("RectangleShape2D_r0gow")
+
+[node name="Ground" type="Node2D" parent="Platforms" unique_id=221809177]
+
+[node name="Platform27" parent="Platforms/Ground" unique_id=463616122 instance=ExtResource("2_npmk5")]
+position = Vector2(-1024, 64)
+scale = Vector2(14, 1)
+collision_shape = SubResource("RectangleShape2D_npmk5")
+
+[node name="Platform28" parent="Platforms/Ground" unique_id=721451040 instance=ExtResource("2_npmk5")]
+position = Vector2(1024, 64)
+scale = Vector2(14, 1)
+collision_shape = SubResource("RectangleShape2D_npmk5")
+
+[connection signal="area_entered" from="Tractor Beam/Rapture Beam" to="PlayerCharacter" method="_on_rapture_beam_area_entered"]
+[connection signal="area_exited" from="Tractor Beam/Rapture Beam" to="PlayerCharacter" method="_on_rapture_beam_area_exited"]
+[connection signal="area_entered" from="Tractor Beam/Low Gravity" to="PlayerCharacter" method="_on_low_gravity_area_entered"]
+[connection signal="area_exited" from="Tractor Beam/Low Gravity" to="PlayerCharacter" method="_on_low_gravity_area_exited"]
