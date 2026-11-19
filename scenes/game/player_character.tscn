@@ -1,17 +1,52 @@
 [gd_scene format=3 uid="uid://d1xpl3iw6ravd"]
 
 [ext_resource type="Script" uid="uid://c6ob6umtrpvhp" path="res://scenes/game/player_character.gd" id="1_hlpqy"]
+[ext_resource type="Texture2D" uid="uid://cp7ib1skwe040" path="res://assets/animations/walk/walk_10.png" id="2_fh8db"]
+[ext_resource type="Texture2D" uid="uid://c4fk43fmfm8ba" path="res://assets/animations/walk/walk_9.png" id="3_audfs"]
+[ext_resource type="Texture2D" uid="uid://bpx6ruu54rclp" path="res://assets/animations/walk/walk_8.png" id="4_x5s3u"]
+[ext_resource type="Texture2D" uid="uid://chqfu2esxxr8n" path="res://assets/animations/walk/walk_7.png" id="5_pnhaf"]
+[ext_resource type="Texture2D" uid="uid://cm8axrn3ounjh" path="res://assets/animations/walk/walk_6.png" id="6_74yne"]
+[ext_resource type="Texture2D" uid="uid://bfnvr10y40ygp" path="res://assets/animations/walk/walk_5.png" id="7_fn70c"]
+[ext_resource type="Texture2D" uid="uid://bdx6rnjnnpg36" path="res://assets/animations/walk/walk_4.png" id="8_j6epq"]
+[ext_resource type="Texture2D" uid="uid://cgypn2kewmx1" path="res://assets/animations/walk/walk_3.png" id="9_ggw8p"]
+[ext_resource type="Texture2D" uid="uid://dh8jmj1i43215" path="res://assets/animations/walk/walk_2.png" id="10_s3cge"]
+[ext_resource type="Texture2D" uid="uid://dt201km0x566t" path="res://assets/animations/walk/walk_1.png" id="11_sm4c6"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_cput5"]
 animations = [{
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_fh8db")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_audfs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_x5s3u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_pnhaf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_74yne")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_fn70c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_j6epq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ggw8p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_s3cge")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_sm4c6")
+}],
 "loop": 1,
 "name": &"default",
-"speed": 5.0
-}, {
-"frames": [],
-"loop": 1,
-"name": &"walk",
 "speed": 12.0
 }]
 
@@ -22,10 +57,9 @@ size = Vector2(192, 192)
 script = ExtResource("1_hlpqy")
 
 [node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=741967185]
-position = Vector2(33, -391)
+position = Vector2(28, -393)
 sprite_frames = SubResource("SpriteFrames_cput5")
-animation = &"walk"
-frame_progress = 0.605108
+frame_progress = 0.02038622
 offset = Vector2(0, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=303067640]
