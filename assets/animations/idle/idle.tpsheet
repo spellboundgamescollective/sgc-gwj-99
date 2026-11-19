@@ -1,0 +1,137 @@
+{
+	"textures": [
+		{
+			"image": "idle.png",
+			"size": {
+				"w": 2044,
+				"h": 1692
+			},
+			"sprites": [
+				{
+					"filename": "idle_1.png",
+					"region": {
+						"x": 0,
+						"y": 0,
+						"w": 681,
+						"h": 563
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "idle_2.png",
+					"region": {
+						"x": 681,
+						"y": 0,
+						"w": 681,
+						"h": 563
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "idle_3.png",
+					"region": {
+						"x": 1362,
+						"y": 0,
+						"w": 681,
+						"h": 563
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "idle_4.png",
+					"region": {
+						"x": 0,
+						"y": 563,
+						"w": 681,
+						"h": 563
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "idle_5.png",
+					"region": {
+						"x": 681,
+						"y": 563,
+						"w": 681,
+						"h": 563
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "idle_6.png",
+					"region": {
+						"x": 1362,
+						"y": 563,
+						"w": 681,
+						"h": 563
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "idle_7.png",
+					"region": {
+						"x": 0,
+						"y": 1126,
+						"w": 681,
+						"h": 563
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				}
+			]
+		}
+	],
+	"animations": [
+		{
+			"name": "idle",
+			"frames": [
+				"idle_1.png",
+				"idle_2.png",
+				"idle_3.png",
+				"idle_4.png",
+				"idle_5.png",
+				"idle_6.png",
+				"idle_7.png"
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "1.1",
+		"smartupdate": "$TexturePacker:SmartUpdate:c4368444b4c3dfe6ce73ea30be7b2a60:bca7f35386c1ea2b06f5d75ae5242f4c:b699c48b590b4685ff8c55f69c0652c5$"
+	}
+}

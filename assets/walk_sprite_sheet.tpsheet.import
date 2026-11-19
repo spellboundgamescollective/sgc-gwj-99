@@ -1,0 +1,16 @@
+[remap]
+
+importer="codeandweb.texturepacker_import_spritesheet"
+type="Resource"
+uid="uid://q5h0y0wadsjb"
+path="res://.godot/imported/walk_sprite_sheet.tpsheet-06da4946dc30db7c15229f2f5c6b089d.res"
+
+[deps]
+
+files=["res://assets/walk_sprite_sheet.sprites/walk_1.tres", "res://assets/walk_sprite_sheet.sprites/walk_2.tres", "res://assets/walk_sprite_sheet.sprites/walk_3.tres", "res://assets/walk_sprite_sheet.sprites/walk_4.tres", "res://assets/walk_sprite_sheet.sprites/walk_5.tres", "res://assets/walk_sprite_sheet.sprites/walk_6.tres", "res://assets/walk_sprite_sheet.sprites/walk_7.tres", "res://assets/walk_sprite_sheet.sprites/walk_8.tres", "res://assets/walk_sprite_sheet.sprites/walk_9.tres", "res://assets/walk_sprite_sheet.sprites/walk_10.tres", "res://assets/walk_sprite_sheet.animations.tres"]
+
+source_file="res://assets/walk_sprite_sheet.tpsheet"
+dest_files=["res://.godot/imported/walk_sprite_sheet.tpsheet-06da4946dc30db7c15229f2f5c6b089d.res", "res://assets/walk_sprite_sheet.sprites/walk_1.tres", "res://assets/walk_sprite_sheet.sprites/walk_2.tres", "res://assets/walk_sprite_sheet.sprites/walk_3.tres", "res://assets/walk_sprite_sheet.sprites/walk_4.tres", "res://assets/walk_sprite_sheet.sprites/walk_5.tres", "res://assets/walk_sprite_sheet.sprites/walk_6.tres", "res://assets/walk_sprite_sheet.sprites/walk_7.tres", "res://assets/walk_sprite_sheet.sprites/walk_8.tres", "res://assets/walk_sprite_sheet.sprites/walk_9.tres", "res://assets/walk_sprite_sheet.sprites/walk_10.tres", "res://assets/walk_sprite_sheet.animations.tres"]
+
+[params]
+

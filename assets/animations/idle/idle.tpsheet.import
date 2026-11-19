@@ -1,0 +1,16 @@
+[remap]
+
+importer="codeandweb.texturepacker_import_spritesheet"
+type="Resource"
+uid="uid://cyom36unvtkbc"
+path="res://.godot/imported/idle.tpsheet-cb74615b5ee5f39dfd39c85c3fc56f64.res"
+
+[deps]
+
+files=["res://assets/animations/idle/idle.sprites/idle_1.tres", "res://assets/animations/idle/idle.sprites/idle_2.tres", "res://assets/animations/idle/idle.sprites/idle_3.tres", "res://assets/animations/idle/idle.sprites/idle_4.tres", "res://assets/animations/idle/idle.sprites/idle_5.tres", "res://assets/animations/idle/idle.sprites/idle_6.tres", "res://assets/animations/idle/idle.sprites/idle_7.tres", "res://assets/animations/idle/idle.animations.tres"]
+
+source_file="res://assets/animations/idle/idle.tpsheet"
+dest_files=["res://.godot/imported/idle.tpsheet-cb74615b5ee5f39dfd39c85c3fc56f64.res", "res://assets/animations/idle/idle.sprites/idle_1.tres", "res://assets/animations/idle/idle.sprites/idle_2.tres", "res://assets/animations/idle/idle.sprites/idle_3.tres", "res://assets/animations/idle/idle.sprites/idle_4.tres", "res://assets/animations/idle/idle.sprites/idle_5.tres", "res://assets/animations/idle/idle.sprites/idle_6.tres", "res://assets/animations/idle/idle.sprites/idle_7.tres", "res://assets/animations/idle/idle.animations.tres"]
+
+[params]
+

@@ -1,7 +1,6 @@
 ## Scripting for player physics, controls and event triggers.
 extends CharacterBody2D
 
-
 ## Constants.
 const player_speed:float = 600.0
 const jump_velocity:float = 1200
@@ -10,9 +9,9 @@ const jump_velocity:float = 1200
 var center_coord:float = 1.0
 var rapture_flag:bool = false
 var lowgrav_flag:bool = false
-@export var gravity_toggle:bool = true
+@export var gravity_toggle:bool = true 
 @export var gravity_scale:float = 1.0
-
+ 
 ## Player controls & physics.
 func _physics_process(delta: float) -> void:
 	if lowgrav_flag:

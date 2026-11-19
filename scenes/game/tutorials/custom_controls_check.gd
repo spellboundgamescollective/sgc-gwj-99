@@ -11,12 +11,12 @@ extends Control
 @export var default_action_container : Control
 
 func _has_custom_actions() -> bool:
-	for custom_action in custom_actions:
+	for custom_action:StringName in custom_actions:
 		if not InputMap.has_action(custom_action):
 			return false
 	return true
 
-func _ready():
+func _ready() -> void:
 	if _has_custom_actions():
 		visible = true
 		default_action_container.visible = false

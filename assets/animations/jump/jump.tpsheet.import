@@ -1,0 +1,16 @@
+[remap]
+
+importer="codeandweb.texturepacker_import_spritesheet"
+type="Resource"
+uid="uid://dsmuqciy8sr01"
+path="res://.godot/imported/jump.tpsheet-fa094546606d62261b3627cfb4c8619a.res"
+
+[deps]
+
+files=["res://assets/animations/jump/jump.sprites/jump-3.tres", "res://assets/animations/jump/jump.sprites/jump_1.tres", "res://assets/animations/jump/jump.sprites/jump_2.tres", "res://assets/animations/jump/jump.sprites/jump_4.tres", "res://assets/animations/jump/jump.sprites/jump_5.tres", "res://assets/animations/jump/jump.sprites/jump_6.tres", "res://assets/animations/jump/jump.sprites/jump_7.tres", "res://assets/animations/jump/jump.sprites/jump_8.tres", "res://assets/animations/jump/jump.sprites/jump_9.tres", "res://assets/animations/jump/jump.sprites/jump_10.tres", "res://assets/animations/jump/jump.sprites/jump_11.tres", "res://assets/animations/jump/jump.sprites/jump_12.tres", "res://assets/animations/jump/jump.sprites/jump_13.tres", "res://assets/animations/jump/jump.sprites/jump_14.tres", "res://assets/animations/jump/jump.sprites/jump_15.tres", "res://assets/animations/jump/jump.sprites/jump_16.tres", "res://assets/animations/jump/jump.sprites/jump_17.tres", "res://assets/animations/jump/jump.sprites/jump_18.tres", "res://assets/animations/jump/jump.animations.tres"]
+
+source_file="res://assets/animations/jump/jump.tpsheet"
+dest_files=["res://.godot/imported/jump.tpsheet-fa094546606d62261b3627cfb4c8619a.res", "res://assets/animations/jump/jump.sprites/jump-3.tres", "res://assets/animations/jump/jump.sprites/jump_1.tres", "res://assets/animations/jump/jump.sprites/jump_2.tres", "res://assets/animations/jump/jump.sprites/jump_4.tres", "res://assets/animations/jump/jump.sprites/jump_5.tres", "res://assets/animations/jump/jump.sprites/jump_6.tres", "res://assets/animations/jump/jump.sprites/jump_7.tres", "res://assets/animations/jump/jump.sprites/jump_8.tres", "res://assets/animations/jump/jump.sprites/jump_9.tres", "res://assets/animations/jump/jump.sprites/jump_10.tres", "res://assets/animations/jump/jump.sprites/jump_11.tres", "res://assets/animations/jump/jump.sprites/jump_12.tres", "res://assets/animations/jump/jump.sprites/jump_13.tres", "res://assets/animations/jump/jump.sprites/jump_14.tres", "res://assets/animations/jump/jump.sprites/jump_15.tres", "res://assets/animations/jump/jump.sprites/jump_16.tres", "res://assets/animations/jump/jump.sprites/jump_17.tres", "res://assets/animations/jump/jump.sprites/jump_18.tres", "res://assets/animations/jump/jump.animations.tres"]
+
+[params]
+

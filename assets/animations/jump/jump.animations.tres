@@ -1,0 +1,51 @@
+[gd_resource type="AnimationLibrary" format=3 uid="uid://hllvxwikn6uo"]
+
+[ext_resource type="Texture2D" uid="uid://856mpdht8pwn" path="res://assets/animations/jump/jump.png" id="1_gl55l"]
+
+[sub_resource type="Animation" id="Animation_iuupw"]
+length = 1.8
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture:atlas")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("1_gl55l"), ExtResource("1_gl55l")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:texture:region")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Rect2(375, 0, 375, 356), Rect2(750, 0, 375, 356), Rect2(0, 0, 375, 356), Rect2(1125, 0, 375, 356), Rect2(0, 356, 375, 356), Rect2(375, 356, 375, 356), Rect2(750, 356, 375, 356), Rect2(1125, 356, 375, 356), Rect2(0, 712, 375, 356), Rect2(375, 712, 375, 356), Rect2(750, 712, 375, 356), Rect2(1125, 712, 375, 356), Rect2(0, 1068, 375, 356), Rect2(375, 1068, 375, 356), Rect2(750, 1068, 375, 356), Rect2(1125, 1068, 375, 356), Rect2(0, 1424, 375, 356), Rect2(375, 1424, 375, 356)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:texture:margin")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Rect2(0, 0, 0, 0), Rect2(0, 0, 0, 0)]
+}
+metadata/texturepacker_frame_count = 18
+metadata/texturepacker_frames = PackedStringArray("jump_1.png", "jump_2.png", "jump-3.png", "jump_4.png", "jump_5.png", "jump_6.png", "jump_7.png", "jump_8.png", "jump_9.png", "jump_10.png", "jump_11.png", "jump_12.png", "jump_13.png", "jump_14.png", "jump_15.png", "jump_16.png", "jump_17.png", "jump_18.png")
+
+[resource]
+_data = {
+&"jump": SubResource("Animation_iuupw")
+}
