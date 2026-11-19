@@ -33,23 +33,27 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 	## Debug labels.
-	var charge_label:Label = get_node("CanvasLayer/ChargeLabel")
+	var charge_label:Label = get_node("CanvasLayer/Chargelabel")
 	$CanvasLayer/VelocityLabel.text = "Velocity is " + str(velocity)
 	$CanvasLayer/GravityLabel.text = "Gravity is " + str(get_gravity()*gravity_scale)
 	$CanvasLayer/PositionLabel.text = "Position is " + str(global_position)
 	$CanvasLayer/RaptureLabel.text = "Rapture: " + str(rapture_flag)
-	$CanvasLayer/LowGravLabel.text = "Low-Grav: " + str(rapture_flag)
+	$CanvasLayer/LowGravLabel.text = "Low-Grav: " + str(lowgrav_flag)
 
 ## Entering and exiting rapture beam flags.
 func _on_rapture_beam_body_entered(body: Node2D) -> void:
-	rapture_flag = true
+	if body == self:
+		rapture_flag = true
 
 func _on_rapture_beam_body_exited(body: Node2D) -> void:
-	rapture_flag = false
+	if body == self:
+		rapture_flag = false
 
 ## Entering and exiting low gravity beam flags.
 func _on_low_gravity_body_entered(body: Node2D) -> void:
-	lowgrav_flag = true
+	if body == self:
+		lowgrav_flag = true
 
 func _on_low_gravity_body_exited(body: Node2D) -> void:
-	lowgrav_flag = false
+	if body == self:
+		lowgrav_flag = false
