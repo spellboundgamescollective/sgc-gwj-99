@@ -69,7 +69,7 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 func _on_reduced_grav_hit_box_body_entered(body: Node2D) -> void:
-	gravity_scale = 0.3
+	gravity_scale = 0.8
 
 
 func _on_reduced_grav_hit_box_body_exited(body: Node2D) -> void:
