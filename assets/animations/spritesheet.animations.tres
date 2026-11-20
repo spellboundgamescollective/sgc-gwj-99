@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://yicngda7gx7m" path="res://assets/animations/spritesheet.png" id="1_53hfx"]
 
-[sub_resource type="Animation" id="Animation_68t53"]
+[sub_resource type="Animation" id="Animation_53hfx"]
 length = 0.7000000000000001
 loop_mode = 1
 step = 0.1
@@ -45,7 +45,7 @@ tracks/2/keys = {
 metadata/texturepacker_frame_count = 7
 metadata/texturepacker_frames = PackedStringArray("idle_1.png", "idle_2.png", "idle_3.png", "idle_4.png", "idle_5.png", "idle_6.png", "idle_7.png")
 
-[sub_resource type="Animation" id="Animation_626t1"]
+[sub_resource type="Animation" id="Animation_68t53"]
 length = 1.8
 loop_mode = 1
 step = 0.1
@@ -88,7 +88,7 @@ tracks/2/keys = {
 metadata/texturepacker_frame_count = 18
 metadata/texturepacker_frames = PackedStringArray("jump_1.png", "jump_2.png", "jump-3.png", "jump_4.png", "jump_5.png", "jump_6.png", "jump_7.png", "jump_8.png", "jump_9.png", "jump_10.png", "jump_11.png", "jump_12.png", "jump_13.png", "jump_14.png", "jump_15.png", "jump_16.png", "jump_17.png", "jump_18.png")
 
-[sub_resource type="Animation" id="Animation_in5n1"]
+[sub_resource type="Animation" id="Animation_626t1"]
 length = 0.5
 loop_mode = 1
 step = 0.1
@@ -131,7 +131,7 @@ tracks/2/keys = {
 metadata/texturepacker_frame_count = 5
 metadata/texturepacker_frames = PackedStringArray("sit_1.png", "sit_2.png", "sit_3.png", "sit_4.png", "sit_5.png")
 
-[sub_resource type="Animation" id="Animation_3cvnb"]
+[sub_resource type="Animation" id="Animation_in5n1"]
 loop_mode = 1
 step = 0.1
 tracks/0/type = "value"
@@ -175,8 +175,8 @@ metadata/texturepacker_frames = PackedStringArray("walk_1.png", "walk_2.png", "w
 
 [resource]
 _data = {
-&"idle": SubResource("Animation_68t53"),
-&"jump": SubResource("Animation_626t1"),
-&"sit": SubResource("Animation_in5n1"),
-&"walk": SubResource("Animation_3cvnb")
+&"idle": SubResource("Animation_53hfx"),
+&"jump": SubResource("Animation_68t53"),
+&"sit": SubResource("Animation_626t1"),
+&"walk": SubResource("Animation_in5n1")
 }
