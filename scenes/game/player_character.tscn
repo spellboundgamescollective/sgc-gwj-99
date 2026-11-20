@@ -34,8 +34,9 @@
 [ext_resource type="Texture2D" uid="uid://c43i8hcjt0kjw" path="res://assets/animations/freefall/freefall_13.png" id="19_b0uox"]
 [ext_resource type="Texture2D" uid="uid://cxoxjvmnsfcq8" path="res://assets/animations/sit/sit_5_scaled.png" id="19_uwons"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_hlpqy"]
-radius = 96.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_j03xg"]
+radius = 46.39
+height = 165.55
 
 [sub_resource type="Animation" id="Animation_hlpqy"]
 length = 0.001
@@ -727,7 +728,8 @@ animations = [{
 script = ExtResource("1_hlpqy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=303067640]
-shape = SubResource("CircleShape2D_hlpqy")
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_j03xg")
 
 [node name="IdleSprite" type="Sprite2D" parent="." unique_id=1292234609]
 visible = false
