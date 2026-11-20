@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dscrn41ua7tuo" path="res://assets/walk_sprite_sheet.png" id="1_cv585"]
 
-[sub_resource type="Animation" id="Animation_r5mm2"]
+[sub_resource type="Animation" id="Animation_cv585"]
 loop_mode = 1
 step = 0.1
 tracks/0/type = "value"
@@ -46,5 +46,5 @@ metadata/texturepacker_frames = PackedStringArray("walk_1.png", "walk_2.png", "w
 
 [resource]
 _data = {
-&"walk": SubResource("Animation_r5mm2")
+&"walk": SubResource("Animation_cv585")
 }

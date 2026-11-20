@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bph626aumx5k2" path="res://assets/animations/sit/sit.png" id="1_jdhw5"]
 
-[sub_resource type="Animation" id="Animation_npxr0"]
+[sub_resource type="Animation" id="Animation_jdhw5"]
 length = 0.5
 loop_mode = 1
 step = 0.1
@@ -47,5 +47,5 @@ metadata/texturepacker_frames = PackedStringArray("sit_1.png", "sit_2.png", "sit
 
 [resource]
 _data = {
-&"sit": SubResource("Animation_npxr0")
+&"sit": SubResource("Animation_jdhw5")
 }

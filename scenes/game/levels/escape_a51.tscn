@@ -1,26 +1,39 @@
 [gd_scene format=3 uid="uid://d0jamtpyfmjrh"]
 
 [ext_resource type="PackedScene" uid="uid://d1xpl3iw6ravd" path="res://scenes/game/player_character.tscn" id="1_s0o00"]
-[ext_resource type="PackedScene" uid="uid://c583nwmheikpt" path="res://scenes/game/platform.tscn" id="2_iicf8"]
+[ext_resource type="Texture2D" uid="uid://b2fbr5cfi44rj" path="res://assets/barrel_1.png" id="2_dc5ky"]
+[ext_resource type="Texture2D" uid="uid://diifq5qlm6po6" path="res://assets/barrel_2.png" id="3_lma7c"]
+[ext_resource type="Texture2D" uid="uid://105oenm62fqs" path="res://assets/box_1.png" id="4_cowcv"]
+[ext_resource type="Texture2D" uid="uid://cmt8p8ilm1tcw" path="res://assets/cow_1.png" id="5_gf5qf"]
+[ext_resource type="Texture2D" uid="uid://cv83airhhfeaq" path="res://assets/cow_2.png" id="6_rga4r"]
+[ext_resource type="Texture2D" uid="uid://dfhls56m6s1bw" path="res://assets/cow_3.png" id="7_dftnh"]
+[ext_resource type="Texture2D" uid="uid://x0wjmednqn1y" path="res://assets/cloud_1.png" id="8_0otxn"]
+[ext_resource type="Texture2D" uid="uid://ciuufsi7c35il" path="res://assets/cloud_2.png" id="9_u7j7n"]
+[ext_resource type="Texture2D" uid="uid://dhkbgy3vinqpr" path="res://assets/cloud_3.png" id="10_050d4"]
+[ext_resource type="Texture2D" uid="uid://dsxdmqx8tf7he" path="res://assets/cloud_4.png" id="11_2wr3m"]
+[ext_resource type="Texture2D" uid="uid://xof0is5w5bpr" path="res://assets/background_1.png" id="12_grgo0"]
+[ext_resource type="Texture2D" uid="uid://bkr7dm7oaasqv" path="res://assets/background_2.png" id="13_70v75"]
+[ext_resource type="Texture2D" uid="uid://cegywnhru1idl" path="res://assets/background_3.png" id="14_bjuhe"]
+[ext_resource type="Texture2D" uid="uid://c3y0ehor2v05m" path="res://assets/background_4.png" id="15_x4sre"]
+[ext_resource type="Texture2D" uid="uid://dkh2q7ry1k6m" path="res://assets/background_5.png" id="16_cn67y"]
+[ext_resource type="Texture2D" uid="uid://e7goq8h4avjb" path="res://assets/background_6.png" id="17_b2en3"]
+[ext_resource type="Texture2D" uid="uid://b4ii2mdweedbr" path="res://assets/background_7.png" id="18_nurek"]
+[ext_resource type="Texture2D" uid="uid://bimddeatavsms" path="res://assets/background_8.png" id="19_7xm4w"]
+[ext_resource type="Texture2D" uid="uid://cwywidfo7oveh" path="res://assets/background_9.png" id="20_r3ee5"]
+[ext_resource type="Texture2D" uid="uid://c6dbh7rwb12w1" path="res://assets/background_10.png" id="21_6epbu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2rcey"]
-size = Vector2(128, 43840)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_r0gow"]
-size = Vector2(128, 128)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_npmk5"]
-size = Vector2(128, 128)
+size = Vector2(128, 43200)
 
 [node name="escape_a51" type="Node2D" unique_id=431927543]
 
 [node name="PlayerCharacter" parent="." unique_id=741950354 instance=ExtResource("1_s0o00")]
-position = Vector2(-1312, -128)
+position = Vector2(-1632, -96)
 
 [node name="Camera2D" type="Camera2D" parent="PlayerCharacter" unique_id=1072366351]
 limit_left = -1920
 limit_right = 1920
-limit_bottom = 1920
+limit_bottom = 0
 limit_smoothed = true
 position_smoothing_enabled = true
 position_smoothing_speed = 50.0
@@ -32,7 +45,7 @@ drag_vertical_enabled = true
 [node name="Rapture Beam" type="Area2D" parent="Tractor Beam" unique_id=1469728893]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tractor Beam/Rapture Beam" unique_id=783760309]
-position = Vector2(0, -21280)
+position = Vector2(0, -21600)
 shape = SubResource("RectangleShape2D_2rcey")
 debug_color = Color(0, 0.6, 0.7019608, 0.41960785)
 
@@ -44,191 +57,92 @@ polygon = PackedVector2Array(-960, 0, 960, 0, 0, -64800)
 [node name="World Border" type="StaticBody2D" parent="." unique_id=1861014912]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="World Border" unique_id=650088987]
+position = Vector2(0, -1920)
 polygon = PackedVector2Array(-1920, 1920, 1920, 1920, 1920, -43200, 2048, -43200, 2048, 2048, -2048, 2048, -2048, -43200, -1920, -43200)
 
-[node name="Platforms" type="Node2D" parent="." unique_id=1361558290]
+[node name="Sprites" type="Node2D" parent="." unique_id=1361558290]
 
-[node name="Crates" type="Node2D" parent="Platforms" unique_id=2035894894]
+[node name="Barrel1" type="Sprite2D" parent="Sprites" unique_id=1932106889]
+position = Vector2(-4872, -296)
+texture = ExtResource("2_dc5ky")
 
-[node name="Crate" parent="Platforms/Crates" unique_id=1838500979 instance=ExtResource("2_iicf8")]
-position = Vector2(-1728, 1856)
-collision_shape = SubResource("RectangleShape2D_r0gow")
+[node name="Barrel2" type="Sprite2D" parent="Sprites" unique_id=1620481514]
+position = Vector2(-4544, -296)
+texture = ExtResource("3_lma7c")
 
-[node name="Crate3" parent="Platforms/Crates" unique_id=1708167464 instance=ExtResource("2_iicf8")]
-position = Vector2(-1856, 1728)
-collision_shape = SubResource("RectangleShape2D_r0gow")
+[node name="Box1" type="Sprite2D" parent="Sprites" unique_id=1988344588]
+position = Vector2(-4208, -320)
+texture = ExtResource("4_cowcv")
 
-[node name="Crate4" parent="Platforms/Crates" unique_id=2144384790 instance=ExtResource("2_iicf8")]
-position = Vector2(-960, 1856)
-collision_shape = SubResource("RectangleShape2D_r0gow")
+[node name="Cow1" type="Sprite2D" parent="Sprites" unique_id=1834354583]
+position = Vector2(-3648, -304)
+texture = ExtResource("5_gf5qf")
 
-[node name="Crate5" parent="Platforms/Crates" unique_id=230479318 instance=ExtResource("2_iicf8")]
-position = Vector2(-960, 1728)
-collision_shape = SubResource("RectangleShape2D_r0gow")
+[node name="Cow2" type="Sprite2D" parent="Sprites" unique_id=148309983]
+position = Vector2(-3088, -288)
+texture = ExtResource("6_rga4r")
 
-[node name="Crate6" parent="Platforms/Crates" unique_id=1027827842 instance=ExtResource("2_iicf8")]
-position = Vector2(-512, 1728)
-collision_shape = SubResource("RectangleShape2D_r0gow")
+[node name="Cow3" type="Sprite2D" parent="Sprites" unique_id=803373154]
+position = Vector2(-2536, -288)
+texture = ExtResource("7_dftnh")
 
-[node name="Crate7" parent="Platforms/Crates" unique_id=1826946282 instance=ExtResource("2_iicf8")]
-position = Vector2(-512, 1856)
-collision_shape = SubResource("RectangleShape2D_r0gow")
+[node name="Cloud1" type="Sprite2D" parent="Sprites" unique_id=246501705]
+position = Vector2(-7312, 848)
+texture = ExtResource("8_0otxn")
 
-[node name="Crate8" parent="Platforms/Crates" unique_id=1511833299 instance=ExtResource("2_iicf8")]
-position = Vector2(-512, 1600)
-collision_shape = SubResource("RectangleShape2D_r0gow")
+[node name="Cloud2" type="Sprite2D" parent="Sprites" unique_id=1914250765]
+position = Vector2(-4848, 936)
+texture = ExtResource("9_u7j7n")
 
-[node name="Crate19" parent="Platforms/Crates" unique_id=694279948 instance=ExtResource("2_iicf8")]
-position = Vector2(-960, 1280)
-collision_shape = SubResource("RectangleShape2D_r0gow")
+[node name="Cloud3" type="Sprite2D" parent="Sprites" unique_id=538743273]
+position = Vector2(-2624, 992)
+texture = ExtResource("10_050d4")
 
-[node name="Crate37" parent="Platforms/Crates" unique_id=1833043392 instance=ExtResource("2_iicf8")]
-position = Vector2(-1088, 1280)
-collision_shape = SubResource("RectangleShape2D_r0gow")
+[node name="Cloud4" type="Sprite2D" parent="Sprites" unique_id=524098851]
+position = Vector2(-344, 1016)
+texture = ExtResource("11_2wr3m")
 
-[node name="Crate38" parent="Platforms/Crates" unique_id=367274458 instance=ExtResource("2_iicf8")]
-position = Vector2(-1472, 1024)
-collision_shape = SubResource("RectangleShape2D_r0gow")
+[node name="Background Canvases" type="Node2D" parent="." unique_id=853294762]
 
-[node name="Crate39" parent="Platforms/Crates" unique_id=1748612710 instance=ExtResource("2_iicf8")]
-position = Vector2(-1600, 1024)
-collision_shape = SubResource("RectangleShape2D_r0gow")
+[node name="Background1" type="Sprite2D" parent="Background Canvases" unique_id=1675565332]
+position = Vector2(-9016, -776)
+texture = ExtResource("12_grgo0")
 
-[node name="Crate40" parent="Platforms/Crates" unique_id=1293303950 instance=ExtResource("2_iicf8")]
-position = Vector2(-960, 768)
-collision_shape = SubResource("RectangleShape2D_r0gow")
+[node name="Background2" type="Sprite2D" parent="Background Canvases" unique_id=396581122]
+position = Vector2(-8992, -1992)
+texture = ExtResource("13_70v75")
 
-[node name="Crate42" parent="Platforms/Crates" unique_id=1770935660 instance=ExtResource("2_iicf8")]
-position = Vector2(-448, 704)
-collision_shape = SubResource("RectangleShape2D_r0gow")
+[node name="Background3" type="Sprite2D" parent="Background Canvases" unique_id=1211619862]
+position = Vector2(-9016, -3272)
+texture = ExtResource("14_bjuhe")
 
-[node name="Crate41" parent="Platforms/Crates" unique_id=594246899 instance=ExtResource("2_iicf8")]
-position = Vector2(-1088, 768)
-collision_shape = SubResource("RectangleShape2D_r0gow")
+[node name="Background4" type="Sprite2D" parent="Background Canvases" unique_id=878593311]
+position = Vector2(-9040, -4680)
+texture = ExtResource("15_x4sre")
 
-[node name="Crate9" parent="Platforms/Crates" unique_id=1169197492 instance=ExtResource("2_iicf8")]
-position = Vector2(1856, 1856)
-collision_shape = SubResource("RectangleShape2D_r0gow")
+[node name="Background5" type="Sprite2D" parent="Background Canvases" unique_id=1567074289]
+position = Vector2(-9112, -5952)
+texture = ExtResource("16_cn67y")
 
-[node name="Crate10" parent="Platforms/Crates" unique_id=2116675746 instance=ExtResource("2_iicf8")]
-position = Vector2(1856, 1728)
-collision_shape = SubResource("RectangleShape2D_r0gow")
+[node name="Background6" type="Sprite2D" parent="Background Canvases" unique_id=1382755964]
+position = Vector2(-9080, -7264)
+texture = ExtResource("17_b2en3")
 
-[node name="Crate11" parent="Platforms/Crates" unique_id=491945560 instance=ExtResource("2_iicf8")]
-position = Vector2(1856, 1600)
-collision_shape = SubResource("RectangleShape2D_r0gow")
+[node name="Background7" type="Sprite2D" parent="Background Canvases" unique_id=1148823850]
+position = Vector2(-9080, -8592)
+texture = ExtResource("18_nurek")
 
-[node name="Crate12" parent="Platforms/Crates" unique_id=2127002754 instance=ExtResource("2_iicf8")]
-position = Vector2(1728, 1600)
-collision_shape = SubResource("RectangleShape2D_r0gow")
+[node name="Background8" type="Sprite2D" parent="Background Canvases" unique_id=136962093]
+position = Vector2(-9080, -9960)
+texture = ExtResource("19_7xm4w")
 
-[node name="Crate13" parent="Platforms/Crates" unique_id=1251056262 instance=ExtResource("2_iicf8")]
-position = Vector2(1728, 1728)
-collision_shape = SubResource("RectangleShape2D_r0gow")
+[node name="Background9" type="Sprite2D" parent="Background Canvases" unique_id=2090079183]
+position = Vector2(-9072, -11184)
+texture = ExtResource("20_r3ee5")
 
-[node name="Crate14" parent="Platforms/Crates" unique_id=1272178643 instance=ExtResource("2_iicf8")]
-position = Vector2(1728, 1856)
-collision_shape = SubResource("RectangleShape2D_r0gow")
-
-[node name="Crate15" parent="Platforms/Crates" unique_id=930058164 instance=ExtResource("2_iicf8")]
-position = Vector2(1600, 1856)
-collision_shape = SubResource("RectangleShape2D_r0gow")
-
-[node name="Crate16" parent="Platforms/Crates" unique_id=1237696846 instance=ExtResource("2_iicf8")]
-position = Vector2(1600, 1728)
-collision_shape = SubResource("RectangleShape2D_r0gow")
-
-[node name="Crate17" parent="Platforms/Crates" unique_id=1694046142 instance=ExtResource("2_iicf8")]
-position = Vector2(1600, 1600)
-collision_shape = SubResource("RectangleShape2D_r0gow")
-
-[node name="Crate20" parent="Platforms/Crates" unique_id=2069056690 instance=ExtResource("2_iicf8")]
-position = Vector2(1856, 1472)
-collision_shape = SubResource("RectangleShape2D_r0gow")
-
-[node name="Crate21" parent="Platforms/Crates" unique_id=1873816530 instance=ExtResource("2_iicf8")]
-position = Vector2(1856, 1344)
-collision_shape = SubResource("RectangleShape2D_r0gow")
-
-[node name="Crate22" parent="Platforms/Crates" unique_id=391167918 instance=ExtResource("2_iicf8")]
-position = Vector2(1728, 1344)
-collision_shape = SubResource("RectangleShape2D_r0gow")
-
-[node name="Crate24" parent="Platforms/Crates" unique_id=1587100663 instance=ExtResource("2_iicf8")]
-position = Vector2(1280, 1088)
-collision_shape = SubResource("RectangleShape2D_r0gow")
-
-[node name="Crate25" parent="Platforms/Crates" unique_id=494234226 instance=ExtResource("2_iicf8")]
-position = Vector2(1152, 1088)
-collision_shape = SubResource("RectangleShape2D_r0gow")
-
-[node name="Crate26" parent="Platforms/Crates" unique_id=1245960659 instance=ExtResource("2_iicf8")]
-position = Vector2(1024, 1088)
-collision_shape = SubResource("RectangleShape2D_r0gow")
-
-[node name="Crate28" parent="Platforms/Crates" unique_id=445818848 instance=ExtResource("2_iicf8")]
-position = Vector2(128, 704)
-collision_shape = SubResource("RectangleShape2D_r0gow")
-
-[node name="Crate29" parent="Platforms/Crates" unique_id=1638279830 instance=ExtResource("2_iicf8")]
-position = Vector2(0, 704)
-collision_shape = SubResource("RectangleShape2D_r0gow")
-
-[node name="Crate30" parent="Platforms/Crates" unique_id=517296104 instance=ExtResource("2_iicf8")]
-position = Vector2(-128, 704)
-collision_shape = SubResource("RectangleShape2D_r0gow")
-
-[node name="Crate31" parent="Platforms/Crates" unique_id=1334254591 instance=ExtResource("2_iicf8")]
-position = Vector2(576, 1216)
-collision_shape = SubResource("RectangleShape2D_r0gow")
-
-[node name="Crate32" parent="Platforms/Crates" unique_id=958027961 instance=ExtResource("2_iicf8")]
-position = Vector2(448, 1216)
-collision_shape = SubResource("RectangleShape2D_r0gow")
-
-[node name="Crate33" parent="Platforms/Crates" unique_id=417759743 instance=ExtResource("2_iicf8")]
-position = Vector2(320, 1216)
-collision_shape = SubResource("RectangleShape2D_r0gow")
-
-[node name="Crate34" parent="Platforms/Crates" unique_id=710647300 instance=ExtResource("2_iicf8")]
-position = Vector2(-128, 1216)
-collision_shape = SubResource("RectangleShape2D_r0gow")
-
-[node name="Crate35" parent="Platforms/Crates" unique_id=2139587037 instance=ExtResource("2_iicf8")]
-position = Vector2(-256, 1216)
-collision_shape = SubResource("RectangleShape2D_r0gow")
-
-[node name="Crate36" parent="Platforms/Crates" unique_id=1639095097 instance=ExtResource("2_iicf8")]
-position = Vector2(-384, 1216)
-collision_shape = SubResource("RectangleShape2D_r0gow")
-
-[node name="Crate23" parent="Platforms/Crates" unique_id=1569890964 instance=ExtResource("2_iicf8")]
-position = Vector2(1728, 1472)
-collision_shape = SubResource("RectangleShape2D_r0gow")
-
-[node name="Crate18" parent="Platforms/Crates" unique_id=2047971116 instance=ExtResource("2_iicf8")]
-position = Vector2(1152, 1856)
-collision_shape = SubResource("RectangleShape2D_r0gow")
-
-[node name="Crate27" parent="Platforms/Crates" unique_id=1282232309 instance=ExtResource("2_iicf8")]
-position = Vector2(1024, 1856)
-collision_shape = SubResource("RectangleShape2D_r0gow")
-
-[node name="Crate2" parent="Platforms/Crates" unique_id=641843697 instance=ExtResource("2_iicf8")]
-position = Vector2(-1856, 1856)
-collision_shape = SubResource("RectangleShape2D_r0gow")
-
-[node name="Ground" type="Node2D" parent="Platforms" unique_id=221809177]
-
-[node name="Platform27" parent="Platforms/Ground" unique_id=463616122 instance=ExtResource("2_iicf8")]
-position = Vector2(-1024, 64)
-scale = Vector2(14, 1)
-collision_shape = SubResource("RectangleShape2D_npmk5")
-
-[node name="Platform28" parent="Platforms/Ground" unique_id=721451040 instance=ExtResource("2_iicf8")]
-position = Vector2(1024, 64)
-scale = Vector2(14, 1)
-collision_shape = SubResource("RectangleShape2D_npmk5")
+[node name="Background10" type="Sprite2D" parent="Background Canvases" unique_id=2008727458]
+position = Vector2(-9040, -12560)
+texture = ExtResource("21_6epbu")
 
 [connection signal="body_entered" from="Tractor Beam/Rapture Beam" to="PlayerCharacter" method="_on_rapture_beam_body_entered"]
 [connection signal="body_exited" from="Tractor Beam/Rapture Beam" to="PlayerCharacter" method="_on_rapture_beam_body_exited"]
