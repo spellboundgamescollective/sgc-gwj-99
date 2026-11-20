@@ -1,0 +1,137 @@
+{
+	"textures": [
+		{
+			"image": "idle_test.png",
+			"size": {
+				"w": 1916,
+				"h": 204
+			},
+			"sprites": [
+				{
+					"filename": "idle_1.png",
+					"region": {
+						"x": 905,
+						"y": 0,
+						"w": 278,
+						"h": 202
+					},
+					"margin": {
+						"x": 192,
+						"y": 178,
+						"w": 403,
+						"h": 361
+					}
+				},
+				{
+					"filename": "idle_2.png",
+					"region": {
+						"x": 320,
+						"y": 0,
+						"w": 302,
+						"h": 202
+					},
+					"margin": {
+						"x": 168,
+						"y": 178,
+						"w": 379,
+						"h": 361
+					}
+				},
+				{
+					"filename": "idle_3.png",
+					"region": {
+						"x": 0,
+						"y": 0,
+						"w": 320,
+						"h": 202
+					},
+					"margin": {
+						"x": 150,
+						"y": 178,
+						"w": 361,
+						"h": 361
+					}
+				},
+				{
+					"filename": "idle_4.png",
+					"region": {
+						"x": 622,
+						"y": 0,
+						"w": 283,
+						"h": 202
+					},
+					"margin": {
+						"x": 187,
+						"y": 178,
+						"w": 398,
+						"h": 361
+					}
+				},
+				{
+					"filename": "idle_5.png",
+					"region": {
+						"x": 1432,
+						"y": 0,
+						"w": 248,
+						"h": 202
+					},
+					"margin": {
+						"x": 222,
+						"y": 178,
+						"w": 433,
+						"h": 361
+					}
+				},
+				{
+					"filename": "idle_6.png",
+					"region": {
+						"x": 1680,
+						"y": 0,
+						"w": 234,
+						"h": 202
+					},
+					"margin": {
+						"x": 236,
+						"y": 178,
+						"w": 447,
+						"h": 361
+					}
+				},
+				{
+					"filename": "idle_7.png",
+					"region": {
+						"x": 1183,
+						"y": 0,
+						"w": 249,
+						"h": 202
+					},
+					"margin": {
+						"x": 221,
+						"y": 178,
+						"w": 432,
+						"h": 361
+					}
+				}
+			]
+		}
+	],
+	"animations": [
+		{
+			"name": "idle",
+			"frames": [
+				"idle_1.png",
+				"idle_2.png",
+				"idle_3.png",
+				"idle_4.png",
+				"idle_5.png",
+				"idle_6.png",
+				"idle_7.png"
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "1.1",
+		"smartupdate": "$TexturePacker:SmartUpdate:dbc20f755f03b34ef7dd6430759c1738:bca7f35386c1ea2b06f5d75ae5242f4c:705297f29fd6c2dc3c54d84d11113d74$"
+	}
+}

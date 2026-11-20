@@ -35,6 +35,11 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.x = move_toward(velocity.x, 0, player_speed)
 
+	if direction < 0:
+		$Sprite.flip_h = true
+	elif direction > 0:
+		$Sprite.flip_h = false
+
 	move_and_slide()
 
 	## Debug labels.

@@ -1,6 +1,6 @@
 [gd_resource type="AnimationLibrary" format=3 uid="uid://hllvxwikn6uo"]
 
-[ext_resource type="Texture2D" uid="uid://856mpdht8pwn" path="res://assets/animations/jump/jump.png" id="1_gl55l"]
+[ext_resource type="Texture2D" uid="uid://856mpdht8pwn" path="res://assets/animations/jump/jump_right.png" id="1_gl55l"]
 
 [sub_resource type="Animation" id="Animation_iuupw"]
 length = 1.8
