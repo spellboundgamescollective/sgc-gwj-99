@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://brkdrlvn4q0um" path="res://assets/animations/walk/walk.png" id="3_fx5lj"]
 [ext_resource type="Texture2D" uid="uid://856mpdht8pwn" path="res://assets/animations/jump/jump.png" id="4_82eum"]
 [ext_resource type="Texture2D" uid="uid://bph626aumx5k2" path="res://assets/animations/sit/sit.png" id="5_1owtg"]
+[ext_resource type="Script" uid="uid://vwj8btnxsxg3" path="res://scenes/game/player_character_animation_player.gd" id="6_1owtg"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hlpqy"]
 radius = 96.0
@@ -138,9 +139,49 @@ _data = {
 &"walk": SubResource("Animation_fx5lj")
 }
 
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_1owtg"]
+animation = &"walk"
+
+[sub_resource type="AnimationNodeBlendSpace1D" id="AnimationNodeBlendSpace1D_8gg62"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_1owtg")
+blend_point_0/pos = -0.5
+blend_point_0/name = &"walk"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_y33hv"]
+animation = &"idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_nwpxb"]
+animation = &"jump"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_k0yxx"]
+animation = &"sit"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_8gg62"]
+animation = &"walk"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_fh8db"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_audfs"]
+advance_mode = 2
+
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_m80j2"]
+states/BlendSpace1D/node = SubResource("AnimationNodeBlendSpace1D_8gg62")
+states/BlendSpace1D/position = Vector2(321, 8)
+states/Start/position = Vector2(263, 88)
+states/idle/node = SubResource("AnimationNodeAnimation_y33hv")
+states/idle/position = Vector2(501, 211)
+states/jump/node = SubResource("AnimationNodeAnimation_nwpxb")
+states/jump/position = Vector2(768, 181)
+states/sit/node = SubResource("AnimationNodeAnimation_k0yxx")
+states/sit/position = Vector2(836, 188)
+states/walk/node = SubResource("AnimationNodeAnimation_8gg62")
+states/walk/position = Vector2(584, 100)
+transitions = ["Start", "walk", SubResource("AnimationNodeStateMachineTransition_fh8db"), "walk", "End", SubResource("AnimationNodeStateMachineTransition_audfs")]
+graph_offset = Vector2(54, -39)
 
 [node name="PlayerCharacter" type="CharacterBody2D" unique_id=741950354]
+visible = false
 script = ExtResource("1_hlpqy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=303067640]
@@ -154,7 +195,6 @@ hframes = 3
 vframes = 3
 
 [node name="WalkSprite" type="Sprite2D" parent="." unique_id=708522596]
-visible = false
 texture = ExtResource("3_fx5lj")
 hframes = 5
 vframes = 2
@@ -167,6 +207,7 @@ hframes = 4
 vframes = 5
 
 [node name="SitSprite" type="Sprite2D" parent="." unique_id=801986705]
+visible = false
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("5_1owtg")
 hframes = 2
@@ -212,8 +253,11 @@ offset_right = 213.0
 offset_bottom = 245.0
 text = "Lowgrav: "
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=156203619]
+[node name="PlayerCharacterAnimationPlayer" type="AnimationPlayer" parent="." unique_id=156203619]
 libraries/ = SubResource("AnimationLibrary_53hwf")
+script = ExtResource("6_1owtg")
 
 [node name="AnimationTree" type="AnimationTree" parent="." unique_id=845729331]
 tree_root = SubResource("AnimationNodeStateMachine_m80j2")
+anim_player = NodePath("../PlayerCharacterAnimationPlayer")
+parameters/BlendSpace1D/blend_position = 0.0

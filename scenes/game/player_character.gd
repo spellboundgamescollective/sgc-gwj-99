@@ -34,10 +34,10 @@ func _physics_process(delta: float) -> void:
 		velocity.x = direction * player_speed
 	else:
 		velocity.x = move_toward(velocity.x, 0, player_speed)
+
 	move_and_slide()
 
 	## Debug labels.
-	var charge_label:Label = get_node("CanvasLayer/Chargelabel")
 	$CanvasLayer/VelocityLabel.text = "Velocity is " + str(velocity)
 	$CanvasLayer/GravityLabel.text = "Gravity is " + str(get_gravity()*gravity_scale)
 	$CanvasLayer/PositionLabel.text = "Position is " + str(global_position)
