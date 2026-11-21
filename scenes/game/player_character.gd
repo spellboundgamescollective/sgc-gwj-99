@@ -14,11 +14,9 @@ var lowgrav_flag:bool = false
 @export var gravity_toggle:bool = true 
 @export var gravity_scale:float = 1.0
  
-
 func _ready() -> void:
-	$Sprite.play("sit")
-	
- 
+	idle_animation()
+
 ## Player controls & physics.
 func _physics_process(delta: float) -> void:
 	if lowgrav_flag:
@@ -40,20 +38,16 @@ func _physics_process(delta: float) -> void:
 	if direction:
 		velocity.x = direction * player_speed
 		#state_machine.travel("walk")
-		$PlayerCharacterAnimationPlayer.play("walk")
 	else:
 		velocity.x = move_toward(velocity.x, 0, player_speed)
-
-	if velocity == Vector2.ZERO:
-		$Sprite.stop()
-		$Sprite.animation = "sit"
-		$Sprite.play("sit")
-
+	
+	if velocity.x != 0:
+		state_machine.travel("walk")
+		
 	if direction < 0:
 		$Sprite.flip_h = true
 	elif direction > 0:
 		$Sprite.flip_h = false
-
 	move_and_slide()
 
 	## Debug labels.
@@ -63,6 +57,13 @@ func _physics_process(delta: float) -> void:
 	$CanvasLayer/RaptureLabel.text = "Rapture: " + str(rapture_flag)
 	$CanvasLayer/LowGravLabel.text = "Low-Grav: " + str(lowgrav_flag)
 
+func idle_animation() -> void:
+	while true:
+		var rand_num:int = randi() % 5 + 2
+		await get_tree().create_timer(rand_num).timeout
+		if state_machine.get_current_node() == "sit":
+			$PlayerCharacterAnimationPlayer.play("idle")
+			
 ## Entering and exiting rapture beam flags.
 func _on_rapture_beam_body_entered(body: Node2D) -> void:
 	if body == self:

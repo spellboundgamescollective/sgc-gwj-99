@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://c6ob6umtrpvhp" path="res://scenes/game/player_character.gd" id="1_hlpqy"]
 [ext_resource type="Texture2D" uid="uid://caclexti626kx" path="res://assets/animations/all.png" id="3_fx5lj"]
-[ext_resource type="Script" uid="uid://vwj8btnxsxg3" path="res://scenes/game/player_character_animation_player.gd" id="6_1owtg"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_j03xg"]
 radius = 55.0
@@ -10,44 +9,192 @@ height = 175.0
 
 [sub_resource type="Animation" id="Animation_hlpqy"]
 length = 0.26666668
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:texture:region")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Rect2(583, 121, 191, 117)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_8gg62"]
+resource_name = "freefall"
+step = 0.083333336
+
+[sub_resource type="Animation" id="Animation_y33hv"]
+resource_name = "idle"
+length = 0.5833333
+loop_mode = 1
+step = 0.083333336
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:texture:region")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.08345693, 0.16430584, 0.25, 0.3333291, 0.41678604, 0.49969715, 0.5833333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Rect2(343, 240, 165, 119), Rect2(511, 240, 180, 119), Rect2(695, 240, 190, 119), Rect2(1, 362, 168, 119), Rect2(172, 362, 147, 119), Rect2(323, 362, 138, 119), Rect2(465, 362, 147, 119), Rect2(343, 240, 165, 119)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.083333336, 0.16430584, 0.25, 0.33333334, 0.41666666, 0.5, 0.5833333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2(0, 0), Vector2(-7.5, 0), Vector2(-12.5, 0), Vector2(-1.5, 0), Vector2(9, 0), Vector2(13.5, 0), Vector2(9, 0), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_1owtg"]
+resource_name = "jump"
+length = 0.583341684051603
+step = 0.083333336
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:texture:region")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.08997701, 0.17343394, 0.2514383, 0.33489522, 0.41418964, 0.49764657),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Rect2(195, 2, 190, 116), Rect2(2, 609, 215, 139), Rect2(221, 609, 201, 145), Rect2(644, 765, 185, 161), Rect2(2, 929, 207, 163), Rect2(213, 929, 211, 164), Rect2(2, 1100, 218, 167)]
+}
+
+[sub_resource type="Animation" id="Animation_53hwf"]
+resource_name = "sit"
+length = 0.3333400173850357
+step = 0.083333336
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:texture:region")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.011519834, 0.07932859, 0.14583333, 0.20081824, 0.268627),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [Rect2(1, 240, 193, 118), Rect2(617, 362, 179, 119), Rect2(798, 363, 153, 119), Rect2(197, 241, 143, 117), Rect2(2, 484, 165, 120)]
+}
+
+[sub_resource type="Animation" id="Animation_82eum"]
+resource_name = "stand"
+length = 0.33333334
+step = 0.083333336
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:texture:region")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.08333334, 0.16666667, 0.25, 0.33333334),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [Rect2(2, 484, 165, 120), Rect2(197, 241, 143, 117), Rect2(798, 363, 153, 119), Rect2(617, 362, 179, 119), Rect2(1, 240, 193, 118)]
+}
+
+[sub_resource type="Animation" id="Animation_fx5lj"]
+resource_name = "walk"
+length = 0.8
+loop_mode = 1
+step = 0.06666667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:texture:region")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.08606496, 0.16691387, 0.2516748, 0.33602664, 0.41687554, 0.5003325, 0.5833333, 0.670665, 0.7528179),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Rect2(583, 121, 191, 117), Rect2(363, 484, 192, 120), Rect2(169, 484, 192, 120), Rect2(557, 484, 192, 120), Rect2(751, 484, 192, 122), Rect2(1, 120, 192, 117), Rect2(389, 120, 191, 118), Rect2(581, 1, 192, 116), Rect2(1, 1, 192, 115), Rect2(195, 121, 192, 117)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_53hwf"]
 _data = {
-&"RESET": SubResource("Animation_hlpqy")
+&"RESET": SubResource("Animation_hlpqy"),
+&"freefall": SubResource("Animation_8gg62"),
+&"idle": SubResource("Animation_y33hv"),
+&"jump": SubResource("Animation_1owtg"),
+&"sit": SubResource("Animation_53hwf"),
+&"stand": SubResource("Animation_82eum"),
+&"walk": SubResource("Animation_fx5lj")
 }
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_3ukan"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_fx5lj"]
 animation = &"sit"
-advance_on_start = true
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_5lpfh"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_82eum"]
+animation = &"stand"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_53hwf"]
 animation = &"walk"
 
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_qbq11"]
-advance_condition = &"sit"
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_82eum"]
+advance_mode = 2
 
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_j03xg"]
-advance_condition = &"walk"
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_1owtg"]
+advance_mode = 2
+advance_expression = "velocity.x == 0"
 
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_px70y"]
-advance_condition = &"sit"
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_8gg62"]
+reset = false
+advance_mode = 2
+advance_expression = "velocity.x != 0"
 
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_1orai"]
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_y33hv"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_nwpxb"]
 advance_mode = 2
 
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_m80j2"]
-states/End/position = Vector2(1245, -204)
-states/Start/position = Vector2(710, -204)
-states/sit/node = SubResource("AnimationNodeAnimation_3ukan")
-states/sit/position = Vector2(949, -145)
-states/walk/node = SubResource("AnimationNodeAnimation_5lpfh")
-states/walk/position = Vector2(949, -293)
-transitions = ["walk", "sit", SubResource("AnimationNodeStateMachineTransition_qbq11"), "sit", "walk", SubResource("AnimationNodeStateMachineTransition_j03xg"), "Start", "sit", SubResource("AnimationNodeStateMachineTransition_px70y"), "walk", "End", SubResource("AnimationNodeStateMachineTransition_1orai")]
-graph_offset = Vector2(254, -330)
+states/End/position = Vector2(1257, -163)
+states/Start/position = Vector2(669, -217)
+states/sit/node = SubResource("AnimationNodeAnimation_fx5lj")
+states/sit/position = Vector2(941, -282)
+states/stand/node = SubResource("AnimationNodeAnimation_82eum")
+states/stand/position = Vector2(1117, -163)
+states/walk/node = SubResource("AnimationNodeAnimation_53hwf")
+states/walk/position = Vector2(958, -70)
+transitions = ["Start", "walk", SubResource("AnimationNodeStateMachineTransition_82eum"), "walk", "sit", SubResource("AnimationNodeStateMachineTransition_1owtg"), "sit", "stand", SubResource("AnimationNodeStateMachineTransition_8gg62"), "stand", "walk", SubResource("AnimationNodeStateMachineTransition_y33hv"), "stand", "End", SubResource("AnimationNodeStateMachineTransition_nwpxb")]
+graph_offset = Vector2(118, -399)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cput5"]
 atlas = ExtResource("3_fx5lj")
-region = Rect2(581, 1, 192, 116)
+region = Rect2(583, 121, 191, 117)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_17hsp"]
+atlas = ExtResource("3_fx5lj")
+region = Rect2(583, 121, 191, 117)
 
 [node name="PlayerCharacter" type="CharacterBody2D" unique_id=741950354]
 script = ExtResource("1_hlpqy")
@@ -95,15 +242,20 @@ text = "Lowgrav: "
 
 [node name="PlayerCharacterAnimationPlayer" type="AnimationPlayer" parent="." unique_id=156203619]
 libraries/ = SubResource("AnimationLibrary_53hwf")
-script = ExtResource("6_1owtg")
 
 [node name="AnimationTree" type="AnimationTree" parent="." unique_id=845729331]
 tree_root = SubResource("AnimationNodeStateMachine_m80j2")
+advance_expression_base_node = NodePath("..")
 anim_player = NodePath("../PlayerCharacterAnimationPlayer")
-parameters/conditions/sit = false
-parameters/conditions/walk = false
 
 [node name="RayCast2D" type="RayCast2D" parent="." unique_id=1924333906]
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2059277273]
+[node name="Sprite" type="Sprite2D" parent="." unique_id=2059277273]
+z_index = 1
 texture = SubResource("AtlasTexture_cput5")
+region_rect = Rect2(2, 484, 165, 120)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1176346687]
+visible = false
+modulate = Color(1, 0, 1, 1)
+texture = SubResource("AtlasTexture_17hsp")
