@@ -1,8 +1,0 @@
-[gd_resource type="AtlasTexture" format=3 uid="uid://bxy50vxxtvuj4"]
-
-[ext_resource type="Texture2D" uid="uid://caclexti626kx" path="res://assets/animations/all.png" id="1_2vs2t"]
-
-[resource]
-atlas = ExtResource("1_2vs2t")
-region = Rect2(0, 0, 194, 118)
-margin = Rect2(37, 46, 78, 140)
