@@ -1,8 +1,8 @@
-[gd_resource type="AnimationLibrary" format=3 uid="uid://b5dypt150u3ul"]
+[gd_resource type="AnimationLibrary" format=3 uid="uid://bpxb1f6iwmocw"]
 
-[ext_resource type="Texture2D" uid="uid://yltj6v42vh5x" path="res://assets/animations/idle/idle.png" id="1_2jdsq"]
+[ext_resource type="Texture2D" uid="uid://c8edhrk7rvt6g" path="res://assets/animations/idle/idle_test.png" id="1_0lde1"]
 
-[sub_resource type="Animation" id="Animation_2jdsq"]
+[sub_resource type="Animation" id="Animation_085gs"]
 length = 0.7000000000000001
 loop_mode = 1
 step = 0.1
@@ -16,7 +16,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.6),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [ExtResource("1_2jdsq"), ExtResource("1_2jdsq")]
+"values": [ExtResource("1_0lde1"), ExtResource("1_0lde1")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -28,7 +28,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [Rect2(0, 0, 681, 563), Rect2(681, 0, 681, 563), Rect2(1362, 0, 681, 563), Rect2(0, 563, 681, 563), Rect2(681, 563, 681, 563), Rect2(1362, 563, 681, 563), Rect2(0, 1126, 681, 563)]
+"values": [Rect2(905, 0, 278, 202), Rect2(320, 0, 302, 202), Rect2(0, 0, 320, 202), Rect2(622, 0, 283, 202), Rect2(1432, 0, 248, 202), Rect2(1680, 0, 234, 202), Rect2(1183, 0, 249, 202)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -37,15 +37,15 @@ tracks/2/path = NodePath(".:texture:margin")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.6),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [Rect2(0, 0, 0, 0), Rect2(0, 0, 0, 0)]
+"values": [Rect2(192, 178, 403, 361), Rect2(168, 178, 379, 361), Rect2(150, 178, 361, 361), Rect2(187, 178, 398, 361), Rect2(222, 178, 433, 361), Rect2(236, 178, 447, 361), Rect2(221, 178, 432, 361)]
 }
 metadata/texturepacker_frame_count = 7
 metadata/texturepacker_frames = PackedStringArray("idle_1.png", "idle_2.png", "idle_3.png", "idle_4.png", "idle_5.png", "idle_6.png", "idle_7.png")
 
 [resource]
 _data = {
-&"idle": SubResource("Animation_2jdsq")
+&"idle": SubResource("Animation_085gs")
 }

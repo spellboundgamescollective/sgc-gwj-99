@@ -1,8 +1,0 @@
-[gd_resource type="AtlasTexture" format=3 uid="uid://cobk5514fbi67"]
-
-[ext_resource type="Texture2D" uid="uid://brkdrlvn4q0um" path="res://assets/animations/walk/walk_right.png" id="1_8nmri"]
-
-[resource]
-atlas = ExtResource("1_8nmri")
-region = Rect2(589, 1, 194, 122)
-margin = Rect2(37, 46, 78, 136)

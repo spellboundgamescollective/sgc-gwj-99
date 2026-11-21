@@ -16,7 +16,7 @@ var lowgrav_flag:bool = false
 ## Player controls & physics.
 func _physics_process(delta: float) -> void:
 	if lowgrav_flag:
-		gravity_scale = 0.8
+		gravity_scale = 0.5
 	else:
 		gravity_scale = 1.0
 		

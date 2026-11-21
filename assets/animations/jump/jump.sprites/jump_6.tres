@@ -1,7 +1,0 @@
-[gd_resource type="AtlasTexture" format=3 uid="uid://dybwgjvp8msic"]
-
-[ext_resource type="Texture2D" uid="uid://856mpdht8pwn" path="res://assets/animations/jump/jump_right.png" id="1_u745o"]
-
-[resource]
-atlas = ExtResource("1_u745o")
-region = Rect2(375, 356, 375, 356)

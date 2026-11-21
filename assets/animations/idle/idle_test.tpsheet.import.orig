@@ -1,0 +1,20 @@
+[remap]
+
+importer="codeandweb.texturepacker_import_spritesheet"
+type="Resource"
+<<<<<<< HEAD
+uid="uid://r4jyxthy53uh"
+=======
+uid="uid://nupj8wsktenc"
+>>>>>>> bf185038542601b4f7e8bacad096ef5222230607
+path="res://.godot/imported/idle_test.tpsheet-9e9b742b62efcdaacfec65c3be1e78ec.res"
+
+[deps]
+
+files=["res://assets/animations/idle/idle_test.sprites/idle_1.tres", "res://assets/animations/idle/idle_test.sprites/idle_2.tres", "res://assets/animations/idle/idle_test.sprites/idle_3.tres", "res://assets/animations/idle/idle_test.sprites/idle_4.tres", "res://assets/animations/idle/idle_test.sprites/idle_5.tres", "res://assets/animations/idle/idle_test.sprites/idle_6.tres", "res://assets/animations/idle/idle_test.sprites/idle_7.tres", "res://assets/animations/idle/idle_test.animations.tres"]
+
+source_file="res://assets/animations/idle/idle_test.tpsheet"
+dest_files=["res://.godot/imported/idle_test.tpsheet-9e9b742b62efcdaacfec65c3be1e78ec.res", "res://assets/animations/idle/idle_test.sprites/idle_1.tres", "res://assets/animations/idle/idle_test.sprites/idle_2.tres", "res://assets/animations/idle/idle_test.sprites/idle_3.tres", "res://assets/animations/idle/idle_test.sprites/idle_4.tres", "res://assets/animations/idle/idle_test.sprites/idle_5.tres", "res://assets/animations/idle/idle_test.sprites/idle_6.tres", "res://assets/animations/idle/idle_test.sprites/idle_7.tres", "res://assets/animations/idle/idle_test.animations.tres"]
+
+[params]
+
