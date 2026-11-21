@@ -9,6 +9,7 @@ const jump_velocity:float = 1200
 var center_coord:float = 1.0
 var rapture_flag:bool = false
 var lowgrav_flag:bool = false
+@onready var animation_tree:AnimationTree = $AnimationTree
 @export var gravity_toggle:bool = true 
 @export var gravity_scale:float = 1.0
  
@@ -34,11 +35,14 @@ func _physics_process(delta: float) -> void:
 		velocity.x = direction * player_speed
 	else:
 		velocity.x = move_toward(velocity.x, 0, player_speed)
+		$Sprite.stop()
 
 	if direction < 0:
 		$Sprite.flip_h = true
+		$PlayerCharacterAnimationPlayer.play("walk")
 	elif direction > 0:
 		$Sprite.flip_h = false
+		$PlayerCharacterAnimationPlayer.play("walk")
 
 	move_and_slide()
 
