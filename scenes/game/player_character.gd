@@ -10,8 +10,14 @@ var center_coord:float = 1.0
 var rapture_flag:bool = false
 var lowgrav_flag:bool = false
 @onready var animation_tree:AnimationTree = $AnimationTree
+@onready var state_machine:AnimationNodeStateMachinePlayback = animation_tree["parameters/playback"]
 @export var gravity_toggle:bool = true 
 @export var gravity_scale:float = 1.0
+ 
+
+func _ready() -> void:
+	$Sprite.play("sit")
+	
  
 ## Player controls & physics.
 func _physics_process(delta: float) -> void:
@@ -19,7 +25,7 @@ func _physics_process(delta: float) -> void:
 		gravity_scale = 0.5
 	else:
 		gravity_scale = 1.0
-		
+	
 	if Input.is_action_just_pressed("up") and is_on_floor():
 		velocity.y = -jump_velocity
 	if not is_on_floor():
@@ -33,16 +39,20 @@ func _physics_process(delta: float) -> void:
 	var direction:float = Input.get_axis("left", "right")
 	if direction:
 		velocity.x = direction * player_speed
+		#state_machine.travel("walk")
+		$PlayerCharacterAnimationPlayer.play("walk")
 	else:
 		velocity.x = move_toward(velocity.x, 0, player_speed)
+
+	if velocity == Vector2.ZERO:
 		$Sprite.stop()
+		$Sprite.animation = "sit"
+		$Sprite.play("sit")
 
 	if direction < 0:
 		$Sprite.flip_h = true
-		$PlayerCharacterAnimationPlayer.play("walk")
 	elif direction > 0:
 		$Sprite.flip_h = false
-		$PlayerCharacterAnimationPlayer.play("walk")
 
 	move_and_slide()
 
