@@ -13,9 +13,6 @@ var lowgrav_flag:bool = false
 @onready var state_machine:AnimationNodeStateMachinePlayback = animation_tree["parameters/playback"]
 @export var gravity_toggle:bool = true 
 @export var gravity_scale:float = 1.0
- 
-func _ready() -> void:
-	idle_animation()
 
 ## Player controls & physics.
 func _physics_process(delta: float) -> void:
@@ -57,13 +54,8 @@ func _physics_process(delta: float) -> void:
 	$CanvasLayer/RaptureLabel.text = "Rapture: " + str(rapture_flag)
 	$CanvasLayer/LowGravLabel.text = "Low-Grav: " + str(lowgrav_flag)
 
-func idle_animation() -> void:
-	while true:
-		var rand_num:int = randi() % 5 + 2
-		await get_tree().create_timer(rand_num).timeout
-		if state_machine.get_current_node() == "sit":
-			$PlayerCharacterAnimationPlayer.play("idle")
-			
+	print(state_machine.get_current_node())
+
 ## Entering and exiting rapture beam flags.
 func _on_rapture_beam_body_entered(body: Node2D) -> void:
 	if body == self:
