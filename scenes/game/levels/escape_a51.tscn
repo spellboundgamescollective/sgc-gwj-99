@@ -21,6 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://bimddeatavsms" path="res://assets/background_8.png" id="19_7xm4w"]
 [ext_resource type="Texture2D" uid="uid://cwywidfo7oveh" path="res://assets/background_9.png" id="20_r3ee5"]
 [ext_resource type="Texture2D" uid="uid://c6dbh7rwb12w1" path="res://assets/background_10.png" id="21_6epbu"]
+[ext_resource type="PackedScene" uid="uid://c583nwmheikpt" path="res://scenes/game/platform.tscn" id="22_lma7c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2rcey"]
 size = Vector2(128, 43200)
@@ -143,6 +144,8 @@ texture = ExtResource("20_r3ee5")
 [node name="Background10" type="Sprite2D" parent="Background Canvases" unique_id=2008727458]
 position = Vector2(-9040, -12560)
 texture = ExtResource("21_6epbu")
+
+[node name="Platform" parent="." unique_id=1838500979 instance=ExtResource("22_lma7c")]
 
 [connection signal="body_entered" from="Tractor Beam/Rapture Beam" to="PlayerCharacter" method="_on_rapture_beam_body_entered"]
 [connection signal="body_exited" from="Tractor Beam/Rapture Beam" to="PlayerCharacter" method="_on_rapture_beam_body_exited"]

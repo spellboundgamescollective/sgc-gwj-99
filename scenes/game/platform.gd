@@ -1,3 +1,5 @@
+@tool
+
 extends StaticBody2D
 @export var collision_shape:Shape2D
 @export_file var texture_path:String="res://icon.svg"
