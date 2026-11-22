@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://caclexti626kx" path="res://assets/animations/all.png" id="1_40idq"]
 
-[sub_resource type="Animation" id="Animation_8jmyw"]
+[sub_resource type="Animation" id="Animation_40idq"]
 length = 1.3
 loop_mode = 1
 step = 0.1
@@ -45,7 +45,7 @@ tracks/2/keys = {
 metadata/texturepacker_frame_count = 13
 metadata/texturepacker_frames = PackedStringArray("freefall_1.png", "freefall_2.png", "freefall_3.png", "freefall_4.png", "freefall_5.png", "freefall_6.png", "freefall_7.png", "freefall_8.png", "freefall_9.png", "freefall_10.png", "freefall_11.png", "freefall_12.png", "freefall_13.png")
 
-[sub_resource type="Animation" id="Animation_7dlds"]
+[sub_resource type="Animation" id="Animation_8jmyw"]
 length = 1.8
 loop_mode = 1
 step = 0.1
@@ -88,7 +88,7 @@ tracks/2/keys = {
 metadata/texturepacker_frame_count = 18
 metadata/texturepacker_frames = PackedStringArray("jump_1.png", "jump_2.png", "jump-3.png", "jump_4.png", "jump_5.png", "jump_6.png", "jump_7.png", "jump_8.png", "jump_9.png", "jump_10.png", "jump_11.png", "jump_12.png", "jump_13.png", "jump_14.png", "jump_15.png", "jump_16.png", "jump_17.png", "jump_18.png")
 
-[sub_resource type="Animation" id="Animation_yccos"]
+[sub_resource type="Animation" id="Animation_7dlds"]
 loop_mode = 1
 step = 0.1
 tracks/0/type = "value"
@@ -132,7 +132,7 @@ metadata/texturepacker_frames = PackedStringArray("walk_1.png", "walk_2.png", "w
 
 [resource]
 _data = {
-&"freefall": SubResource("Animation_8jmyw"),
-&"jump": SubResource("Animation_7dlds"),
-&"walk": SubResource("Animation_yccos")
+&"freefall": SubResource("Animation_40idq"),
+&"jump": SubResource("Animation_8jmyw"),
+&"walk": SubResource("Animation_7dlds")
 }
