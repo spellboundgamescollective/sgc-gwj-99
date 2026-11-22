@@ -420,6 +420,7 @@ script = ExtResource("1_cowcv")
 
 [node name="PlayerCharacter" parent="." unique_id=741950354 instance=ExtResource("1_s0o00")]
 z_index = 3
+
 position = Vector2(0, -31000)
 
 [node name="Camera2D" type="Camera2D" parent="PlayerCharacter" unique_id=1072366351]

@@ -22,6 +22,14 @@ var lowgrav_flag:bool = false
 var grav_min:float = 0.1
 var grav_max:float = 0.9
 
+# Sitting audio signals
+signal sat_down
+signal sat_long
+signal stood_up
+
+# Sitting slop
+var sit_delta_cache:float
+
 ## Player controls & physics.
 func _physics_process(delta: float) ->  void:
 	if lowgrav_flag:
@@ -45,8 +53,18 @@ func _physics_process(delta: float) ->  void:
 		velocity.x = move_toward(velocity.x, 0, player_speed)
 	
 	if velocity.x != 0:
+		if(sit_delta_cache != 0):
+			sit_delta_cache = 0
 		state_machine.travel("walk")
+		stood_up.emit()
+	else:
+		sit_delta_cache += delta
+		if(sit_delta_cache > 10):
+			sat_long.emit()
+		elif(sit_delta_cache > .5):
+			sat_down.emit()
 		
+				
 	if direction < 0:
 		$Sprite.flip_h = true
 	elif direction > 0:
