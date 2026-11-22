@@ -28,6 +28,7 @@ script = ExtResource("4_kp23o")
 level_loader = NodePath("../LevelLoader")
 starting_level_path = "uid://d0jamtpyfmjrh"
 scene_lister = NodePath("SceneLister")
+main_menu_scene_path = "uid://riygeo4ovh46"
 game_won_scene = ExtResource("5_5jirj")
 level_lost_scene = ExtResource("6_vaxfo")
 level_won_scene = ExtResource("7_ftsea")
