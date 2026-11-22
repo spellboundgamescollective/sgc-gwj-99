@@ -12,7 +12,6 @@ func _process(delta: float) -> void:
 
 
 func _on_new_game_button_pressed() -> void:
-	play()
 	pass # Replace with function body.
 
 

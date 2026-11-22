@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="Going Home"
-run/main_scene="res://scenes/opening/opening.tscn"
+run/main_scene="uid://d0jamtpyfmjrh"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
+
+[audio]
+
+buses/default_bus_layout="uid://drdcomumrblcx"
 
 [clean_copy_examples]
 
@@ -38,7 +42,7 @@ window/stretch/aspect="expand"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/cheatsheet_viewer/plugin.cfg", "res://addons/godot_vim/plugin.cfg", "res://addons/maaacks_game_template/plugin.cfg", "res://addons/plugin_updater/plugin.cfg")
+enabled=PackedStringArray("res://addons/cheatsheet_viewer/plugin.cfg", "res://addons/maaacks_game_template/plugin.cfg", "res://addons/plugin_updater/plugin.cfg")
 
 [gui]
 

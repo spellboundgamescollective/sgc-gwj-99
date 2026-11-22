@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://m1c8tcjtnq2"]
 
 [ext_resource type="PackedScene" uid="uid://crndfbb22ri4s" path="res://addons/maaacks_game_template/base/nodes/windows/popup_window_scene_container.tscn" id="1_a6sle"]
-[ext_resource type="Theme" uid="uid://b6kqe3b6h2swo" path="res://resources/themes/lore (copy 1).tres" id="2_j45qp"]
+[ext_resource type="Theme" uid="uid://b6kqe3b6h2swo" path="res://resources/themes/lore_fork.tres" id="2_j45qp"]
 [ext_resource type="PackedScene" uid="uid://bo6d6d71bbc8g" path="res://scenes/menus/options_menu/master_options_menu_with_tabs.tscn" id="2_r1t3m"]
 
 [node name="PauseMenuOptionsWindow" unique_id=701085877 instance=ExtResource("1_a6sle")]
 process_mode = 3
-anchors_preset = 15
+anchors_preset = 0
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 1.0
