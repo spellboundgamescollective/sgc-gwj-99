@@ -116,7 +116,8 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.08333334, 0.16666667, 0.25, 0.33333334),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 1,
-"values": [Rect2(2, 484, 165, 120), Rect2(197, 241, 143, 117), Rect2(798, 363, 153, 119), Rect2(617, 362, 179, 119), Rect2(1, 240, 193, 118)] }
+"values": [Rect2(2, 484, 165, 120), Rect2(197, 241, 143, 117), Rect2(798, 363, 153, 119), Rect2(617, 362, 179, 119), Rect2(1, 240, 193, 118)]
+}
 
 [sub_resource type="Animation" id="Animation_fx5lj"]
 resource_name = "walk"
@@ -178,14 +179,6 @@ advance_expression = "velocity.x != 0"
 advance_mode = 2
 
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_m80j2"]
-states/End/position = Vector2(1245, -204)
-states/Start/position = Vector2(710, -204)
-states/sit/node = SubResource("AnimationNodeAnimation_3ukan")
-states/sit/position = Vector2(949, -146)
-states/walk/node = SubResource("AnimationNodeAnimation_5lpfh")
-states/walk/position = Vector2(949, -293)
-transitions = ["walk", "sit", SubResource("AnimationNodeStateMachineTransition_qbq11"), "sit", "walk", SubResource("AnimationNodeStateMachineTransition_j03xg"), "Start", "sit", SubResource("AnimationNodeStateMachineTransition_px70y"), "walk", "End", SubResource("AnimationNodeStateMachineTransition_1orai")]
-graph_offset = Vector2(191, -548)
 states/End/position = Vector2(1362, -163)
 states/Start/position = Vector2(669, -217)
 states/sit/node = SubResource("AnimationNodeAnimation_fx5lj")
@@ -252,3 +245,6 @@ libraries/ = SubResource("AnimationLibrary_53hwf")
 tree_root = SubResource("AnimationNodeStateMachine_m80j2")
 advance_expression_base_node = NodePath("..")
 anim_player = NodePath("../PlayerCharacterAnimationPlayer")
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=1830767452]
+texture = SubResource("AtlasTexture_cput5")

@@ -117,7 +117,6 @@ position = Vector2(-400, -2040)
 position = Vector2(-136, -3144)
 
 [node name="Background" type="Parallax2D" parent="." unique_id=410912751]
-visible = false
 
 [node name="NewBackground1" type="Sprite2D" parent="Background" unique_id=159662039]
 position = Vector2(0, -1080)
