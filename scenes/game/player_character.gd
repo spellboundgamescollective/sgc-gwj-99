@@ -57,7 +57,7 @@ func _physics_process(delta: float) -> void:
 	$CanvasLayer/PositionLabel.text = "Position is " + str(global_position)
 	$CanvasLayer/RaptureLabel.text = "Rapture: " + str(rapture_flag)
 	$CanvasLayer/LowGravLabel.text = "Low-Grav: " + str(lowgrav_flag)
-	print(animation_tree["parameters/sitting/blend_position"])
+#	print(animation_tree["parameters/sitting/blend_position"])
 	#print(state_machine.get_current_node())
 	
 func idle_animation() -> void:

@@ -41,6 +41,7 @@ step = 0.083333336
 [sub_resource type="Animation" id="Animation_y33hv"]
 resource_name = "idle"
 length = 0.5833333
+loop_mode = 1
 step = 0.083333336
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -118,24 +119,6 @@ tracks/0/keys = {
 "values": [Rect2(2, 484, 165, 120), Rect2(197, 241, 143, 117), Rect2(798, 363, 153, 119), Rect2(617, 362, 179, 119), Rect2(1, 240, 193, 118)]
 }
 
-[sub_resource type="Animation" id="Animation_nwpxb"]
-resource_name = "stationary"
-length = 0.30938265
-loop_mode = 1
-step = 1.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite:texture:region")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(-0.0011443344, 0.1735595),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Rect2(343, 240, 165, 120), Rect2(343, 240, 165, 120)]
-}
-
 [sub_resource type="Animation" id="Animation_fx5lj"]
 resource_name = "walk"
 length = 0.8
@@ -162,33 +145,15 @@ _data = {
 &"jump": SubResource("Animation_1owtg"),
 &"sit": SubResource("Animation_53hwf"),
 &"stand": SubResource("Animation_82eum"),
-&"stationary": SubResource("Animation_nwpxb"),
 &"walk": SubResource("Animation_fx5lj")
 }
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_fx5lj"]
 animation = &"sit"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_hlpqy"]
-animation = &"stationary"
-advance_on_start = true
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_8gg62"]
-animation = &"idle"
-advance_on_start = true
-
-[sub_resource type="AnimationNodeBlendSpace1D" id="AnimationNodeBlendSpace1D_hlpqy"]
-value_label = "idle_flag"
-blend_mode = 1
-blend_point_0/node = SubResource("AnimationNodeAnimation_hlpqy")
-blend_point_0/pos = -1.0
-blend_point_0/name = &"stationary"
-blend_point_1/node = SubResource("AnimationNodeAnimation_8gg62")
-blend_point_1/pos = 1.0
-blend_point_1/name = &"idle"
-
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_82eum"]
 animation = &"stand"
+advance_on_start = true
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_53hwf"]
 animation = &"walk"
@@ -200,34 +165,30 @@ advance_mode = 2
 advance_mode = 2
 advance_expression = "velocity.x == 0"
 
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_y33hv"]
-switch_mode = 2
-advance_mode = 2
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_nwpxb"]
-advance_mode = 2
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_hlpqy"]
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_8gg62"]
+reset = false
 advance_mode = 2
 advance_expression = "velocity.x != 0"
 
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_fx5lj"]
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_y33hv"]
+switch_mode = 2
 advance_mode = 2
-advance_expression = "velocity.x == 0"
+advance_expression = "velocity.x != 0"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_nwpxb"]
+advance_mode = 2
 
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_m80j2"]
 states/End/position = Vector2(1257, -163)
 states/Start/position = Vector2(669, -217)
 states/sit/node = SubResource("AnimationNodeAnimation_fx5lj")
 states/sit/position = Vector2(941, -282)
-states/sitting/node = SubResource("AnimationNodeBlendSpace1D_hlpqy")
-states/sitting/position = Vector2(970, -434)
 states/stand/node = SubResource("AnimationNodeAnimation_82eum")
 states/stand/position = Vector2(1117, -163)
 states/walk/node = SubResource("AnimationNodeAnimation_53hwf")
 states/walk/position = Vector2(958, -70)
-transitions = ["Start", "walk", SubResource("AnimationNodeStateMachineTransition_82eum"), "walk", "sit", SubResource("AnimationNodeStateMachineTransition_1owtg"), "stand", "walk", SubResource("AnimationNodeStateMachineTransition_y33hv"), "stand", "End", SubResource("AnimationNodeStateMachineTransition_nwpxb"), "sitting", "stand", SubResource("AnimationNodeStateMachineTransition_hlpqy"), "sit", "sitting", SubResource("AnimationNodeStateMachineTransition_fx5lj")]
-graph_offset = Vector2(-17, -494)
+transitions = ["Start", "walk", SubResource("AnimationNodeStateMachineTransition_82eum"), "walk", "sit", SubResource("AnimationNodeStateMachineTransition_1owtg"), "sit", "stand", SubResource("AnimationNodeStateMachineTransition_8gg62"), "stand", "walk", SubResource("AnimationNodeStateMachineTransition_y33hv"), "stand", "End", SubResource("AnimationNodeStateMachineTransition_nwpxb")]
+graph_offset = Vector2(118, -399)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cput5"]
 atlas = ExtResource("3_fx5lj")
@@ -288,7 +249,6 @@ libraries/ = SubResource("AnimationLibrary_53hwf")
 tree_root = SubResource("AnimationNodeStateMachine_m80j2")
 advance_expression_base_node = NodePath("..")
 anim_player = NodePath("../PlayerCharacterAnimationPlayer")
-parameters/sitting/blend_position = 0.0
 
 [node name="RayCast2D" type="RayCast2D" parent="." unique_id=1924333906]
 
@@ -301,9 +261,3 @@ region_rect = Rect2(2, 484, 165, 120)
 visible = false
 modulate = Color(1, 0, 1, 1)
 texture = SubResource("AtlasTexture_17hsp")
-
-[node name="Timer" type="Timer" parent="." unique_id=304952002]
-wait_time = 3.0
-autostart = true
-
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
