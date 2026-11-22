@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://ck33slmhxxg3m" path="res://scenes/windows/main_menu_credits_window.tscn" id="4_2k5l7"]
 [ext_resource type="AudioStream" uid="uid://dmw1gumce2p1x" path="res://assets/audio/Wind_Constant_Breeze_with_Occasional_Gusts_OCP-0527-01.wav" id="5_2k5l7"]
 [ext_resource type="Texture2D" uid="uid://d0ey227sfnxgd" path="res://assets/backgrounds/area51_background.png" id="5_ixa71"]
-[ext_resource type="Theme" uid="uid://b6kqe3b6h2swo" path="res://resources/themes/lore_fork.tres" id="6_ixa71"]
+[ext_resource type="Theme" uid="uid://b6kqe3b6h2swo" path="res://resources/themes/lore (copy 1).tres" id="6_ixa71"]
 
 [sub_resource type="Animation" id="1"]
 resource_name = "Intro"
@@ -293,6 +293,7 @@ transitions = ["Intro", "OpenMainMenu", SubResource("11"), "OpenMainMenu", "Open
 graph_offset = Vector2(-89.27699, -20)
 
 [node name="MainMenu" unique_id=2084566378 instance=ExtResource("1_rr1rn")]
+theme = ExtResource("6_ixa71")
 script = ExtResource("2_sr523")
 options_packed_scene = ExtResource("3_ixa71")
 credits_packed_scene = ExtResource("4_2k5l7")

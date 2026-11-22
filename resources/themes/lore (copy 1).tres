@@ -81,6 +81,7 @@ border_color = Color(0.00392157, 0.0862745, 0.152941, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8kykl"]
 texture = ExtResource("1_nurrv")
+region_rect = Rect2(476, 381, 951, 335)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f05by"]
 bg_color = Color(0.192157, 0.239216, 0.352941, 1)
