@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cs60ukx4b2b62"
-path="res://.godot/imported/new_background_8.png-ceaca1ba8a17265c0c765fd52ce82ef6.ctex"
+uid="uid://do3iblhrlqcrx"
+path="res://.godot/imported/mesosphere3.png-587e651fb32fb4ae8648908ea9c2f681.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/backgrounds/new_background_8.png"
-dest_files=["res://.godot/imported/new_background_8.png-ceaca1ba8a17265c0c765fd52ce82ef6.ctex"]
+source_file="res://assets/backgrounds/mesosphere3.png"
+dest_files=["res://.godot/imported/mesosphere3.png-587e651fb32fb4ae8648908ea9c2f681.ctex"]
 
 [params]
 

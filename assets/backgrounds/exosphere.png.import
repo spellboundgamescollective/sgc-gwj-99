@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bk6r5vhukllx1"
-path="res://.godot/imported/new_background_4.png-3cf5717494e0d995d3bc6dc4ffb277a3.ctex"
+uid="uid://ceblmxrput16g"
+path="res://.godot/imported/exosphere.png-e3e204ff3e0c8a3a007c6902276a6b12.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/backgrounds/new_background_4.png"
-dest_files=["res://.godot/imported/new_background_4.png-3cf5717494e0d995d3bc6dc4ffb277a3.ctex"]
+source_file="res://assets/backgrounds/exosphere.png"
+dest_files=["res://.godot/imported/exosphere.png-e3e204ff3e0c8a3a007c6902276a6b12.ctex"]
 
 [params]
 

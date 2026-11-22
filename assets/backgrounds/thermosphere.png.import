@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://gnyceodmd1p8"
-path="res://.godot/imported/new_background_9.png-efc8458114694c8280b55f0dac2163e2.ctex"
+uid="uid://cp0erfx0qkamn"
+path="res://.godot/imported/thermosphere.png-5cd87ac195548c24b295fc53244c55e5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/backgrounds/new_background_9.png"
-dest_files=["res://.godot/imported/new_background_9.png-efc8458114694c8280b55f0dac2163e2.ctex"]
+source_file="res://assets/backgrounds/thermosphere.png"
+dest_files=["res://.godot/imported/thermosphere.png-5cd87ac195548c24b295fc53244c55e5.ctex"]
 
 [params]
 

@@ -280,6 +280,7 @@ rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_j03xg")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=843805598]
+visible = false
 
 [node name="PositionLabel" type="Label" parent="CanvasLayer" unique_id=848165183]
 offset_left = 139.0

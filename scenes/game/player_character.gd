@@ -77,6 +77,11 @@ func _physics_process(delta: float) ->  void:
 	$CanvasLayer/RaptureLabel.text = "Rapture: " + str(rapture_flag)
 	$CanvasLayer/LowGravLabel.text = "Low-Grav: " + str(lowgrav_flag)
 ## Entering and exiting rapture beam flags.
+
+func stop_sounds() -> void:
+	$SitAnimationSounds.queue_free()
+	$WalkAnimationSounds.queue_free()
+
 func _on_rapture_beam_body_entered(body: Node2D) -> void:
 	if body == self:
 		rapture_flag = true

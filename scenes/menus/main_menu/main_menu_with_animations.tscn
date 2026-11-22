@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://cobqselc2l1rm" path="res://scenes/menus/main_menu/main_menu_with_animations.gd" id="2_sr523"]
 [ext_resource type="PackedScene" uid="uid://cul2ojrqh77x3" path="res://scenes/windows/main_menu_options_window.tscn" id="3_ixa71"]
 [ext_resource type="PackedScene" uid="uid://ck33slmhxxg3m" path="res://scenes/windows/main_menu_credits_window.tscn" id="4_2k5l7"]
+[ext_resource type="AudioStream" uid="uid://dmw1gumce2p1x" path="res://assets/audio/Wind_Constant_Breeze_with_Occasional_Gusts_OCP-0527-01.wav" id="5_2k5l7"]
 [ext_resource type="Texture2D" uid="uid://d0ey227sfnxgd" path="res://assets/backgrounds/area51_background.png" id="5_ixa71"]
 [ext_resource type="Theme" uid="uid://b6kqe3b6h2swo" path="res://resources/themes/lore_fork.tres" id="6_ixa71"]
 
@@ -297,6 +298,7 @@ options_packed_scene = ExtResource("3_ixa71")
 credits_packed_scene = ExtResource("4_2k5l7")
 
 [node name="BackgroundMusicPlayer" parent="." index="0" unique_id=1141822549]
+stream = ExtResource("5_2k5l7")
 bus = &"Master"
 
 [node name="MenuAnimationPlayer" type="AnimationPlayer" parent="." index="1" unique_id=1108772180]
