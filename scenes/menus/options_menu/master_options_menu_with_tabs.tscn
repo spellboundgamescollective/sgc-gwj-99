@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b5q575bxa5ink" path="res://scenes/menus/options_menu/master_options_menu_with_tabs.gd" id="1_b036r"]
 [ext_resource type="PackedScene" uid="uid://bctmb6tp4w5pk" path="res://scenes/menus/options_menu/input/input_options_menu.tscn" id="2_fqpxk"]
+[ext_resource type="Theme" uid="uid://b6kqe3b6h2swo" path="res://resources/themes/lore_fork.tres" id="3_fqpxk"]
 [ext_resource type="PackedScene" uid="uid://drpm5dcxahdbd" path="res://scenes/menus/options_menu/input/input_extras_menu.tscn" id="3_w1dvr"]
 [ext_resource type="PackedScene" uid="uid://bat6bdodgragl" path="res://scenes/menus/options_menu/audio/audio_options_menu.tscn" id="4_bn2s3"]
 [ext_resource type="PackedScene" uid="uid://bjum2g3j3l5er" path="res://scenes/menus/options_menu/video/video_options_menu_with_extras.tscn" id="5_6wkjv"]
@@ -18,6 +19,7 @@ script = ExtResource("1_b036r")
 
 [node name="Controls" parent="." unique_id=659681694 instance=ExtResource("2_fqpxk")]
 layout_mode = 2
+theme = ExtResource("3_fqpxk")
 metadata/_tab_index = 0
 
 [node name="Inputs" parent="." unique_id=1292920546 instance=ExtResource("3_w1dvr")]
