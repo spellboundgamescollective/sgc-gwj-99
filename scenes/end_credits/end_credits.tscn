@@ -10,6 +10,7 @@ theme = ExtResource("2_2v40y")
 script = ExtResource("2_0sycx")
 main_menu_scene_path = ""
 force_mouse_mode_visible = false
+scroll_paused = true
 
 [node name="BackgroundMusicPlayer" type="AudioStreamPlayer" parent="." index="0" unique_id=1411252862]
 process_mode = 3
@@ -35,7 +36,7 @@ expand_mode = 1
 stretch_mode = 5
 
 [node name="ScrollContainer" parent="." index="3" unique_id=1826061058]
-scroll_vertical = 3035
+scroll_vertical = 3248
 
 [node name="HeaderSpace" parent="ScrollContainer/VBoxContainer" parent_id_path=PackedInt32Array(1799859771) index="0" unique_id=1055754816]
 custom_minimum_size = Vector2(0, 1080)
@@ -56,8 +57,7 @@ mouse_filter = 2
 
 [node name="EndMessagePanel" type="Panel" parent="CenterContainer" index="0" unique_id=213736646]
 unique_name_in_owner = true
-visible = false
-custom_minimum_size = Vector2(360, 120)
+custom_minimum_size = Vector2(620, 200)
 layout_mode = 2
 theme = ExtResource("2_2v40y")
 
