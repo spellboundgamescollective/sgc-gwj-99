@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://cobqselc2l1rm" path="res://scenes/menus/main_menu/main_menu_with_animations.gd" id="2_sr523"]
 [ext_resource type="PackedScene" uid="uid://cul2ojrqh77x3" path="res://scenes/windows/main_menu_options_window.tscn" id="3_ixa71"]
 [ext_resource type="PackedScene" uid="uid://ck33slmhxxg3m" path="res://scenes/windows/main_menu_credits_window.tscn" id="4_2k5l7"]
+[ext_resource type="Texture2D" uid="uid://d0ey227sfnxgd" path="res://assets/backgrounds/area51_background.png" id="5_ixa71"]
 [ext_resource type="Theme" uid="uid://b6kqe3b6h2swo" path="res://resources/themes/lore_fork.tres" id="6_ixa71"]
 
 [sub_resource type="Animation" id="1"]
@@ -306,10 +307,14 @@ tree_root = SubResource("AnimationNodeStateMachine_vikuh")
 anim_player = NodePath("../MenuAnimationPlayer")
 parameters/conditions/intro_done = false
 
+[node name="BackgroundTextureRect" parent="." index="3" unique_id=1025367827]
+texture = ExtResource("5_ixa71")
+
 [node name="TitleContainer" parent="MenuContainer/TitleMargin" parent_id_path=PackedInt32Array(1189822984) index="0" unique_id=704939549]
 modulate = Color(1, 1, 1, 0)
 
 [node name="TitleLabel" parent="MenuContainer/TitleMargin/TitleContainer" index="0" unique_id=334107926]
+theme_override_font_sizes/font_size = 82
 text = "Going Home"
 
 [node name="SubTitleContainer" parent="MenuContainer/SubTitleMargin" parent_id_path=PackedInt32Array(893436372) index="0" unique_id=523889664]
@@ -317,7 +322,8 @@ modulate = Color(1, 1, 1, 0)
 
 [node name="SubTitleLabel" parent="MenuContainer/SubTitleMargin/SubTitleContainer" index="0" unique_id=754291424]
 theme = ExtResource("6_ixa71")
-text = "Escape from Area 51!"
+theme_override_font_sizes/font_size = 32
+text = "Escape from Area 51"
 
 [node name="MenuButtonsMargin" parent="MenuContainer" parent_id_path=PackedInt32Array(785053879) index="2" unique_id=1532800992]
 theme = ExtResource("6_ixa71")

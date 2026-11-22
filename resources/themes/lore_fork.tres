@@ -1,6 +1,7 @@
 [gd_resource type="Theme" format=3 uid="uid://b6kqe3b6h2swo"]
 
 [ext_resource type="FontFile" uid="uid://bd7d2ar5vrjqm" path="res://resources/Masterpiece.ttf" id="1_55067"]
+[ext_resource type="Texture2D" uid="uid://dtfxcewj1nmjb" path="res://assets/textbox.png" id="1_nurrv"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8hxc2"]
 content_margin_left = 8.0
@@ -37,6 +38,11 @@ border_width_top = 2
 border_width_right = 2
 border_width_bottom = 2
 border_color = Color(0.00392157, 0.0862745, 0.152941, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 1
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wnp2l"]
 content_margin_left = 8.0
@@ -72,6 +78,9 @@ border_width_top = 2
 border_width_right = 2
 border_width_bottom = 2
 border_color = Color(0.00392157, 0.0862745, 0.152941, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8kykl"]
+texture = ExtResource("1_nurrv")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f05by"]
 bg_color = Color(0.192157, 0.239216, 0.352941, 1)
@@ -156,6 +165,7 @@ corner_radius_bottom_left = 4
 
 [resource]
 default_font = ExtResource("1_55067")
+default_font_size = 50
 Button/colors/font_color = Color(0.839216, 0.933333, 1, 1)
 Button/colors/font_disabled_color = Color(0.192157, 0.239216, 0.352941, 1)
 Button/colors/font_focus_color = Color(0.839216, 0.933333, 1, 1)
@@ -177,7 +187,7 @@ LineEdit/colors/font_uneditable_color = Color(0.192157, 0.239216, 0.352941, 1)
 LineEdit/styles/normal = SubResource("StyleBoxFlat_pq3iw")
 LineEdit/styles/read_only = SubResource("StyleBoxFlat_pq3iw")
 Panel/styles/panel = SubResource("StyleBoxFlat_hvab5")
-PanelContainer/styles/panel = SubResource("StyleBoxFlat_hvab5")
+PanelContainer/styles/panel = SubResource("StyleBoxTexture_8kykl")
 ProgressBar/styles/background = SubResource("StyleBoxFlat_f05by")
 ProgressBar/styles/fill = SubResource("StyleBoxFlat_t1x62")
 RichTextLabel/colors/default_color = Color(0.839216, 0.933333, 1, 1)

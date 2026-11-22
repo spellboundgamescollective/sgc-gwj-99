@@ -1,18 +1,34 @@
 [gd_scene format=3 uid="uid://7i6wnj7sxd13"]
 
-[ext_resource type="PackedScene" path="res://addons/maaacks_game_template/base/nodes/windows/popup_window_panel.tscn" id="1_lpba5"]
-[ext_resource type="Script" path="res://scenes/windows/game_won_window.gd" id="2_rvsdo"]
-[ext_resource type="PackedScene" path="res://addons/maaacks_game_template/base/nodes/windows/confirmation_popup_window_panel.tscn" id="3_ga0ue"]
+[ext_resource type="PackedScene" uid="uid://6gdbfi0172ji" path="res://addons/maaacks_game_template/base/nodes/windows/popup_window_panel.tscn" id="1_lpba5"]
+[ext_resource type="Theme" uid="uid://b6kqe3b6h2swo" path="res://resources/themes/lore_fork.tres" id="2_ga0ue"]
+[ext_resource type="Script" uid="uid://cwnh5dlnt4jy2" path="res://scenes/windows/game_won_window.gd" id="2_rvsdo"]
+[ext_resource type="PackedScene" uid="uid://cwt4p3bufkke5" path="res://addons/maaacks_game_template/base/nodes/windows/confirmation_popup_window_panel.tscn" id="3_ga0ue"]
+[ext_resource type="Texture2D" uid="uid://dtfxcewj1nmjb" path="res://assets/textbox.png" id="4_hx4dq"]
 
 [node name="GameWonWindow" unique_id=862385343 instance=ExtResource("1_lpba5")]
 process_mode = 3
 custom_minimum_size = Vector2(432, 240)
+offset_left = -331.5
+offset_top = -199.0
+offset_right = 342.0
+offset_bottom = 120.0
+theme = ExtResource("2_ga0ue")
 script = ExtResource("2_rvsdo")
 pauses_game = true
 update_content = true
 title = ""
 text = "You won!"
 close_button_text = "Continue"
+
+[node name="NinePatchRect" type="NinePatchRect" parent="." index="0" unique_id=1522208028]
+layout_mode = 2
+texture = ExtResource("4_hx4dq")
+region_rect = Rect2(476, 381, 951, 335)
+patch_margin_left = 332
+patch_margin_top = 65
+patch_margin_right = 331
+patch_margin_bottom = 56
 
 [node name="TitleMargin" parent="ContentContainer/BoxContainer" parent_id_path=PackedInt32Array(394030069) index="0" unique_id=1262022916]
 visible = false
@@ -23,7 +39,13 @@ text = ""
 [node name="DescriptionLabel" parent="ContentContainer/BoxContainer/BodyMargin/BoxContainer" parent_id_path=PackedInt32Array(1957884530) index="0" unique_id=617407155]
 text = "You won!"
 
-[node name="MenuButtons" parent="ContentContainer/BoxContainer/MenuButtonsMargin" parent_id_path=PackedInt32Array(1413292752) index="0" unique_id=1371114575]
+[node name="MenuButtonsMargin" parent="ContentContainer/BoxContainer" parent_id_path=PackedInt32Array(394030069) index="2" unique_id=1413292752]
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 25
+
+[node name="MenuButtons" parent="ContentContainer/BoxContainer/MenuButtonsMargin" index="0" unique_id=1371114575]
 vertical = false
 reverse_search = true
 
@@ -32,6 +54,7 @@ unique_name_in_owner = true
 visible = false
 layout_mode = 2
 size_flags_horizontal = 3
+theme = ExtResource("2_ga0ue")
 text = "Exit"
 
 [node name="MainMenuButton" type="Button" parent="ContentContainer/BoxContainer/MenuButtonsMargin/MenuButtons" index="1" unique_id=1169131466]
@@ -45,7 +68,7 @@ text = "Main Menu"
 size_flags_horizontal = 3
 text = "Continue"
 
-[node name="MainMenuConfirmation" parent="." index="1" unique_id=1489862545 instance=ExtResource("3_ga0ue")]
+[node name="MainMenuConfirmation" parent="." index="2" unique_id=1489862545 instance=ExtResource("3_ga0ue")]
 unique_name_in_owner = true
 visible = false
 custom_minimum_size = Vector2(220, 0)
@@ -53,7 +76,7 @@ layout_mode = 2
 title = "Confirm Exit"
 text = "Exit to the main menu?"
 
-[node name="ExitConfirmation" parent="." index="2" unique_id=1941427183 instance=ExtResource("3_ga0ue")]
+[node name="ExitConfirmation" parent="." index="3" unique_id=1941427183 instance=ExtResource("3_ga0ue")]
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
