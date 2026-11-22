@@ -103,7 +103,7 @@ tracks/0/path = NodePath("Sprite:texture:region")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.08997701, 0.17343394, 0.2514383, 0.33489522, 0.41418964, 0.49764657),
+"times": PackedFloat32Array(0, 0.08997701, 0.16666667, 0.24467102, 0.32656607, 0.40586048, 0.48931742),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [Rect2(195, 2, 190, 116), Rect2(2, 609, 215, 139), Rect2(221, 609, 201, 145), Rect2(644, 765, 185, 161), Rect2(2, 929, 207, 163), Rect2(213, 929, 211, 164), Rect2(2, 1100, 218, 167)]

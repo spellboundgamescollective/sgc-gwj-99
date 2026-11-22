@@ -115,6 +115,30 @@ tracks/6/keys = {
 "update": 0,
 "values": []
 }
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("OpeningScene/Cat:texture:region")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Rect2(195, 2, 190, 116)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("OpeningScene/Cat:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-133, 595)]
+}
 
 [sub_resource type="Animation" id="Animation_rga4r"]
 resource_name = "opening"
@@ -166,10 +190,10 @@ tracks/3/path = NodePath("OpeningScene/Blob:visible")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 1.0833334),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 1.0833334, 3.5833333),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [false, true]
+"values": [false, true, false]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
@@ -193,7 +217,7 @@ tracks/5/keys = {
 "times": PackedFloat32Array(0, 1.0872996, 1.1687583, 1.2513927, 1.3339654, 1.418193, 1.5078167, 1.5873913, 1.6694524, 1.7515137, 1.833575, 1.9206096, 2.000184, 2.084732, 2.16928, 2.2488544, 2.335889, 2.4254105, 2.5008645, 2.5896456, 2.6680498, 2.7526512, 2.8331738, 2.918049, 3.0007482, 3.081271, 3.1661463, 3.2553742, 3.3371952, 3.4167402, 3.501501, 3.58235),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [Vector2(-176, 41), Vector2(-144, 28.000015), Vector2(-138, 23.000015), Vector2(-105.99999, 24.000015), Vector2(-77, 49.000015), Vector2(-66, 72.000015), Vector2(-38, 91.000015), Vector2(-3.8146973e-06, 57.000015), Vector2(31.999996, 25.000015), Vector2(71, 47.000015), Vector2(112, 91.000015), Vector2(159, 57.000015), Vector2(197, 25.000015), Vector2(231.99998, 57.000015), Vector2(270, 91.000015), Vector2(313, 57.000015), Vector2(366, 12.000015), Vector2(408.99997, 15.000016), Vector2(443.99997, 57.00002), Vector2(466.00003, 86.00002), Vector2(398.99997, 92.00002), Vector2(358.99997, 155.00003), Vector2(304, 259.00003), Vector2(254, 281.00003), Vector2(191.99998, 309.00003), Vector2(156.00002, 342.00003), Vector2(106.99999, 387.00003), Vector2(28, 404.00003), Vector2(-63.000008, 426.00003), Vector2(-116.00003, 466.00003), Vector2(-153, 510.00003), Vector2(-204, 566)]
+"values": [Vector2(-176, 41), Vector2(-144, 28.000015), Vector2(-138, 23.000015), Vector2(-105.99999, 24.000015), Vector2(-77, 49.000015), Vector2(-66, 72.000015), Vector2(-38, 91.000015), Vector2(-3.8146973e-06, 57.000015), Vector2(31.999996, 25.000015), Vector2(71, 47.000015), Vector2(112, 91.000015), Vector2(159, 57.000015), Vector2(197, 25.000015), Vector2(231.99998, 57.000015), Vector2(270, 91.000015), Vector2(313, 57.000015), Vector2(366, 12.000015), Vector2(408.99997, 15.000016), Vector2(443.99997, 57.00002), Vector2(466.00003, 86.00002), Vector2(398.99997, 92.00002), Vector2(358.99997, 155.00003), Vector2(304, 259.00003), Vector2(254, 281.00003), Vector2(191.99998, 309.00003), Vector2(156.00002, 342.00003), Vector2(106.99999, 387.00003), Vector2(28, 404.00003), Vector2(-63.000008, 426.00003), Vector2(-116.00003, 466.00003), Vector2(-153, 510.00003), Vector2(-204, 575)]
 }
 tracks/6/type = "value"
 tracks/6/imported = false
@@ -219,6 +243,42 @@ tracks/7/keys = {
 "update": 1,
 "values": [-0.89011794, -0.56897736, 0.572468, 0.8953539, 0.8953539, 0.0, -0.6440265, 0.0, 0.6440265, -0.3228859, -0.6457718, 0.3211406, 0.6422812, -0.32463124, -0.64751714, -0.64751714, 0.64053583, 0.64053583, -0.21991149, -0.21991149, -0.84823, -0.21991149, -0.06283186, -0.53407073, -0.69115037, -0.06283186, -0.06283186, -0.21991149, -0.69115037, -0.84823, -0.84823]
 }
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("OpeningScene/Cat:texture:region")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 3.9166667, 4.0833335, 4.177349, 4.255354, 4.337249, 4.75, 4.8333335, 4.925462, 5.005201, 5.0877876, 5.170375, 5.247266, 5.3355484, 5.418135, 5.4978743, 5.5890045, 5.665896),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Rect2(195, 2, 190, 116), Rect2(195, 2, 190, 116), Rect2(2, 609, 215, 139), Rect2(221, 609, 201, 145), Rect2(644, 765, 185, 161), Rect2(2, 929, 207, 163), Rect2(213, 929, 211, 164), Rect2(2, 1100, 218, 167), Rect2(2, 1280, 231, 176), Rect2(237, 1280, 214, 178), Rect2(450, 1468, 205, 205), Rect2(1, 1678, 203, 212), Rect2(525, 1678, 189, 227), Rect2(718, 1678, 176, 223), Rect2(365, 1678, 156, 221), Rect2(208, 1678, 154, 203), Rect2(659, 1468, 143, 192), Rect2(195, 2, 190, 116)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("OpeningScene/Cat:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 3.6666667, 3.9166667, 4.337966, 4.75, 4.7517447, 4.92831, 5.187462, 5.665896),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-133, 595), Vector2(-133, 595), Vector2(-133, 540), Vector2(-82, 501), Vector2(304, 57), Vector2(372, 0), Vector2(473, 0), Vector2(607, 0), Vector2(825, 43)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("OpeningScene/Cat:flip_h")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 1,
+"values": []
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_dftnh"]
 _data = {
@@ -229,6 +289,13 @@ _data = {
 [sub_resource type="AtlasTexture" id="AtlasTexture_cput5"]
 atlas = ExtResource("4_dftnh")
 region = Rect2(810, 449, 57, 40)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_u7j7n"]
+load_path = "res://.godot/imported/all.png-50151c509bb0c90be142a778e1db2703.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rxvf3"]
+atlas = SubResource("CompressedTexture2D_u7j7n")
+region = Rect2(195, 2, 190, 116)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cput5"]
 size = Vector2(1366, 393)
@@ -694,6 +761,10 @@ visible = false
 z_index = 1
 position = Vector2(-176, 41)
 texture = ExtResource("6_u7j7n")
+
+[node name="Cat" type="Sprite2D" parent="OpeningScene" unique_id=489954858]
+position = Vector2(-133, 595)
+texture = SubResource("AtlasTexture_rxvf3")
 
 [node name="FinalScene" type="Node2D" parent="." unique_id=1569644746]
 z_index = 3
