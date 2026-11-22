@@ -5,7 +5,7 @@ func _preselect_resolution(window : Window) -> void:
 
 func _update_resolution_options_enabled(window : Window) -> void:
 	if OS.has_feature("web"):
-		%ResolutionControl.editable = false
+		%ResolutionControl.editable = false 
 		%ResolutionControl.tooltip_text = "Disabled for web"
 	elif AppSettings.is_fullscreen(window):
 		%ResolutionControl.editable = false

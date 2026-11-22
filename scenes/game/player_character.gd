@@ -23,7 +23,7 @@ var grav_min:float = 0.1
 var grav_max:float = 0.9
 
 ## Player controls & physics.
-func _physics_process(delta: float) -> void:
+func _physics_process(delta: float) ->  void:
 	if lowgrav_flag:
 		gravity_scale = lerp(grav_max, grav_min, clampf(-global_position.y/beam_height, 0, 1))
 	else:

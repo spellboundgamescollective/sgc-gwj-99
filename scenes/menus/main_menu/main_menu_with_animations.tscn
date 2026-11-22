@@ -1,9 +1,10 @@
 [gd_scene format=3 uid="uid://riygeo4ovh46"]
 
-[ext_resource type="PackedScene" path="res://addons/maaacks_game_template/base/nodes/menus/main_menu/main_menu.tscn" id="1_rr1rn"]
-[ext_resource type="Script" path="res://scenes/menus/main_menu/main_menu_with_animations.gd" id="2_sr523"]
-[ext_resource type="PackedScene" path="res://scenes/windows/main_menu_options_window.tscn" id="3_ixa71"]
-[ext_resource type="PackedScene" path="res://scenes/windows/main_menu_credits_window.tscn" id="4_2k5l7"]
+[ext_resource type="PackedScene" uid="uid://c6k5nnpbypshi" path="res://addons/maaacks_game_template/base/nodes/menus/main_menu/main_menu.tscn" id="1_rr1rn"]
+[ext_resource type="Script" uid="uid://cobqselc2l1rm" path="res://scenes/menus/main_menu/main_menu_with_animations.gd" id="2_sr523"]
+[ext_resource type="PackedScene" uid="uid://cul2ojrqh77x3" path="res://scenes/windows/main_menu_options_window.tscn" id="3_ixa71"]
+[ext_resource type="PackedScene" uid="uid://ck33slmhxxg3m" path="res://scenes/windows/main_menu_credits_window.tscn" id="4_2k5l7"]
+[ext_resource type="Theme" uid="uid://b6kqe3b6h2swo" path="res://resources/themes/lore_fork.tres" id="6_ixa71"]
 
 [sub_resource type="Animation" id="1"]
 resource_name = "Intro"
@@ -287,12 +288,15 @@ states/OpenSubMenu/node = SubResource("13")
 states/OpenSubMenu/position = Vector2(734, 123)
 states/Start/position = Vector2(82, 123)
 transitions = ["Intro", "OpenMainMenu", SubResource("11"), "OpenMainMenu", "OpenSubMenu", SubResource("14"), "Start", "Intro", SubResource("AnimationNodeStateMachineTransition_j0orr"), "OpenSubMenu", "OpenMainMenu", SubResource("AnimationNodeStateMachineTransition_63dxc")]
-graph_offset = Vector2(-180.277, 49)
+graph_offset = Vector2(-89.27699, -20)
 
 [node name="MainMenu" unique_id=2084566378 instance=ExtResource("1_rr1rn")]
 script = ExtResource("2_sr523")
 options_packed_scene = ExtResource("3_ixa71")
 credits_packed_scene = ExtResource("4_2k5l7")
+
+[node name="BackgroundMusicPlayer" parent="." index="0" unique_id=1141822549]
+bus = &"Master"
 
 [node name="MenuAnimationPlayer" type="AnimationPlayer" parent="." index="1" unique_id=1108772180]
 libraries/ = SubResource("AnimationLibrary_2kqig")
@@ -305,16 +309,30 @@ parameters/conditions/intro_done = false
 [node name="TitleContainer" parent="MenuContainer/TitleMargin" parent_id_path=PackedInt32Array(1189822984) index="0" unique_id=704939549]
 modulate = Color(1, 1, 1, 0)
 
+[node name="TitleLabel" parent="MenuContainer/TitleMargin/TitleContainer" index="0" unique_id=334107926]
+text = "Going Home"
+
 [node name="SubTitleContainer" parent="MenuContainer/SubTitleMargin" parent_id_path=PackedInt32Array(893436372) index="0" unique_id=523889664]
 modulate = Color(1, 1, 1, 0)
 
-[node name="MenuButtonsContainer" parent="MenuContainer/MenuButtonsMargin" parent_id_path=PackedInt32Array(1532800992) index="0" unique_id=580041505]
+[node name="SubTitleLabel" parent="MenuContainer/SubTitleMargin/SubTitleContainer" index="0" unique_id=754291424]
+theme = ExtResource("6_ixa71")
+text = "Escape from Area 51!"
+
+[node name="MenuButtonsMargin" parent="MenuContainer" parent_id_path=PackedInt32Array(785053879) index="2" unique_id=1532800992]
+theme = ExtResource("6_ixa71")
+
+[node name="MenuButtonsContainer" parent="MenuContainer/MenuButtonsMargin" index="0" unique_id=580041505]
 modulate = Color(1, 1, 1, 0)
+theme = ExtResource("6_ixa71")
 
 [node name="MenuButtonsBoxContainer" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer" index="0" unique_id=1691719897]
 lock = true
 
-[node name="VersionContainer" parent="VersionMargin" parent_id_path=PackedInt32Array(115503069) index="0" unique_id=645412385]
+[node name="VersionMargin" parent="." index="5" unique_id=115503069]
+visible = false
+
+[node name="VersionContainer" parent="VersionMargin" index="0" unique_id=645412385]
 modulate = Color(1, 1, 1, 0)
 
 [node name="MouseFilter" type="Control" parent="." index="6" unique_id=26695112]
