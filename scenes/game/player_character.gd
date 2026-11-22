@@ -1,3 +1,4 @@
+class_name Player
 ## Scripting for player physics, controls and event triggers.
 extends CharacterBody2D
 

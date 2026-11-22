@@ -2,6 +2,7 @@ extends AudioStreamPlayer
 
 var sat_long:bool = false
 var play_delay:float = 0
+var sit_animation_options:bool = true
 
 @export var single_audio: AudioStream
 @export var random_audio: AudioStreamRandomizer
@@ -15,7 +16,8 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	play_delay += delta
-	if((stream == single_audio && !playing) || (play_delay > 5)):
+	if( ((stream == single_audio && !playing) || (play_delay > 5)
+	 	) && sit_animation_options == true):
 		play()
 		play_delay = 0
 	pass

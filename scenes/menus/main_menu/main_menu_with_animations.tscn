@@ -4,8 +4,11 @@
 [ext_resource type="Script" uid="uid://cobqselc2l1rm" path="res://scenes/menus/main_menu/main_menu_with_animations.gd" id="2_sr523"]
 [ext_resource type="PackedScene" uid="uid://cul2ojrqh77x3" path="res://scenes/windows/main_menu_options_window.tscn" id="3_ixa71"]
 [ext_resource type="PackedScene" uid="uid://ck33slmhxxg3m" path="res://scenes/windows/main_menu_credits_window.tscn" id="4_2k5l7"]
+[ext_resource type="AudioStream" uid="uid://dahovnd54bkc4" path="res://assets/audio/Level 01 v2.wav" id="5_6xh1d"]
 [ext_resource type="Texture2D" uid="uid://d0ey227sfnxgd" path="res://assets/backgrounds/area51_background.png" id="5_ixa71"]
 [ext_resource type="Theme" uid="uid://b6kqe3b6h2swo" path="res://resources/themes/lore_fork.tres" id="6_ixa71"]
+[ext_resource type="AudioStream" uid="uid://dis7ffjd1srg1" path="res://assets/audio/Land.mp3" id="8_dhrx6"]
+[ext_resource type="Script" uid="uid://bynhtftfxkcf0" path="res://scenes/menus/main_menu/menu_button_player.gd" id="9_xkrf4"]
 
 [sub_resource type="Animation" id="1"]
 resource_name = "Intro"
@@ -297,6 +300,7 @@ options_packed_scene = ExtResource("3_ixa71")
 credits_packed_scene = ExtResource("4_2k5l7")
 
 [node name="BackgroundMusicPlayer" parent="." index="0" unique_id=1141822549]
+stream = ExtResource("5_6xh1d")
 bus = &"Master"
 
 [node name="MenuAnimationPlayer" type="AnimationPlayer" parent="." index="1" unique_id=1108772180]
@@ -350,3 +354,12 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 metadata/_edit_lock_ = true
+
+[node name="MenuButtonPlayer" type="AudioStreamPlayer" parent="." index="8" unique_id=731394728]
+stream = ExtResource("8_dhrx6")
+script = ExtResource("9_xkrf4")
+
+[connection signal="pressed" from="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer/NewGameButton" to="MenuButtonPlayer" method="_on_new_game_button_pressed"]
+[connection signal="pressed" from="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer/OptionsButton" to="MenuButtonPlayer" method="_on_options_button_pressed"]
+[connection signal="pressed" from="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer/CreditsButton" to="MenuButtonPlayer" method="_on_credits_button_pressed"]
+[connection signal="pressed" from="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer/ExitButton" to="MenuButtonPlayer" method="_on_exit_button_pressed"]
