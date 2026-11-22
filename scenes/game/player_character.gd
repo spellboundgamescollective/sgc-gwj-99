@@ -12,9 +12,9 @@ const jump_velocity:float = 1200
 
 # Rapture Beam Variables.
 var rapture_flag:bool = false
-var rapture_speed:float = 500
+var rapture_speed:float = 1500
 var rapture_force:float = 5
-var beam_height:float = 6400
+var beam_height:float = 32000
 
 # Low Gravity Field Variables.
 var lowgrav_flag:bool = false
@@ -30,11 +30,11 @@ func _physics_process(delta: float) -> void:
 
 	if Input.is_action_just_pressed("up") and is_on_floor():
 		velocity.y = -jump_velocity
-	if not is_on_floor():
-		if(rapture_flag):
-			velocity.y = move_toward(velocity.y, -rapture_speed, rapture_force)
-		else:
-			velocity += 3 * get_gravity() * delta * gravity_scale
+
+	if(rapture_flag):
+		velocity.y = move_toward(velocity.y, -rapture_speed, rapture_force)
+	else:
+		velocity += 3 * get_gravity() * delta * gravity_scale
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
