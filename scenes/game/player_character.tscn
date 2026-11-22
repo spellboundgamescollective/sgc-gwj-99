@@ -178,7 +178,6 @@ advance_expression = "velocity.x != 0"
 advance_mode = 2
 
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_m80j2"]
-<<<<<<< HEAD
 states/End/position = Vector2(1245, -204)
 states/Start/position = Vector2(710, -204)
 states/sit/node = SubResource("AnimationNodeAnimation_3ukan")
@@ -187,7 +186,6 @@ states/walk/node = SubResource("AnimationNodeAnimation_5lpfh")
 states/walk/position = Vector2(949, -293)
 transitions = ["walk", "sit", SubResource("AnimationNodeStateMachineTransition_qbq11"), "sit", "walk", SubResource("AnimationNodeStateMachineTransition_j03xg"), "Start", "sit", SubResource("AnimationNodeStateMachineTransition_px70y"), "walk", "End", SubResource("AnimationNodeStateMachineTransition_1orai")]
 graph_offset = Vector2(191, -548)
-=======
 states/End/position = Vector2(1362, -163)
 states/Start/position = Vector2(669, -217)
 states/sit/node = SubResource("AnimationNodeAnimation_fx5lj")
@@ -198,7 +196,6 @@ states/walk/node = SubResource("AnimationNodeAnimation_53hwf")
 states/walk/position = Vector2(958, -70)
 transitions = ["Start", "walk", SubResource("AnimationNodeStateMachineTransition_82eum"), "walk", "sit", SubResource("AnimationNodeStateMachineTransition_1owtg"), "sit", "stand", SubResource("AnimationNodeStateMachineTransition_8gg62"), "stand", "walk", SubResource("AnimationNodeStateMachineTransition_y33hv"), "stand", "End", SubResource("AnimationNodeStateMachineTransition_nwpxb")]
 graph_offset = Vector2(265, -421)
->>>>>>> animations
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cput5"]
 atlas = ExtResource("3_fx5lj")
