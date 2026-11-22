@@ -59,15 +59,6 @@ func _physics_process(delta: float) -> void:
 	$CanvasLayer/LowGravLabel.text = "Low-Grav: " + str(lowgrav_flag)
 #	print(animation_tree["parameters/sitting/blend_position"])
 	#print(state_machine.get_current_node())
-	
-func idle_animation() -> void:
-	pass
-	#var rand_dict:Dictionary = {0: -1, 1:1}
-	#while true:
-		#if state_machine.get_current_node() == "sitting":
-	#	var rand_num:int = randi() % 2
-	#	state_machine.set("parameters/sitting/blend_position", rand_dict[rand_num])
-	#	await get_tree().create_timer(2).timeout
 		
 ## Entering and exiting rapture beam flags.
 func _on_rapture_beam_body_entered(body: Node2D) -> void:
@@ -86,12 +77,3 @@ func _on_low_gravity_body_entered(body: Node2D) -> void:
 func _on_low_gravity_body_exited(body: Node2D) -> void:
 	if body == self:
 		lowgrav_flag = false
-
-func _on_timer_timeout() -> void:
-	print("TIMER")
-	var x:int = -0.9
-	if randf() < 0.5:
-		print("Idling!")
-		x = 0.9
-	animation_tree.set("parameters/sitting/blend_position", x)
-	

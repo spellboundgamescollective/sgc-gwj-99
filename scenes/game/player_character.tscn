@@ -179,7 +179,7 @@ advance_expression = "velocity.x != 0"
 advance_mode = 2
 
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_m80j2"]
-states/End/position = Vector2(1257, -163)
+states/End/position = Vector2(1362, -163)
 states/Start/position = Vector2(669, -217)
 states/sit/node = SubResource("AnimationNodeAnimation_fx5lj")
 states/sit/position = Vector2(941, -282)
@@ -188,13 +188,9 @@ states/stand/position = Vector2(1117, -163)
 states/walk/node = SubResource("AnimationNodeAnimation_53hwf")
 states/walk/position = Vector2(958, -70)
 transitions = ["Start", "walk", SubResource("AnimationNodeStateMachineTransition_82eum"), "walk", "sit", SubResource("AnimationNodeStateMachineTransition_1owtg"), "sit", "stand", SubResource("AnimationNodeStateMachineTransition_8gg62"), "stand", "walk", SubResource("AnimationNodeStateMachineTransition_y33hv"), "stand", "End", SubResource("AnimationNodeStateMachineTransition_nwpxb")]
-graph_offset = Vector2(118, -399)
+graph_offset = Vector2(265, -421)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cput5"]
-atlas = ExtResource("3_fx5lj")
-region = Rect2(583, 121, 191, 117)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_17hsp"]
 atlas = ExtResource("3_fx5lj")
 region = Rect2(583, 121, 191, 117)
 
@@ -256,8 +252,3 @@ anim_player = NodePath("../PlayerCharacterAnimationPlayer")
 z_index = 1
 texture = SubResource("AtlasTexture_cput5")
 region_rect = Rect2(2, 484, 165, 120)
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1176346687]
-visible = false
-modulate = Color(1, 0, 1, 1)
-texture = SubResource("AtlasTexture_17hsp")
