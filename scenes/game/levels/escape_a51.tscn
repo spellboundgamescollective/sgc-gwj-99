@@ -29,6 +29,7 @@ size = Vector2(128, 43200)
 [node name="escape_a51" type="Node2D" unique_id=431927543]
 
 [node name="PlayerCharacter" parent="." unique_id=741950354 instance=ExtResource("1_s0o00")]
+z_index = 3
 position = Vector2(-1632, -96)
 
 [node name="Camera2D" type="Camera2D" parent="PlayerCharacter" unique_id=1072366351]
@@ -106,46 +107,87 @@ texture = ExtResource("11_2wr3m")
 [node name="Background Canvases" type="Node2D" parent="." unique_id=853294762]
 
 [node name="Background1" type="Sprite2D" parent="Background Canvases" unique_id=1675565332]
-position = Vector2(-9016, -776)
+position = Vector2(0, -3240)
+scale = Vector2(2, 2)
 texture = ExtResource("12_grgo0")
 
 [node name="Background2" type="Sprite2D" parent="Background Canvases" unique_id=396581122]
-position = Vector2(-8992, -1992)
+position = Vector2(0, -5400)
+scale = Vector2(2, 2)
 texture = ExtResource("13_70v75")
 
 [node name="Background3" type="Sprite2D" parent="Background Canvases" unique_id=1211619862]
-position = Vector2(-9016, -3272)
+position = Vector2(0, -7560)
+scale = Vector2(2, 2)
 texture = ExtResource("14_bjuhe")
 
 [node name="Background4" type="Sprite2D" parent="Background Canvases" unique_id=878593311]
-position = Vector2(-9040, -4680)
+position = Vector2(0, -9720)
+scale = Vector2(2, 2)
 texture = ExtResource("15_x4sre")
 
 [node name="Background5" type="Sprite2D" parent="Background Canvases" unique_id=1567074289]
-position = Vector2(-9112, -5952)
+position = Vector2(0, -14040)
+scale = Vector2(2, 2)
+texture = ExtResource("16_cn67y")
+
+[node name="Background13" type="Sprite2D" parent="Background Canvases" unique_id=1753720816]
+position = Vector2(0, -11880)
+scale = Vector2(2, 2)
 texture = ExtResource("16_cn67y")
 
 [node name="Background6" type="Sprite2D" parent="Background Canvases" unique_id=1382755964]
-position = Vector2(-9080, -7264)
+position = Vector2(0, -16200)
+scale = Vector2(2, 2)
 texture = ExtResource("17_b2en3")
 
 [node name="Background7" type="Sprite2D" parent="Background Canvases" unique_id=1148823850]
-position = Vector2(-9080, -8592)
+position = Vector2(0, -18360)
+scale = Vector2(2, 2)
+texture = ExtResource("18_nurek")
+
+[node name="Background12" type="Sprite2D" parent="Background Canvases" unique_id=1118228098]
+position = Vector2(0, -20520)
+scale = Vector2(2, 2)
+texture = ExtResource("18_nurek")
+
+[node name="Background14" type="Sprite2D" parent="Background Canvases" unique_id=1205281600]
+position = Vector2(0, -22680)
+scale = Vector2(2, 2)
 texture = ExtResource("18_nurek")
 
 [node name="Background8" type="Sprite2D" parent="Background Canvases" unique_id=136962093]
-position = Vector2(-9080, -9960)
+position = Vector2(0, -24840)
+scale = Vector2(2, 2)
 texture = ExtResource("19_7xm4w")
 
 [node name="Background9" type="Sprite2D" parent="Background Canvases" unique_id=2090079183]
-position = Vector2(-9072, -11184)
+position = Vector2(0, -27000)
+scale = Vector2(2, 2)
+texture = ExtResource("20_r3ee5")
+
+[node name="Background11" type="Sprite2D" parent="Background Canvases" unique_id=878668876]
+position = Vector2(0, -29160)
+scale = Vector2(2, 2)
+texture = ExtResource("20_r3ee5")
+
+[node name="Background15" type="Sprite2D" parent="Background Canvases" unique_id=1010244197]
+position = Vector2(0, -31320)
+scale = Vector2(2, 2)
 texture = ExtResource("20_r3ee5")
 
 [node name="Background10" type="Sprite2D" parent="Background Canvases" unique_id=2008727458]
-position = Vector2(-9040, -12560)
+position = Vector2(0, -33480)
+scale = Vector2(2, 2)
+texture = ExtResource("21_6epbu")
+
+[node name="Background16" type="Sprite2D" parent="Background Canvases" unique_id=1272427447]
+position = Vector2(0, -1080)
+scale = Vector2(2, 2)
 texture = ExtResource("21_6epbu")
 
 [node name="Platform" parent="." unique_id=1838500979 instance=ExtResource("22_lma7c")]
+position = Vector2(-2616, -1024)
 
 [connection signal="body_entered" from="Tractor Beam/Rapture Beam" to="PlayerCharacter" method="_on_rapture_beam_body_entered"]
 [connection signal="body_exited" from="Tractor Beam/Rapture Beam" to="PlayerCharacter" method="_on_rapture_beam_body_exited"]

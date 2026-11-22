@@ -2,29 +2,37 @@
 extends CharacterBody2D
 
 ## Constants.
-const player_speed:float = 600.0
+const player_speed:float = 600
 const jump_velocity:float = 1200
 
 ## Variables.
-var center_coord:float = 1.0
-var rapture_flag:bool = false
-var lowgrav_flag:bool = false
 @onready var animation_tree:AnimationTree = $AnimationTree
-@export var gravity_toggle:bool = true 
+@export var gravity_toggle:bool = true
 @export var gravity_scale:float = 1.0
- 
+
+# Rapture Beam Variables.
+var rapture_flag:bool = false
+var rapture_speed:float = 500
+var rapture_force:float = 5
+var beam_height:float = 6400
+
+# Low Gravity Field Variables.
+var lowgrav_flag:bool = false
+var grav_min:float = 0.1
+var grav_max:float = 0.9
+
 ## Player controls & physics.
 func _physics_process(delta: float) -> void:
 	if lowgrav_flag:
-		gravity_scale = 0.5
+		gravity_scale = lerp(grav_max, grav_min, clampf(-global_position.y/beam_height, 0, 1))
 	else:
 		gravity_scale = 1.0
-		
+
 	if Input.is_action_just_pressed("up") and is_on_floor():
 		velocity.y = -jump_velocity
 	if not is_on_floor():
 		if(rapture_flag):
-			velocity.y = -200
+			velocity.y = move_toward(velocity.y, -rapture_speed, rapture_force)
 		else:
 			velocity += 3 * get_gravity() * delta * gravity_scale
 
