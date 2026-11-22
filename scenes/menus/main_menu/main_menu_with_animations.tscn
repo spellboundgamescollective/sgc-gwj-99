@@ -323,7 +323,7 @@ modulate = Color(1, 1, 1, 0)
 [node name="SubTitleLabel" parent="MenuContainer/SubTitleMargin/SubTitleContainer" index="0" unique_id=754291424]
 theme = ExtResource("6_ixa71")
 theme_override_font_sizes/font_size = 32
-text = "Escape from Area 51!"
+text = "Escape from Area 51"
 
 [node name="MenuButtonsMargin" parent="MenuContainer" parent_id_path=PackedInt32Array(785053879) index="2" unique_id=1532800992]
 theme = ExtResource("6_ixa71")
