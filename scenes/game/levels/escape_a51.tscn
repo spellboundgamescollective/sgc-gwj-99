@@ -1,8 +1,11 @@
 [gd_scene format=3 uid="uid://d0jamtpyfmjrh"]
 
+[ext_resource type="Script" uid="uid://cp2b8pon7kkfj" path="res://scenes/game/levels/escape_a_51.gd" id="1_cowcv"]
 [ext_resource type="PackedScene" uid="uid://d1xpl3iw6ravd" path="res://scenes/game/player_character.tscn" id="1_s0o00"]
 [ext_resource type="PackedScene" uid="uid://pf1omi14yrlt" path="res://scenes/game/barrel_1.tscn" id="2_rvuwa"]
 [ext_resource type="PackedScene" uid="uid://cdtg3563doj21" path="res://scenes/game/barrel_2.tscn" id="3_1qu7h"]
+[ext_resource type="Texture2D" uid="uid://k15o187lnk8e" path="res://assets/final_scene/final_scene_cat.png" id="3_lma7c"]
+[ext_resource type="AudioStream" uid="uid://bmr4w5ijpu6pe" path="res://assets/audio/SpaceShipFlyOut v3.mp3" id="4_cowcv"]
 [ext_resource type="PackedScene" uid="uid://d2tw8nx73kgep" path="res://scenes/game/box_1.tscn" id="4_wjywi"]
 [ext_resource type="PackedScene" uid="uid://dna8xyjpcurtq" path="res://scenes/game/cow_1.tscn" id="5_3f1ar"]
 [ext_resource type="PackedScene" uid="uid://db4lq8dp4dewk" path="res://scenes/game/cow_2.tscn" id="6_b7kyd"]
@@ -21,14 +24,307 @@
 [ext_resource type="Texture2D" uid="uid://dqpity34ibcfr" path="res://assets/final_scene/final_scene_tractor_beam.png" id="19_cowcv"]
 [ext_resource type="Texture2D" uid="uid://bgdwkxnk0tgxj" path="res://assets/tractor_beam_2.png" id="21_rga4r"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cput5"]
+size = Vector2(1366, 393)
+
+[sub_resource type="Gradient" id="Gradient_17hsp"]
+offsets = PackedFloat32Array(0.04517134, 0.7725857)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_rxvf3"]
+gradient = SubResource("Gradient_17hsp")
+fill = 1
+fill_from = Vector2(0.5, 0.50427353)
+fill_to = Vector2(0.94871795, 0.06410257)
+
+[sub_resource type="Animation" id="Animation_gf5qf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../SpaceshipCat:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../PointLight2D:energy")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("..:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(24, -32200)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../../../TractorBeam:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../..:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(24, -32200)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../..:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../../Blink:energy")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../../Blink:scale")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../..:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_l2f54"]
+resource_name = "win"
+length = 16.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../SpaceshipCat:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("..:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.025176406, 1.2359002, 1.8101238, 2.63944, 3.4334493, 4.0497427, 4.807892, 5.2599998, 5.6540093, 5.9622397, 6.195666, 6.4348817, 6.65812, 6.885194, 7.096206, 7.2784524, 7.467051, 7.6248465, 7.813445, 7.973278, 8.129275, 8.234093, 8.369713, 8.494906, 8.602001, 8.725157, 8.838364, 8.941143, 9.043898, 9.12926, 9.211534, 9.292002, 9.366681, 9.439555, 9.512065, 9.594703, 9.657448, 9.728151, 9.799576, 9.876789, 9.938449, 9.9950485, 10.063218, 10.124458, 10.193412, 10.25405, 10.309501, 10.359591, 10.415826, 10.472425, 10.525406, 10.579835, 10.630646, 10.680735, 10.73046, 10.787845, 10.825936, 10.865176, 10.912732, 10.959567, 10.998444, 11.038769),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -50), Vector2(0, 0), Vector2(0, -50), Vector2(0, 0), Vector2(0, -50), Vector2(0, 0), Vector2(0, -25), Vector2(0, 0), Vector2(0, -25), Vector2(0, 0), Vector2(0, -25), Vector2(0, 0), Vector2(0, -25), Vector2(0, 0), Vector2(0, -25), Vector2(0, 0), Vector2(0, -25), Vector2(0, 0), Vector2(0, -25), Vector2(0, 0), Vector2(0, -25), Vector2(0, 0), Vector2(0, -25), Vector2(0, 0), Vector2(0, -25), Vector2(0, 0), Vector2(0, -25), Vector2(0, 0), Vector2(0, -25), Vector2(0, 0), Vector2(0, -25), Vector2(0, 0), Vector2(0, -25), Vector2(0, 0), Vector2(0, -25), Vector2(0, 0), Vector2(0, -25), Vector2(0, 0), Vector2(0, -25), Vector2(0, 0), Vector2(0, -25), Vector2(0, 0), Vector2(0, -25), Vector2(0, 0), Vector2(0, -25), Vector2(0, 0), Vector2(0, -25), Vector2(0, 0), Vector2(0, -25), Vector2(0, 0), Vector2(0, -25), Vector2(0, 0), Vector2(0, -25), Vector2(0, 0), Vector2(0, -25), Vector2(0, 0), Vector2(0, -25), Vector2(0, 0), Vector2(0, -25), Vector2(0, 0), Vector2(0, -25)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../PointLight2D:energy")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.79999995, 1.2333333, 1.8333333, 2.6333332, 3.4302652, 4.0454497, 4.808026, 5.2666664, 5.652505, 5.9594936, 6.1968656, 6.4350014, 6.6602573, 6.8910933, 7.0999517, 7.283797, 7.4636025, 7.6262307, 7.805013, 7.971932, 8.131073, 8.23757, 8.369114, 8.491713, 8.605368, 8.715443, 8.832674, 8.936253, 9.043408, 9.126647, 9.213465, 9.287759, 9.366172, 9.437735, 9.512875, 9.589805, 9.657789, 9.731605, 9.800153, 9.873706, 9.935, 9.993844, 10.062524, 10.129034, 10.192104, 10.251143, 10.310183, 10.362066, 10.417527, 10.471199, 10.52666, 10.578543, 10.630426, 10.680521, 10.730614, 10.778918, 10.825434, 10.864794, 10.913098, 10.956036, 10.997185, 11.038333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [1.0, 3.45, 1.0, 3.45, 1.0, 3.45, 1.0, 3.45, 1.0, 3.45, 1.0, 3.45, 1.0, 3.45, 1.0, 3.45, 1.0, 3.45, 1.0, 3.45, 1.0, 3.45, 1.0, 3.45, 1.0, 3.45, 1.0, 3.45, 1.0, 3.45, 1.0, 3.45, 1.0, 3.45, 1.0, 3.45, 1.0, 3.45, 1.0, 3.45, 1.0, 3.45, 1.0, 3.45, 1.0, 3.45, 1.0, 3.45, 1.0, 3.45, 1.0, 3.45, 1.0, 3.45, 1.0, 3.45, 1.0, 3.45, 1.0, 3.45, 1.0, 3.45]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../PointLight2D2:energy")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.7769048, 1.2102382, 1.8102381, 2.610238, 3.4071698, 4.0223546, 4.7849307, 5.243571, 5.6294093, 5.957681, 6.1950536, 6.4385104, 6.6637654, 6.8839602, 7.1001143, 7.28396, 7.4637656, 7.626394, 7.8051763, 7.972095, 8.131236, 8.237733, 8.369277, 8.491876, 8.605531, 8.715606, 8.832837, 8.936416, 9.043571, 9.12681, 9.213628, 9.287922, 9.366335, 9.437898, 9.513038, 9.589968, 9.657952, 9.731768, 9.800316, 9.873869, 9.9351635, 9.994007, 10.062687, 10.129197, 10.192267, 10.251307, 10.310346, 10.362229, 10.41769, 10.471362, 10.526823, 10.578706, 10.6305895, 10.680684, 10.730777, 10.779081, 10.825597, 10.864957, 10.913261, 10.956199, 10.997348, 11.038496),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [1.0, 3.45, 1.0, 3.45, 1.0, 3.45, 1.0, 3.45, 1.0, 3.45, 1.0, 3.45, 1.0, 3.45, 1.0, 3.45, 1.0, 3.45, 1.0, 3.45, 1.0, 3.45, 1.0, 3.45, 1.0, 3.45, 1.0, 3.45, 1.0, 3.45, 1.0, 3.45, 1.0, 3.45, 1.0, 3.45, 1.0, 3.45, 1.0, 3.45, 1.0, 3.45, 1.0, 3.45, 1.0, 3.45, 1.0, 3.45, 1.0, 3.45, 1.0, 3.45, 1.0, 3.45, 1.0, 3.45, 1.0, 3.45, 1.0, 3.45, 1.0, 3.45]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../PointLight2D3:energy")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.77189106, 1.2052244, 1.8052243, 2.6052241, 3.4021564, 4.017341, 4.7799172, 5.2385573, 5.624396, 5.9526677, 6.19004, 6.433497, 6.658752, 6.878947, 7.095101, 7.2789464, 7.458752, 7.6213803, 7.8001633, 7.967082, 8.126223, 8.232719, 8.364264, 8.486862, 8.600517, 8.710592, 8.827824, 8.931402, 9.038558, 9.121797, 9.208614, 9.282908, 9.361321, 9.432884, 9.508024, 9.584954, 9.652939, 9.726754, 9.795302, 9.868855, 9.93015, 9.988994, 10.057673, 10.124184, 10.187254, 10.246293, 10.305332, 10.357216, 10.412677, 10.466349, 10.52181, 10.573692, 10.625576, 10.675671, 10.725763, 10.774068, 10.820583, 10.859943, 10.908248, 10.951185, 10.992334, 11.033483),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [1.0, 3.45, 1.0, 3.45, 1.0, 3.45, 1.0, 3.45, 1.0, 3.45, 1.0, 3.45, 1.0, 3.45, 1.0, 3.45, 1.0, 3.45, 1.0, 3.45, 1.0, 3.45, 1.0, 3.45, 1.0, 3.45, 1.0, 3.45, 1.0, 3.45, 1.0, 3.45, 1.0, 3.45, 1.0, 3.45, 1.0, 3.45, 1.0, 3.45, 1.0, 3.45, 1.0, 3.45, 1.0, 3.45, 1.0, 3.45, 1.0, 3.45, 1.0, 3.45, 1.0, 3.45, 1.0, 3.45, 1.0, 3.45, 1.0, 3.45, 1.0, 3.45]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../../../TractorBeam:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.013642773),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/6/type = "audio"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../../../AudioStreamPlayer")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("4_cowcv")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/6/use_blend = true
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../..:position")
+tracks/7/interp = 2
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0.095630825, 6.152251, 15.018433),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, -32000), Vector2(0, -32000), Vector2(1886, -33300)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../..:scale")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0.04781542, 6.184128, 15.0288725),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1, 1), Vector2(0.05, 0.05)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../../Blink:energy")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(15.544407, 16.040653),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [100.0, 0.0]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("../../Blink:scale")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(15.03258, 15.554163, 16.040655),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(25, 25), Vector2(0, 0)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("../..:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(16.040653),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dc5ky"]
+_data = {
+&"RESET": SubResource("Animation_gf5qf"),
+&"win": SubResource("Animation_l2f54")
+}
+
+[sub_resource type="Gradient" id="Gradient_lma7c"]
+offsets = PackedFloat32Array(0.05919003, 0.9813084)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_cput5"]
+gradient = SubResource("Gradient_lma7c")
+width = 56
+fill = 1
+fill_from = Vector2(0.50793654, 0.47008547)
+fill_to = Vector2(0.11721612, 0.094017096)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2rcey"]
 size = Vector2(32, 32000)
 
 [node name="escape_a51" type="Node2D" unique_id=431927543]
+script = ExtResource("1_cowcv")
 
 [node name="PlayerCharacter" parent="." unique_id=741950354 instance=ExtResource("1_s0o00")]
 z_index = 3
-position = Vector2(-456, -6744)
+position = Vector2(0, -31000)
 
 [node name="Camera2D" type="Camera2D" parent="PlayerCharacter" unique_id=1072366351]
 limit_left = -1920
@@ -40,36 +336,100 @@ position_smoothing_speed = 50.0
 drag_horizontal_enabled = true
 drag_vertical_enabled = true
 
-[node name="Tractor Beam" type="Node2D" parent="." unique_id=993555344]
-z_index = 5
+[node name="FinalScene" type="Node2D" parent="." unique_id=1569644746]
+z_index = 3
+position = Vector2(24, -32200)
 
-[node name="Rapture Beam" type="Area2D" parent="Tractor Beam" unique_id=1469728893]
+[node name="FinalSceneSpaceship" type="Area2D" parent="FinalScene" unique_id=1910469851]
+z_index = 4
+position = Vector2(24, -32200)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Tractor Beam/Rapture Beam" unique_id=783760309]
+[node name="FinalSceneSpaceshipSprite" type="Sprite2D" parent="FinalScene/FinalSceneSpaceship" unique_id=770966433]
+texture = ExtResource("18_lma7c")
+
+[node name="SpaceshipCat" type="Sprite2D" parent="FinalScene/FinalSceneSpaceship" unique_id=1436304161]
+visible = false
+z_index = -1
+position = Vector2(-24, 53)
+texture = ExtResource("3_lma7c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FinalScene/FinalSceneSpaceship" unique_id=1868011165]
+position = Vector2(-8, 108)
+shape = SubResource("RectangleShape2D_cput5")
+
+[node name="PointLight2D" type="PointLight2D" parent="FinalScene/FinalSceneSpaceship" unique_id=566409672]
+position = Vector2(-5, -35.000694)
+scale = Vector2(4, 4)
+color = Color(1, 1, 0.22352941, 1)
+texture = SubResource("GradientTexture2D_rxvf3")
+
+[node name="PointLight2D2" type="PointLight2D" parent="FinalScene/FinalSceneSpaceship" unique_id=397556384]
+position = Vector2(-354, -25.000694)
+scale = Vector2(4, 4)
+color = Color(1, 1, 0, 1)
+texture = SubResource("GradientTexture2D_rxvf3")
+
+[node name="PointLight2D3" type="PointLight2D" parent="FinalScene/FinalSceneSpaceship" unique_id=615871304]
+position = Vector2(345, -18.000694)
+scale = Vector2(4, 4)
+color = Color(1, 1, 0, 1)
+texture = SubResource("GradientTexture2D_rxvf3")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="FinalScene" unique_id=631357836]
+root_node = NodePath("../FinalSceneSpaceship/FinalSceneSpaceshipSprite")
+libraries/ = SubResource("AnimationLibrary_dc5ky")
+
+[node name="Blink" type="PointLight2D" parent="FinalScene" unique_id=421233282]
+texture = SubResource("GradientTexture2D_cput5")
+
+[node name="TractorBeam" type="Node2D" parent="." unique_id=993555344]
+visible = false
+z_index = 7
+
+[node name="Rapture Beam" type="Area2D" parent="TractorBeam" unique_id=1469728893]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TractorBeam/Rapture Beam" unique_id=783760309]
 position = Vector2(0, -16000)
 shape = SubResource("RectangleShape2D_2rcey")
 debug_color = Color(0, 0.6, 0.7019608, 0.41960785)
 metadata/_edit_lock_ = true
 
-[node name="FinalSceneSpaceship" type="Sprite2D" parent="Tractor Beam/Rapture Beam" unique_id=770966433]
-position = Vector2(24, -32200)
-texture = ExtResource("18_lma7c")
-
-[node name="FinalSceneTractorBeam" type="Sprite2D" parent="Tractor Beam/Rapture Beam" unique_id=427591006]
+[node name="FinalSceneTractorBeam" type="Sprite2D" parent="TractorBeam/Rapture Beam" unique_id=427591006]
 position = Vector2(0, -32000)
 scale = Vector2(0.25185105, 0.25185105)
 texture = ExtResource("19_cowcv")
 
-[node name="TractorBeam2" type="Sprite2D" parent="Tractor Beam/Rapture Beam" unique_id=90862319]
+[node name="TractorBeam2" type="Sprite2D" parent="TractorBeam/Rapture Beam" unique_id=90862319]
 position = Vector2(6, -15932.001)
 scale = Vector2(0.20000002, 8.297916)
 texture = ExtResource("21_rga4r")
 
-[node name="Low Gravity" type="Area2D" parent="Tractor Beam" unique_id=625029070]
+[node name="Low Gravity" type="Area2D" parent="TractorBeam" unique_id=625029070]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Tractor Beam/Low Gravity" unique_id=1876070226]
-polygon = PackedVector2Array(-960, 0, 960, 0, 0, -32000)
+[node name="Polygon2D" type="Polygon2D" parent="TractorBeam/Low Gravity" unique_id=1226500896]
+color = Color(1, 1, 0.101960786, 0.26666668)
+polygon = PackedVector2Array(-960, 0, 960, 0, 95, -32000, -95, -32000)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="TractorBeam/Low Gravity" unique_id=1876070226]
+polygon = PackedVector2Array(-960, 0, 960, 0, 95, -32000, -95, -32000)
 metadata/_edit_lock_ = true
+
+[node name="Line2D" type="Line2D" parent="TractorBeam/Low Gravity" unique_id=920633581]
+z_index = 6
+points = PackedVector2Array(-960, 0, -95, -32000)
+width = 25.0
+default_color = Color(1, 1, 0, 0.68235296)
+round_precision = 16
+antialiased = true
+
+[node name="Line2D2" type="Line2D" parent="TractorBeam/Low Gravity" unique_id=1428339275]
+z_index = 6
+points = PackedVector2Array(960, 0, 95, -32000)
+width = 25.0
+default_color = Color(1, 1, 0, 0.68235296)
+round_precision = 16
+antialiased = true
 
 [node name="World Border" type="StaticBody2D" parent="." unique_id=1861014912]
 metadata/_edit_lock_ = true
@@ -150,7 +510,7 @@ position = Vector2(224, -9248)
 position = Vector2(-944, -9232)
 
 [node name="box_a17" parent="Platforms" unique_id=116575479 instance=ExtResource("4_wjywi")]
-position = Vector2(-1208, -9432)
+position = Vector2(-425, -9439)
 
 [node name="box_a15" parent="Platforms" unique_id=915934118 instance=ExtResource("4_wjywi")]
 position = Vector2(-304, -9824)
@@ -186,124 +546,150 @@ position = Vector2(-136, -3144)
 position = Vector2(440, -7808)
 
 [node name="Background" type="Parallax2D" parent="." unique_id=410912751]
-visible = false
 scroll_scale = Vector2(1, 1.5)
 limit_begin = Vector2(0, 0)
 limit_end = Vector2(0, -32000)
+metadata/_edit_lock_ = true
 
 [node name="NewBackground1" type="Sprite2D" parent="Background" unique_id=159662039]
 position = Vector2(0, -1080)
 scale = Vector2(2, 2)
 texture = ExtResource("8_v314w")
+metadata/_edit_lock_ = true
 
 [node name="NewBackground12" type="Sprite2D" parent="Background" unique_id=1178136029]
 position = Vector2(0, -3240)
 scale = Vector2(2, 2)
 texture = ExtResource("8_v314w")
+metadata/_edit_lock_ = true
 
 [node name="NewBackground2" type="Sprite2D" parent="Background" unique_id=1872716923]
 position = Vector2(0, -5400)
 scale = Vector2(2, 2)
 texture = ExtResource("9_wjywi")
+metadata/_edit_lock_ = true
 
 [node name="NewBackground3" type="Sprite2D" parent="Background" unique_id=2019905970]
 position = Vector2(0, -7560)
 scale = Vector2(2, 2)
 texture = ExtResource("10_3f1ar")
+metadata/_edit_lock_ = true
 
 [node name="NewBackground10" type="Sprite2D" parent="Background" unique_id=1144728878]
 position = Vector2(0, -9720)
 scale = Vector2(2, 2)
 texture = ExtResource("10_3f1ar")
+metadata/_edit_lock_ = true
 
 [node name="NewBackground4" type="Sprite2D" parent="Background" unique_id=806479263]
 position = Vector2(0, -11880)
 scale = Vector2(2, 2)
 texture = ExtResource("11_b7kyd")
+metadata/_edit_lock_ = true
 
 [node name="NewBackground5" type="Sprite2D" parent="Background" unique_id=109891367]
 position = Vector2(0, -16200)
 scale = Vector2(2, 2)
 texture = ExtResource("12_l2f54")
+metadata/_edit_lock_ = true
 
 [node name="NewBackground13" type="Sprite2D" parent="Background" unique_id=1675932402]
 position = Vector2(0, -18360)
 scale = Vector2(2, 2)
 texture = ExtResource("12_l2f54")
+metadata/_edit_lock_ = true
 
 [node name="NewBackground16" type="Sprite2D" parent="Background" unique_id=450391732]
 position = Vector2(0, -20520)
 scale = Vector2(2, 2)
 texture = ExtResource("12_l2f54")
+metadata/_edit_lock_ = true
 
 [node name="NewBackground11" type="Sprite2D" parent="Background" unique_id=212138616]
 position = Vector2(0, -14040)
 scale = Vector2(2, 2)
 texture = ExtResource("12_l2f54")
+metadata/_edit_lock_ = true
 
 [node name="NewBackground6" type="Sprite2D" parent="Background" unique_id=527719836]
 position = Vector2(0, -22680)
 scale = Vector2(2, 2)
 texture = ExtResource("13_dc5ky")
+metadata/_edit_lock_ = true
 
 [node name="NewBackground7" type="Sprite2D" parent="Background" unique_id=1204600195]
 position = Vector2(0.00012207031, -31320)
 rotation = -3.1415925
 scale = Vector2(2, 2)
 texture = ExtResource("14_lma7c")
+metadata/_edit_lock_ = true
 
 [node name="NewBackground14" type="Sprite2D" parent="Background" unique_id=1670235464]
 position = Vector2(0.00012207031, -29160)
 scale = Vector2(2, 2)
 texture = ExtResource("14_lma7c")
+metadata/_edit_lock_ = true
 
 [node name="NewBackground17" type="Sprite2D" parent="Background" unique_id=2114933778]
 position = Vector2(0.00012207031, -27000)
 rotation = -3.1415925
 scale = Vector2(2, 2)
 texture = ExtResource("14_lma7c")
+metadata/_edit_lock_ = true
 
 [node name="NewBackground18" type="Sprite2D" parent="Background" unique_id=1656465234]
 position = Vector2(0.00012207031, -24840)
 scale = Vector2(2, 2)
 texture = ExtResource("14_lma7c")
+metadata/_edit_lock_ = true
 
 [node name="NewBackground8" type="Sprite2D" parent="Background" unique_id=57339294]
 position = Vector2(0.00012207031, -33480)
 scale = Vector2(2, 2)
 texture = ExtResource("15_cowcv")
+metadata/_edit_lock_ = true
 
 [node name="NewBackground9" type="Sprite2D" parent="Background" unique_id=335621755]
 position = Vector2(0.00012207031, -35640)
 scale = Vector2(2, 2)
 texture = ExtResource("16_gf5qf")
+metadata/_edit_lock_ = true
 
 [node name="NewBackground15" type="Sprite2D" parent="Background" unique_id=4726931]
 position = Vector2(0.00012207031, -37800)
 scale = Vector2(2, 2)
 texture = ExtResource("16_gf5qf")
+metadata/_edit_lock_ = true
 
 [node name="NewBackground19" type="Sprite2D" parent="Background" unique_id=938892526]
 position = Vector2(0, -39960)
 scale = Vector2(2, 2)
 texture = ExtResource("16_gf5qf")
+metadata/_edit_lock_ = true
 
 [node name="NewBackground20" type="Sprite2D" parent="Background" unique_id=1470762612]
 position = Vector2(0, -42120)
 scale = Vector2(2, 2)
 texture = ExtResource("16_gf5qf")
+metadata/_edit_lock_ = true
 
 [node name="FinalSceneBackground" type="Sprite2D" parent="Background" unique_id=673209580]
 position = Vector2(0, -44280)
 scale = Vector2(2, 2)
 texture = ExtResource("17_dc5ky")
+metadata/_edit_lock_ = true
 
 [node name="FinalSceneBackground2" type="Sprite2D" parent="Background" unique_id=954898957]
 position = Vector2(0, -46440)
 scale = Vector2(2, 2)
 texture = ExtResource("17_dc5ky")
+metadata/_edit_lock_ = true
 
-[connection signal="body_entered" from="Tractor Beam/Rapture Beam" to="PlayerCharacter" method="_on_rapture_beam_body_entered"]
-[connection signal="body_exited" from="Tractor Beam/Rapture Beam" to="PlayerCharacter" method="_on_rapture_beam_body_exited"]
-[connection signal="body_entered" from="Tractor Beam/Low Gravity" to="PlayerCharacter" method="_on_low_gravity_body_entered"]
-[connection signal="body_exited" from="Tractor Beam/Low Gravity" to="PlayerCharacter" method="_on_low_gravity_body_exited"]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=920373806]
+volume_db = -20.8
+
+[connection signal="body_entered" from="FinalScene/FinalSceneSpaceship" to="." method="_on_final_scene_spaceship_body_entered"]
+[connection signal="body_entered" from="TractorBeam/Rapture Beam" to="PlayerCharacter" method="_on_rapture_beam_body_entered"]
+[connection signal="body_exited" from="TractorBeam/Rapture Beam" to="PlayerCharacter" method="_on_rapture_beam_body_exited"]
+[connection signal="body_entered" from="TractorBeam/Low Gravity" to="PlayerCharacter" method="_on_low_gravity_body_entered"]
+[connection signal="body_exited" from="TractorBeam/Low Gravity" to="PlayerCharacter" method="_on_low_gravity_body_exited"]
