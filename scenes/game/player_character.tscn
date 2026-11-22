@@ -335,6 +335,16 @@ script = ExtResource("11_audfs")
 single_audio = ExtResource("2_nwpxb")
 random_audio = SubResource("AudioStreamRandomizer_dftnh")
 
+[node name="Camera2D" type="Camera2D" parent="." unique_id=832758359]
+limit_left = -1920
+limit_right = 1920
+limit_bottom = 0
+limit_smoothed = true
+position_smoothing_enabled = true
+position_smoothing_speed = 50.0
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+
 [connection signal="sat_down" from="." to="SitAnimationSounds" method="_on_player_character_sat_down"]
 [connection signal="sat_long" from="." to="SitAnimationSounds" method="_on_player_character_sat_long"]
 [connection signal="stood_up" from="." to="SitAnimationSounds" method="_on_player_character_stood_up"]

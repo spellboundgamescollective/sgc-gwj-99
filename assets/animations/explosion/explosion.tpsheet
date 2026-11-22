@@ -1,0 +1,217 @@
+{
+	"textures": [
+		{
+			"image": "explosion.png",
+			"size": {
+				"w": 1988,
+				"h": 1236
+			},
+			"sprites": [
+				{
+					"filename": "explosion_1.png",
+					"region": {
+						"x": 808,
+						"y": 447,
+						"w": 60,
+						"h": 44
+					},
+					"margin": {
+						"x": 816,
+						"y": 501,
+						"w": 1860,
+						"h": 1036
+					}
+				},
+				{
+					"filename": "explosion_2.png",
+					"region": {
+						"x": 1298,
+						"y": 447,
+						"w": 170,
+						"h": 138
+					},
+					"margin": {
+						"x": 771,
+						"y": 443,
+						"w": 1750,
+						"h": 942
+					}
+				},
+				{
+					"filename": "explosion_3.png",
+					"region": {
+						"x": 333,
+						"y": 1012,
+						"w": 256,
+						"h": 183
+					},
+					"margin": {
+						"x": 741,
+						"y": 420,
+						"w": 1664,
+						"h": 897
+					}
+				},
+				{
+					"filename": "explosion_4.png",
+					"region": {
+						"x": 0,
+						"y": 1012,
+						"w": 333,
+						"h": 217
+					},
+					"margin": {
+						"x": 703,
+						"y": 381,
+						"w": 1587,
+						"h": 863
+					}
+				},
+				{
+					"filename": "explosion_5.png",
+					"region": {
+						"x": 912,
+						"y": 447,
+						"w": 386,
+						"h": 283
+					},
+					"margin": {
+						"x": 697,
+						"y": 315,
+						"w": 1534,
+						"h": 797
+					}
+				},
+				{
+					"filename": "explosion_6.png",
+					"region": {
+						"x": 1513,
+						"y": 0,
+						"w": 462,
+						"h": 350
+					},
+					"margin": {
+						"x": 703,
+						"y": 249,
+						"w": 1458,
+						"h": 730
+					}
+				},
+				{
+					"filename": "explosion_7.png",
+					"region": {
+						"x": 1566,
+						"y": 789,
+						"w": 422,
+						"h": 353
+					},
+					"margin": {
+						"x": 750,
+						"y": 245,
+						"w": 1498,
+						"h": 727
+					}
+				},
+				{
+					"filename": "explosion_8.png",
+					"region": {
+						"x": 1513,
+						"y": 350,
+						"w": 447,
+						"h": 439
+					},
+					"margin": {
+						"x": 748,
+						"y": 161,
+						"w": 1473,
+						"h": 641
+					}
+				},
+				{
+					"filename": "explosion_9.png",
+					"region": {
+						"x": 912,
+						"y": 789,
+						"w": 654,
+						"h": 445
+					},
+					"margin": {
+						"x": 733,
+						"y": 155,
+						"w": 1266,
+						"h": 635
+					}
+				},
+				{
+					"filename": "explosion_10.png",
+					"region": {
+						"x": 808,
+						"y": 0,
+						"w": 705,
+						"h": 447
+					},
+					"margin": {
+						"x": 750,
+						"y": 151,
+						"w": 1215,
+						"h": 633
+					}
+				},
+				{
+					"filename": "explosion_11.png",
+					"region": {
+						"x": 0,
+						"y": 0,
+						"w": 808,
+						"h": 508
+					},
+					"margin": {
+						"x": 750,
+						"y": 90,
+						"w": 1112,
+						"h": 572
+					}
+				},
+				{
+					"filename": "explosion_12.png",
+					"region": {
+						"x": 0,
+						"y": 508,
+						"w": 912,
+						"h": 504
+					},
+					"margin": {
+						"x": 750,
+						"y": 94,
+						"w": 1008,
+						"h": 576
+					}
+				}
+			]
+		}
+	],
+	"animations": [
+		{
+			"name": "explosion",
+			"frames": [
+				"explosion_1.png",
+				"explosion_2.png",
+				"explosion_3.png",
+				"explosion_4.png",
+				"explosion_5.png",
+				"explosion_6.png",
+				"explosion_7.png",
+				"explosion_8.png",
+				"explosion_9.png",
+				"explosion_10.png",
+				"explosion_11.png",
+				"explosion_12.png"
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "1.1",
+		"smartupdate": "$TexturePacker:SmartUpdate:c8367ed2bf013f05e18b90065392523a:f7b0eb14f600e07a75a127f194eb0bd0:04c3b67c12cc42b98ac09c953cbfbf7a$"
+	}
+}

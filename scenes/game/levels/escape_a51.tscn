@@ -5,7 +5,9 @@
 [ext_resource type="PackedScene" uid="uid://pf1omi14yrlt" path="res://scenes/game/barrel_1.tscn" id="2_rvuwa"]
 [ext_resource type="PackedScene" uid="uid://cdtg3563doj21" path="res://scenes/game/barrel_2.tscn" id="3_1qu7h"]
 [ext_resource type="Texture2D" uid="uid://k15o187lnk8e" path="res://assets/final_scene/final_scene_cat.png" id="3_lma7c"]
+[ext_resource type="Texture2D" uid="uid://d0ey227sfnxgd" path="res://assets/backgrounds/area51_background.png" id="3_rga4r"]
 [ext_resource type="AudioStream" uid="uid://bmr4w5ijpu6pe" path="res://assets/audio/SpaceShipFlyOut v3.mp3" id="4_cowcv"]
+[ext_resource type="Texture2D" uid="uid://d4gy4psoi63lo" path="res://assets/animations/explosion/explosion.png" id="4_dftnh"]
 [ext_resource type="PackedScene" uid="uid://d2tw8nx73kgep" path="res://scenes/game/box_1.tscn" id="4_wjywi"]
 [ext_resource type="PackedScene" uid="uid://dna8xyjpcurtq" path="res://scenes/game/cow_1.tscn" id="5_3f1ar"]
 [ext_resource type="PackedScene" uid="uid://db4lq8dp4dewk" path="res://scenes/game/cow_2.tscn" id="6_b7kyd"]
@@ -24,6 +26,47 @@
 [ext_resource type="AudioStream" uid="uid://mvpb2ilti1xe" path="res://assets/audio/Level 01.mp3" id="24_gf5qf"]
 [ext_resource type="Texture2D" uid="uid://caifebl0xhmmu" path="res://assets/backgrounds/mesosphere_to_thermosphere.jpg" id="25_u7j7n"]
 [ext_resource type="Texture2D" uid="uid://ceblmxrput16g" path="res://assets/backgrounds/exosphere.png" id="26_0otxn"]
+
+[sub_resource type="Animation" id="Animation_0otxn"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("OpeningScene/Explosion:texture:region")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Rect2(810, 449, 57, 40)]
+}
+
+[sub_resource type="Animation" id="Animation_rga4r"]
+resource_name = "opening"
+step = 0.083333336
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("OpeningScene/Explosion:texture:region")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.08369145, 0.16642092, 0.25011238, 0.33380383, 0.41653332, 0.5011867, 0.5829542, 0.6685696, 0.7484132, 0.8321047, 0.9167581),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Rect2(1299, 449, 168, 134), Rect2(810, 449, 57, 40), Rect2(334, 1014, 254, 180), Rect2(1, 1014, 330, 213), Rect2(913, 448, 384, 280), Rect2(1522, 2, 452, 345), Rect2(1567, 791, 420, 349), Rect2(1516, 360, 439, 425), Rect2(917, 800, 609, 430), Rect2(809, 3, 702, 442), Rect2(1, 13, 799, 493), Rect2(1, 531, 904, 479)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dftnh"]
+_data = {
+&"RESET": SubResource("Animation_0otxn"),
+&"opening": SubResource("Animation_rga4r")
+}
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cput5"]
+atlas = ExtResource("4_dftnh")
+region = Rect2(810, 449, 57, 40)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cput5"]
 size = Vector2(1366, 393)
@@ -451,15 +494,21 @@ script = ExtResource("1_cowcv")
 z_index = 3
 position = Vector2(0, -20)
 
-[node name="Camera2D" type="Camera2D" parent="PlayerCharacter" unique_id=1072366351]
-limit_left = -1920
-limit_right = 1920
-limit_bottom = 0
-limit_smoothed = true
-position_smoothing_enabled = true
-position_smoothing_speed = 50.0
-drag_horizontal_enabled = true
-drag_vertical_enabled = true
+[node name="OpeningScene" type="Node2D" parent="." unique_id=1674485441]
+position = Vector2(0, 1100)
+
+[node name="Camera2D" type="Camera2D" parent="OpeningScene" unique_id=2105699620]
+
+[node name="OpeningSceneBackground" type="Sprite2D" parent="OpeningScene" unique_id=287585665]
+texture = ExtResource("3_rga4r")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="OpeningScene" unique_id=1462351938]
+root_node = NodePath("../..")
+libraries/ = SubResource("AnimationLibrary_dftnh")
+
+[node name="Explosion" type="Sprite2D" parent="OpeningScene" unique_id=1569507411]
+position = Vector2(-116, 0)
+texture = SubResource("AtlasTexture_cput5")
 
 [node name="FinalScene" type="Node2D" parent="." unique_id=1569644746]
 z_index = 3
