@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cegywnhru1idl"
-path="res://.godot/imported/background_3.png-fb8fe26b3716b5ffa0fbf7e24f708c37.ctex"
+uid="uid://b47ws68pydc5e"
+path="res://.godot/imported/final_scene_composite.png-d4b568f745874a859f1b66dffa7c5506.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/background_3.png"
-dest_files=["res://.godot/imported/background_3.png-fb8fe26b3716b5ffa0fbf7e24f708c37.ctex"]
+source_file="res://assets/final_scene/final_scene_composite.png"
+dest_files=["res://.godot/imported/final_scene_composite.png-d4b568f745874a859f1b66dffa7c5506.ctex"]
 
 [params]
 
