@@ -1,6 +1,6 @@
 extends Node2D
 
-signal level_won
+signal game_won
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -13,7 +13,7 @@ func _process(delta: float) -> void:
 	pass
 
 func won() -> void:
-	level_won.emit()
+	game_won.emit()
 
 
 func _on_final_scene_spaceship_body_entered(body: Node2D) -> void:

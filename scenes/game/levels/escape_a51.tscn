@@ -143,7 +143,7 @@ tracks/8/path = NodePath("../../../PlayerCharacter/Camera2D:zoom")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
-"times": PackedFloat32Array(0.009999998),
+"times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector2(1, 1)]
@@ -206,12 +206,12 @@ tracks/13/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(0, -30000)]
+"values": [Vector2(0, -20)]
 }
 
 [sub_resource type="Animation" id="Animation_l2f54"]
 resource_name = "win"
-length = 18.34
+length = 18.296028
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -309,7 +309,7 @@ tracks/7/keys = {
 "times": PackedFloat32Array(0.021351814, 8.256819, 17.123001),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector2(0, -36000), Vector2(0, -36000), Vector2(1880, -37475)]
+"values": [Vector2(0, -36000), Vector2(0, -36000), Vector2(1886, -33300)]
 }
 tracks/8/type = "value"
 tracks/8/imported = false
@@ -366,7 +366,7 @@ tracks/12/path = NodePath("../../../PlayerCharacter/Camera2D:position")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/keys = {
-"times": PackedFloat32Array(0, 0.91134644),
+"times": PackedFloat32Array(0, 0.89134645),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(0, -1000), Vector2(0, -1500)]
@@ -417,7 +417,7 @@ tracks/16/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(0, -35000)]
+"values": [Vector2(0, -31000)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_dc5ky"]
@@ -449,7 +449,7 @@ script = ExtResource("1_cowcv")
 
 [node name="PlayerCharacter" parent="." unique_id=741950354 instance=ExtResource("1_s0o00")]
 z_index = 3
-position = Vector2(0, -30000)
+position = Vector2(0, -20)
 
 [node name="Camera2D" type="Camera2D" parent="PlayerCharacter" unique_id=1072366351]
 limit_left = -1920
@@ -490,14 +490,12 @@ texture = SubResource("GradientTexture2D_rxvf3")
 position = Vector2(-354, -25.000694)
 scale = Vector2(4, 4)
 color = Color(1, 1, 0, 1)
-energy = 3.45
 texture = SubResource("GradientTexture2D_rxvf3")
 
 [node name="PointLight2D3" type="PointLight2D" parent="FinalScene/FinalSceneSpaceship" unique_id=615871304]
 position = Vector2(345, -18.000694)
 scale = Vector2(4, 4)
 color = Color(1, 1, 0, 1)
-energy = 3.45
 texture = SubResource("GradientTexture2D_rxvf3")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="FinalScene" unique_id=631357836]
@@ -811,11 +809,6 @@ texture = ExtResource("26_0otxn")
 
 [node name="Exosphere4" type="Sprite2D" parent="Backgrounds" unique_id=1479995444]
 position = Vector2(0, -54348)
-scale = Vector2(2, 2)
-texture = ExtResource("26_0otxn")
-
-[node name="Exosphere5" type="Sprite2D" parent="Backgrounds" unique_id=1572790486]
-position = Vector2(0, -55909)
 scale = Vector2(2, 2)
 texture = ExtResource("26_0otxn")
 
