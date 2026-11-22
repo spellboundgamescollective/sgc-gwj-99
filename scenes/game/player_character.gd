@@ -13,8 +13,8 @@ const jump_velocity:float = 1200
 
 # Rapture Beam Variables.
 var rapture_flag:bool = false
-var rapture_speed:float = 1500
-var rapture_force:float = 5
+var rapture_speed:float = 15000
+var rapture_force:float = 50
 var beam_height:float = 32000
 
 # Low Gravity Field Variables.
@@ -79,8 +79,9 @@ func _physics_process(delta: float) ->  void:
 ## Entering and exiting rapture beam flags.
 
 func stop_sounds() -> void:
-	$SitAnimationSounds.queue_free()
-	$WalkAnimationSounds.queue_free()
+	#$SitAnimationSounds.queue_free()
+	#$WalkAnimationSounds.queue_free()
+	pass
 
 func _on_rapture_beam_body_entered(body: Node2D) -> void:
 	if body == self:

@@ -331,6 +331,7 @@ texture = SubResource("AtlasTexture_cput5")
 [node name="WalkAnimationSounds" type="AudioStreamPlayer" parent="." unique_id=1467684955]
 
 [node name="SitAnimationSounds" type="AudioStreamPlayer" parent="." unique_id=604147974]
+volume_db = -25.634
 script = ExtResource("11_audfs")
 single_audio = ExtResource("2_nwpxb")
 random_audio = SubResource("AudioStreamRandomizer_dftnh")

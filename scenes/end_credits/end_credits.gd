@@ -8,12 +8,10 @@ extends "res://scenes/credits/scrolling_credits.gd"
 ## Useful for games that capture the mouse, and don't automatically return it.
 @export var force_mouse_mode_visible : bool = false
 
-@onready var end_message_panel = %EndMessagePanel
-@onready var exit_button = %ExitButton
-@onready var menu_button = %MenuButton
+@onready var end_message_panel:Panel = %EndMessagePanel
+@onready var exit_button:Button = %ExitButton
+@onready var menu_button:Button = %MenuButton
 @onready var init_mouse_filter : MouseFilter = mouse_filter
-## If Maaack's Scene Loader is installed, then it will be used to change scenes.
-@onready var scene_loader_node = get_tree().root.get_node_or_null(^"SceneLoader")
 
 func get_main_menu_scene_path() -> String:
 	return MaaacksGameTemplate.get_main_menu_path(main_menu_scene_path)
@@ -26,10 +24,7 @@ func _end_reached() -> void:
 	super._end_reached()
 
 func load_main_menu() -> void:
-	if scene_loader_node:
-		scene_loader_node.load_scene(get_main_menu_scene_path())
-	else:
-		get_tree().change_scene_to_file(get_main_menu_scene_path())
+	get_tree().change_scene_to_file(get_main_menu_scene_path())
 
 func exit_game() -> void:
 	if OS.has_feature("web"):
@@ -57,8 +52,8 @@ func _unhandled_input(event : InputEvent) -> void:
 		else:
 			exit_game()
 
-func _on_exit_button_pressed():
+func _on_exit_button_pressed() -> void:
 	exit_game()
 
-func _on_menu_button_pressed():
+func _on_menu_button_pressed() -> void:
 	load_main_menu()
