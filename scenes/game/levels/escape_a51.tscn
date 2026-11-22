@@ -417,7 +417,7 @@ tracks/16/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(0, -31000)]
+"values": [Vector2(0, -35000)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_dc5ky"]
@@ -512,8 +512,8 @@ z_index = 7
 [node name="Rapture Beam" type="Area2D" parent="TractorBeam" unique_id=1469728893]
 
 [node name="RaptureBeam" type="Sprite2D" parent="TractorBeam/Rapture Beam" unique_id=90862319]
-position = Vector2(7.2300024, -17285.863)
-scale = Vector2(0.21737961, 9.661011)
+position = Vector2(0, -17917.504)
+scale = Vector2(0.20673147, 9.332032)
 texture = ExtResource("21_rga4r")
 
 [node name="RaptureBeamCollision" type="CollisionShape2D" parent="TractorBeam/Rapture Beam" unique_id=433015179]
@@ -809,6 +809,11 @@ texture = ExtResource("26_0otxn")
 
 [node name="Exosphere4" type="Sprite2D" parent="Backgrounds" unique_id=1479995444]
 position = Vector2(0, -54348)
+scale = Vector2(2, 2)
+texture = ExtResource("26_0otxn")
+
+[node name="Exosphere5" type="Sprite2D" parent="Backgrounds" unique_id=557738275]
+position = Vector2(0, -55909)
 scale = Vector2(2, 2)
 texture = ExtResource("26_0otxn")
 
