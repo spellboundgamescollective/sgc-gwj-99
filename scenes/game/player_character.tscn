@@ -1,7 +1,16 @@
 [gd_scene format=3 uid="uid://d1xpl3iw6ravd"]
 
 [ext_resource type="Script" uid="uid://c6ob6umtrpvhp" path="res://scenes/game/player_character.gd" id="1_hlpqy"]
+[ext_resource type="AudioStream" uid="uid://bf8cnxolsneko" path="res://assets/audio/Purr.mp3" id="2_nwpxb"]
 [ext_resource type="Texture2D" uid="uid://caclexti626kx" path="res://assets/animations/all.png" id="3_fx5lj"]
+[ext_resource type="AudioStream" uid="uid://3308vs61wn5j" path="res://assets/audio/Meow.mp3" id="3_k0yxx"]
+[ext_resource type="AudioStream" uid="uid://srrsoojqnqfw" path="res://assets/audio/Meow-1.mp3" id="4_fh8db"]
+[ext_resource type="AudioStream" uid="uid://bhve6ftlasoug" path="res://assets/audio/Step 1.mp3" id="5_audfs"]
+[ext_resource type="AudioStream" uid="uid://di3s6cm70mrpg" path="res://assets/audio/Step 2.mp3" id="6_x5s3u"]
+[ext_resource type="AudioStream" uid="uid://ycbdyocm3mip" path="res://assets/audio/Step 3.mp3" id="7_pnhaf"]
+[ext_resource type="AudioStream" uid="uid://bt3qr6p78wojl" path="res://assets/audio/Step 4.mp3" id="8_74yne"]
+[ext_resource type="AudioStream" uid="uid://cn5k6h86mnu1s" path="res://assets/audio/Meow-2.mp3" id="10_fh8db"]
+[ext_resource type="Script" uid="uid://c7d7gux8hrij7" path="res://scenes/game/sit_animation_sounds.gd" id="11_audfs"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_j03xg"]
 radius = 55.0
@@ -67,6 +76,21 @@ tracks/1/keys = {
 "update": 1,
 "values": [Vector2(0, 0), Vector2(-7.5, 0), Vector2(-12.5, 0), Vector2(-1.5, 0), Vector2(9, 0), Vector2(13.5, 0), Vector2(9, 0), Vector2(0, 0)]
 }
+tracks/2/type = "audio"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("WalkAnimationSounds")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("2_nwpxb")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/2/use_blend = true
 
 [sub_resource type="Animation" id="Animation_1owtg"]
 resource_name = "jump"
@@ -102,6 +126,11 @@ tracks/0/keys = {
 "values": [Rect2(1, 240, 193, 118), Rect2(617, 362, 179, 119), Rect2(798, 363, 153, 119), Rect2(197, 241, 143, 117), Rect2(2, 484, 165, 120)]
 }
 
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_y33hv"]
+streams_count = 2
+stream_0/stream = ExtResource("3_k0yxx")
+stream_1/stream = ExtResource("4_fh8db")
+
 [sub_resource type="Animation" id="Animation_82eum"]
 resource_name = "stand"
 length = 0.33333334
@@ -118,6 +147,30 @@ tracks/0/keys = {
 "update": 1,
 "values": [Rect2(2, 484, 165, 120), Rect2(197, 241, 143, 117), Rect2(798, 363, 153, 119), Rect2(617, 362, 179, 119), Rect2(1, 240, 193, 118)]
 }
+tracks/1/type = "audio"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("WalkAnimationSounds")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.08908802,
+"stream": SubResource("AudioStreamRandomizer_y33hv")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/1/use_blend = true
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_8gg62"]
+random_pitch = 1.297364
+random_volume_offset_db = 9.0
+streams_count = 4
+stream_0/stream = ExtResource("5_audfs")
+stream_1/stream = ExtResource("6_x5s3u")
+stream_2/stream = ExtResource("7_pnhaf")
+stream_3/stream = ExtResource("8_74yne")
 
 [sub_resource type="Animation" id="Animation_fx5lj"]
 resource_name = "walk"
@@ -136,6 +189,25 @@ tracks/0/keys = {
 "update": 1,
 "values": [Rect2(583, 121, 191, 117), Rect2(363, 484, 192, 120), Rect2(169, 484, 192, 120), Rect2(557, 484, 192, 120), Rect2(751, 484, 192, 122), Rect2(1, 120, 192, 117), Rect2(389, 120, 191, 118), Rect2(581, 1, 192, 116), Rect2(1, 1, 192, 115), Rect2(195, 121, 192, 117)]
 }
+tracks/1/type = "audio"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("WalkAnimationSounds")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"clips": [{
+"end_offset": 0.25696483,
+"start_offset": 0.0,
+"stream": SubResource("AudioStreamRandomizer_8gg62")
+}, {
+"end_offset": 0.255,
+"start_offset": 0.0,
+"stream": SubResource("AudioStreamRandomizer_8gg62")
+}],
+"times": PackedFloat32Array(0.2526, 0.6712)
+}
+tracks/1/use_blend = true
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_53hwf"]
 _data = {
@@ -182,7 +254,7 @@ advance_mode = 2
 states/End/position = Vector2(1362, -163)
 states/Start/position = Vector2(669, -217)
 states/sit/node = SubResource("AnimationNodeAnimation_fx5lj")
-states/sit/position = Vector2(941, -282)
+states/sit/position = Vector2(945, -282)
 states/stand/node = SubResource("AnimationNodeAnimation_82eum")
 states/stand/position = Vector2(1117, -163)
 states/walk/node = SubResource("AnimationNodeAnimation_53hwf")
@@ -193,6 +265,12 @@ graph_offset = Vector2(265, -421)
 [sub_resource type="AtlasTexture" id="AtlasTexture_cput5"]
 atlas = ExtResource("3_fx5lj")
 region = Rect2(583, 121, 191, 117)
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_dftnh"]
+streams_count = 3
+stream_0/stream = ExtResource("3_k0yxx")
+stream_1/stream = ExtResource("4_fh8db")
+stream_2/stream = ExtResource("10_fh8db")
 
 [node name="PlayerCharacter" type="CharacterBody2D" unique_id=741950354]
 script = ExtResource("1_hlpqy")
@@ -248,3 +326,18 @@ anim_player = NodePath("../PlayerCharacterAnimationPlayer")
 
 [node name="Sprite" type="Sprite2D" parent="." unique_id=1830767452]
 texture = SubResource("AtlasTexture_cput5")
+
+[node name="WalkAnimationSounds" type="AudioStreamPlayer" parent="." unique_id=1467684955]
+
+[node name="SitAnimationSounds" type="AudioStreamPlayer" parent="." unique_id=604147974]
+script = ExtResource("11_audfs")
+single_audio = ExtResource("2_nwpxb")
+random_audio = SubResource("AudioStreamRandomizer_dftnh")
+
+[connection signal="sat_down" from="." to="SitAnimationSounds" method="_on_player_character_sat_down"]
+[connection signal="sat_long" from="." to="SitAnimationSounds" method="_on_player_character_sat_long"]
+[connection signal="stood_up" from="." to="SitAnimationSounds" method="_on_player_character_stood_up"]
+[connection signal="animation_changed" from="PlayerCharacterAnimationPlayer" to="." method="_on_player_character_animation_player_animation_changed"]
+[connection signal="current_animation_changed" from="PlayerCharacterAnimationPlayer" to="." method="_on_player_character_animation_player_current_animation_changed"]
+[connection signal="animation_player_changed" from="AnimationTree" to="." method="_on_animation_tree_animation_player_changed"]
+[connection signal="animation_started" from="AnimationTree" to="." method="_on_animation_tree_animation_started"]
