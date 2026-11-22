@@ -1,3 +1,4 @@
+class_name Player
 ## Scripting for player physics, controls and event triggers.
 extends CharacterBody2D
 
@@ -13,9 +14,9 @@ const jump_velocity:float = 1200
 
 # Rapture Beam Variables.
 var rapture_flag:bool = false
-var rapture_speed:float = 15000
-var rapture_force:float = 50
-var beam_height:float = 32000
+var rapture_speed:float = 1500
+var rapture_force:float = 20
+var beam_height:float = 36000
 
 # Low Gravity Field Variables.
 var lowgrav_flag:bool = false
@@ -59,9 +60,9 @@ func _physics_process(delta: float) ->  void:
 		stood_up.emit()
 	else:
 		sit_delta_cache += delta
-		if(sit_delta_cache > 10):
+		if(sit_delta_cache > 17):
 			sat_long.emit()
-		elif(sit_delta_cache > .5):
+		elif(sit_delta_cache > 2):
 			sat_down.emit()
 		
 				
