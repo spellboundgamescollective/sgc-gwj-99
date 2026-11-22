@@ -17,3 +17,5 @@ shape = SubResource("RectangleShape2D_2k8v3")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=298546633]
 texture = SubResource("PlaceholderTexture2D_aagra")
+
+[connection signal="editor_state_changed" from="." to="." method="_on_editor_state_changed"]
