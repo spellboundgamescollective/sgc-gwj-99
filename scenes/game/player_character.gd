@@ -59,9 +59,9 @@ func _physics_process(delta: float) ->  void:
 		stood_up.emit()
 	else:
 		sit_delta_cache += delta
-		if(sit_delta_cache > 10):
+		if(sit_delta_cache > 17):
 			sat_long.emit()
-		elif(sit_delta_cache > .5):
+		elif(sit_delta_cache > 2):
 			sat_down.emit()
 		
 				

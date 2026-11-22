@@ -799,6 +799,10 @@ metadata/_edit_lock_ = true
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=920373806]
 volume_db = -20.8
 
+[node name="BackgroundMusicPlayer" type="AudioStreamPlayer" parent="." unique_id=25688943]
+stream = ExtResource("24_gf5qf")
+bus = &"Background Sound"
+
 [connection signal="body_entered" from="FinalScene/FinalSceneSpaceship" to="." method="_on_final_scene_spaceship_body_entered"]
 [connection signal="body_entered" from="TractorBeam/Rapture Beam" to="PlayerCharacter" method="_on_rapture_beam_body_entered"]
 [connection signal="body_exited" from="TractorBeam/Rapture Beam" to="PlayerCharacter" method="_on_rapture_beam_body_exited"]
