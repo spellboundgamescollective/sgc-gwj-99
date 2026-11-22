@@ -1398,6 +1398,111 @@ game_won_scene = ExtResource("33_x4sre")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=102891875]
 
+[node name="barrel_a" parent="." unique_id=1529402257 instance=ExtResource("2_rvuwa")]
+position = Vector2(1446, -10480)
+
+[node name="barrel_a6" parent="." unique_id=1626834823 instance=ExtResource("2_rvuwa")]
+position = Vector2(-258, -18504)
+
+[node name="barrel_a7" parent="." unique_id=103210850 instance=ExtResource("2_rvuwa")]
+position = Vector2(-569.9995, -18592)
+rotation = 0.57072264
+
+[node name="barrel_a4" parent="." unique_id=1902426783 instance=ExtResource("2_rvuwa")]
+position = Vector2(133.99963, -14424.002)
+rotation = -0.57072264
+
+[node name="barrel_a2" parent="." unique_id=1855482316 instance=ExtResource("2_rvuwa")]
+position = Vector2(-569.99963, -12000.001)
+rotation = -0.93375117
+
+[node name="barrel_a5" parent="." unique_id=908894208 instance=ExtResource("2_rvuwa")]
+position = Vector2(102.00012, -15712)
+rotation = 1.1431906
+
+[node name="barrel_a3" parent="." unique_id=243762479 instance=ExtResource("2_rvuwa")]
+position = Vector2(-553.99976, -13032.001)
+rotation = -0.93375117
+
+[node name="barrel_b" parent="." unique_id=658934233 instance=ExtResource("3_1qu7h")]
+position = Vector2(398, -10040)
+
+[node name="barrel_b3" parent="." unique_id=2120717407 instance=ExtResource("3_1qu7h")]
+position = Vector2(-530, -13536)
+
+[node name="barrel_b2" parent="." unique_id=322524064 instance=ExtResource("3_1qu7h")]
+position = Vector2(101.99994, -12160)
+rotation = 1.2566371
+
+[node name="box_a" parent="." unique_id=1775241278 instance=ExtResource("4_wjywi")]
+position = Vector2(-306, -9656)
+
+[node name="box_a2" parent="." unique_id=1339634674 instance=ExtResource("4_wjywi")]
+position = Vector2(926, -10272)
+
+[node name="box_a3" parent="." unique_id=515946159 instance=ExtResource("4_wjywi")]
+position = Vector2(934, -10720)
+
+[node name="box_a11" parent="." unique_id=177435912 instance=ExtResource("4_wjywi")]
+position = Vector2(102, -17824)
+
+[node name="box_a7" parent="." unique_id=770459326 instance=ExtResource("4_wjywi")]
+position = Vector2(766, -12360)
+
+[node name="box_a9" parent="." unique_id=1091076821 instance=ExtResource("4_wjywi")]
+position = Vector2(-346, -14168)
+
+[node name="box_a10" parent="." unique_id=939990328 instance=ExtResource("4_wjywi")]
+position = Vector2(846, -15568)
+
+[node name="box_a12" parent="." unique_id=1291618908 instance=ExtResource("4_wjywi")]
+position = Vector2(806, -17704)
+
+[node name="box_a14" parent="." unique_id=2139499328 instance=ExtResource("4_wjywi")]
+position = Vector2(86, -18984)
+
+[node name="box_a13" parent="." unique_id=1815602907 instance=ExtResource("4_wjywi")]
+position = Vector2(342, -18816)
+
+[node name="box_a16" parent="." unique_id=1580576641 instance=ExtResource("4_wjywi")]
+position = Vector2(-826, -18800)
+
+[node name="box_a17" parent="." unique_id=1296018663 instance=ExtResource("4_wjywi")]
+position = Vector2(-307, -19007)
+
+[node name="box_a15" parent="." unique_id=1189978360 instance=ExtResource("4_wjywi")]
+position = Vector2(-186, -19392)
+
+[node name="box_a8" parent="." unique_id=1805065748 instance=ExtResource("4_wjywi")]
+position = Vector2(318, -12608)
+
+[node name="box_a4" parent="." unique_id=145487736 instance=ExtResource("4_wjywi")]
+position = Vector2(438, -12136)
+
+[node name="box_a6" parent="." unique_id=1985989291 instance=ExtResource("4_wjywi")]
+position = Vector2(-1018, -13360)
+
+[node name="box_a5" parent="." unique_id=84380568 instance=ExtResource("4_wjywi")]
+position = Vector2(94, -13560)
+
+[node name="cow_a" parent="." unique_id=1306064652 instance=ExtResource("5_3f1ar")]
+position = Vector2(86, -10576)
+
+[node name="cow_a2" parent="." unique_id=45042042 instance=ExtResource("5_3f1ar")]
+position = Vector2(534, -15208)
+
+[node name="cow_b" parent="." unique_id=842898347 instance=ExtResource("6_b7kyd")]
+position = Vector2(-282, -11608)
+
+[node name="cow_b2" parent="." unique_id=1435662192 instance=ExtResource("6_b7kyd")]
+position = Vector2(-434, -16144)
+
+[node name="cow_c" parent="." unique_id=1779526797 instance=ExtResource("7_l2f54")]
+position = Vector2(-18, -12712)
+
+[node name="cow_c2" parent="." unique_id=1418278141 instance=ExtResource("7_l2f54")]
+position = Vector2(558, -17376)
+
 [connection signal="body_entered" from="FinalScene/FinalSceneSpaceship" to="." method="_on_final_scene_spaceship_body_entered"]
 [connection signal="body_entered" from="TractorBeam/Rapture Beam" to="PlayerCharacter" method="_on_rapture_beam_body_entered"]
 [connection signal="body_entered" from="TractorBeam/Rapture Beam" to="TractorBeam/TractorBeamPlayer" method="_on_rapture_beam_body_entered"]

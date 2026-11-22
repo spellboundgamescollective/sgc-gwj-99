@@ -14,8 +14,8 @@ const jump_velocity:float = 1200
 
 # Rapture Beam Variables.
 var rapture_flag:bool = false
-var rapture_speed:float = 1500
-var rapture_force:float = 20
+var rapture_speed:float = 1000
+var rapture_force:float = 5 
 var beam_height:float = 36000
 
 # Low Gravity Field Variables.
