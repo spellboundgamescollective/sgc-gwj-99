@@ -1226,11 +1226,11 @@ position = Vector2(-949, -13704.001)
 rotation = -0.93375117
 scale = Vector2(0.99999994, 0.99999994)
 
-[node name="barrel_b4" parent="Platforms" unique_id=658934233 instance=ExtResource("3_1qu7h")]
-position = Vector2(3, -10712)
-
 [node name="barrel_b5" parent="Platforms" unique_id=2120717407 instance=ExtResource("3_1qu7h")]
 position = Vector2(-925, -14208)
+
+[node name="barrel_b4" parent="Platforms" unique_id=658934233 instance=ExtResource("3_1qu7h")]
+position = Vector2(0, -10656)
 
 [node name="barrel_b6" parent="Platforms" unique_id=322524064 instance=ExtResource("3_1qu7h")]
 position = Vector2(-293, -12832)
