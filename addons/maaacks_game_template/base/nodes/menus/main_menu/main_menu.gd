@@ -37,14 +37,7 @@ func get_game_scene_path() -> String:
 	return MaaacksGameTemplate.get_game_path(game_scene_path)
 
 func load_game_scene() -> void:
-	if scene_loader_node:
-		if signal_game_start:
-			scene_loader_node.load_scene(get_game_scene_path(), true)
-			game_started.emit()
-		else:
-			scene_loader_node.load_scene(get_game_scene_path())
-	else:
-		print(get_tree().change_scene_to_file(get_game_scene_path()))
+	get_tree().change_scene_to_file(get_game_scene_path())
 
 func new_game() -> void:
 	load_game_scene()

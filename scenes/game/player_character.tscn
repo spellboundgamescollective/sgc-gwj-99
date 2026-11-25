@@ -321,7 +321,6 @@ text = "Lowgrav: "
 libraries/ = SubResource("AnimationLibrary_53hwf")
 
 [node name="AnimationTree" type="AnimationTree" parent="." unique_id=845729331]
-active = false
 tree_root = SubResource("AnimationNodeStateMachine_m80j2")
 advance_expression_base_node = NodePath("..")
 anim_player = NodePath("../PlayerCharacterAnimationPlayer")
