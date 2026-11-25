@@ -15,7 +15,6 @@ func _on_close_button_pressed() -> void:
 	play()
 	pass # Replace with function body.
 
-
 func _on_restart_button_pressed() -> void:
 	play()
 	pass # Replace with function body.

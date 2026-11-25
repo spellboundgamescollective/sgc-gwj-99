@@ -5,9 +5,12 @@ signal game_won
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
+	$OpeningScene/OpeningSceneCamera.enabled = true
 	$TractorBeam.visible = true
 	$FinalScene.visible = true
 	$OpeningScene/AnimationPlayer.play("opening")
+	$PlayerCharacter/PlayerCamera.enabled = false
+	
 	$PlayerCharacter.position = Vector2(1487, -9)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

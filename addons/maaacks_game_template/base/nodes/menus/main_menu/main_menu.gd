@@ -44,7 +44,7 @@ func load_game_scene() -> void:
 		else:
 			scene_loader_node.load_scene(get_game_scene_path())
 	else:
-		get_tree().change_scene_to_file(get_game_scene_path())
+		print(get_tree().change_scene_to_file(get_game_scene_path()))
 
 func new_game() -> void:
 	load_game_scene()
