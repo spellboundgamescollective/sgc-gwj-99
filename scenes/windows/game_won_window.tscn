@@ -11,10 +11,10 @@
 [node name="GameWonWindow" unique_id=862385343 instance=ExtResource("1_lpba5")]
 process_mode = 3
 custom_minimum_size = Vector2(432, 240)
-offset_left = 623.25
-offset_top = 381.0
-offset_right = 1296.75
-offset_bottom = 700.0
+offset_left = -336.75
+offset_top = -159.0
+offset_right = 336.75
+offset_bottom = 160.0
 theme = ExtResource("2_ga0ue")
 script = ExtResource("2_rvsdo")
 pauses_game = true
